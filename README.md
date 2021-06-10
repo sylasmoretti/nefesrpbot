@@ -1,2 +1,0 @@
-# asperius
-Botu çalmazsanız sevinirim.
