@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var ayarlar = require('../ayarlar.json');
 const prefix = ayarlar.prefix
-const ms = require('parse-ms')
+const ms = require('ms')
 const db = require('quick.db')
 let dbs = require("coders.db");
 
