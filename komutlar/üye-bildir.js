@@ -6,8 +6,8 @@ exports.run = async(client, message, args) => {
   .setAuthor("GVT", client.user.avatarURL())
   .setDescription(`
   Lütfen ne yapmak istediğinizi belirtiniz.
-  gvt bildir öneri <öneriniz> -> Öneri bildirmenizi sağlar:
-  gvt bildir bug <bugunuz> -> Bug bildirmenizi sağlar
+  gvtbildir öneri <öneriniz> -> Öneri bildirmenizi sağlar:
+  gvtbildir bug <bugunuz> -> Bug bildirmenizi sağlar
   `)
 if(args[0] === "öneri") {  
     const öneri = args.slice(1).join(' ');

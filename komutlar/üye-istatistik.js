@@ -30,12 +30,12 @@ let aylartoplam = {
 
 
  const Embed = new Discord.MessageEmbed()
-  .setAuthor(`Carnoxis İstatistik`,client.user.avatarURL())
-  .addField("<:dev:829823441867112488> Geliştirici", `<@!477050335685509124>`, true) 
+  .setAuthor(`GVT İstatistikleri`,client.user.avatarURL())
+  .addField("<a:872826534740754474:876563309799825478>  Geliştirici", `<@!698179015243989003>`, true) 
   .addField("<:discord:829823598595407952> Discord.JS", `**v${Discord.version}**`, true)
   .addField("<a:tamam:806136101529059338> Ping", `**${client.ws.ping}ms**`, true)
 .addField("<:Js:811661537491943445> Sunucu Sayısı", `**\`${client.guilds.cache.size.toLocaleString()}\`**`, true)
-.addField("<:Js:811661537491943445>Kullanıcı Sayısı", `**\`${client.guilds.cache.reduce((a,b)=>a+=b.memberCount,0)}\`**`, true)
+.addField("<:Js:811661537491943445> Kullanıcı Sayısı", `**\`${client.guilds.cache.reduce((a,b)=>a+=b.memberCount,0)}\`**`, true)
 .addField("<:Js:811661537491943445> Kanal Sayısı", `**\`${client.channels.cache.size.toLocaleString()}\`**`, true)
 .addField("<:AyarPng:829828591575105616> Destek Sunucusu", `[Destek Sunucusu](https://discord.gg/Eq67w5gkD7)`, true)
 .addField("<:AyarPng:829828591575105616> Kuruluş Tarihi", `**\`${s}\`**`, true)
