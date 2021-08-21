@@ -56,7 +56,7 @@ Süreli para komutları;
 exports.conf = {
   enable: true, 
   guildOnly: false, 
-  aliases: ['ym'], 
+  aliases: ['ym','help'], 
   permLevel: 0 
 } 
 exports.help = {

@@ -8,13 +8,14 @@ module.exports = client => {
  setInterval(function() {
 }, 8000);
   var msgArray = [
-"a?yardım",
-"Efsanevi ekonomi sistemi"
+"🔧 gvt yardım - gvt help",
+"💖 Gravity Ekonomi Botu",
+"gvt davet 🎉 "
  ];
 
  setInterval(() => {
   var rastgeleOyun = Math.floor(Math.random() * msgArray.length);
   client.user.setActivity(`${msgArray[rastgeleOyun]}`)
 }, 5000);
-    console.log(`Asperius başarıyla giriş yaptı.`);
+    console.log(`GVT başarıyla giriş yaptı.`);
 }

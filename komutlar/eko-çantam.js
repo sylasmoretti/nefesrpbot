@@ -12,14 +12,14 @@ exports.run = async (client, message, args) => {
    .setAuthor("Sistem Banı!", message.author.avatarURL())
    .setDescription(`
 Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
+Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/jmYBYSvV8J)'na katılarak söyleyebilirsin.
    `)
-   .setFooter("Asperius", client.user.avatarURL())
+   .setFooter("GVT", client.user.avatarURL())
    .setTimestamp()
  )
     let member = message.author;
   let kllanç = message.mentions.users.first() || message.author;
-if(!args[0]) return message.reply(`Bir mesaj içeriği belirtiniz örnek \n  a?çantam genel/zindan/odun/maden`)
+if(!args[0]) return message.reply(`Bir mesaj içeriği belirtiniz örnek \n  gvt çantam genel/zindan/odun/maden`)
   
 if(args[0] === "genel") {
     let btcdeger = 4532
@@ -52,29 +52,29 @@ const param = new Discord.MessageEmbed()
 
 Bitcoinleriniz: ${btc ? btc : 'Yok.'} \n --> Bitcoin Değeri: ${btcdeger}
 
-Zindan
+<a:740690463052529674:869178996376625182>  Zindan
 
-⚔️ Elmas Kılıçlarınız: ${elmaskılıç ? elmaskılıç : 'Yok.'}
+<a:788743854593277995:862655365409800232>  Elmas Kılıçlarınız: ${elmaskılıç ? elmaskılıç : 'Yok.'}
 
-⚔️ Demir Kılıçlarınız: ${demirkılıç ? demirkılıç : 'Yok.'}
+<a:848346698623090728:862655337953624065>  Demir Kılıçlarınız: ${demirkılıç ? demirkılıç : 'Yok.'}
 
-⚔️ Taş Kılıçlarınız: ${taşkılıç ? taşkılıç : 'Yok.'}
+<a:816412608017596448:869179017209733140>  Taş Kılıçlarınız: ${taşkılıç ? taşkılıç : 'Yok.'}
 
-Orman
+<a:766107346672812073:874689003213947020>  Orman
 
-🪓 Elmas baltalarınız: ${elmasbalta ? elmasbalta : 'Yok.'}
+<a:816411129760841769:869179020934283274>  Elmas baltalarınız: ${elmasbalta ? elmasbalta : 'Yok.'}
 
-🪓 Demir baltalarınız: ${demirbalta ? demirbalta : 'Yok.'}
+<a:848346698623090728:862655337953624065>  Demir baltalarınız: ${demirbalta ? demirbalta : 'Yok.'}
 
-🪓 Taş baltalarınız: ${taşbalta ? taşbalta : 'Yok.'}
+<a:816412608017596448:869179017209733140>  Taş baltalarınız: ${taşbalta ? taşbalta : 'Yok.'}
 
-Maden
+<a:740690463559909416:869178996380815400>  Maden
 
-<:diakazma:829792473403490325> Elmas kazmalarınız: ${elmaskazma ? elmaskazma : 'Yok.'}
+<a:816411129760841769:869179020934283274>  Elmas kazmalarınız: ${elmaskazma ? elmaskazma : 'Yok.'}
 
-⛏️ Demir kazmalarınız: ${demirkazma ? demirkazma : 'Yok.'}
+<a:848346698623090728:862655337953624065>  Demir kazmalarınız: ${demirkazma ? demirkazma : 'Yok.'}
 
-⛏️ Taş kazmalarınız: ${taşkazma ? taşkazma : 'Yok.'}
+<a:816412608017596448:869179017209733140>  Taş kazmalarınız: ${taşkazma ? taşkazma : 'Yok.'}
 `)
 .setFooter("Asperius", client.user.avatarURL())
  .setTimestamp()
