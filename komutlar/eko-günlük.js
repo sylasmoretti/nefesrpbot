@@ -15,7 +15,7 @@ function getRandomInt(min, max) {
 
 
 exports.run = async (client, message, args) => {
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4MTE5NDEwODg4NTkyNTk0OCIsImJvdCI6dHJ1ZSwiaWF0IjoxNjEwOTE0MjMzfQ.P_HOXh4kUfqf-bITfJkts3ttdqwgjidz6U1pzgVA7Mk', client); //Dbl Tokeninizi Yazınız.
+const dbl = new DBL('', client); //Dbl Tokeninizi Yazınız.
 	 let ekoban = db.get(`sistemban_${message.author.id}`)
  if(ekoban) return message.channel.send(
  new Discord.MessageEmbed()
@@ -24,7 +24,7 @@ const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4MTE5NDEwOD
 Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
 Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
    `)
-   .setFooter("Asperius", client.user.avatarURL())
+   .setFooter("Gravity", client.user.avatarURL())
    .setTimestamp()
  )	  
 	

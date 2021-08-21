@@ -14,17 +14,17 @@ exports.run = async (client, message, args) => {
 Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
 Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
    `)
-   .setFooter("Asperius", client.user.avatarURL())
+   .setFooter("Gravity", client.user.avatarURL())
    .setTimestamp()
  )
 const soygunlog = db.get(`soygunlog_${message.guild.id}`)
 if(!soygunlog) {
     const embed = new Discord.MessageEmbed()
-    .setAuthor("Asperius", client.user.avatarURL())
+    .setAuthor("Gravity", client.user.avatarURL())
     .setDescription(`
-    Bir soygun log kanalı ayarlanmamış lütfen ayarlayınız \n -> a?soygun-log ayarla #kanal
+    Bir soygun log kanalı ayarlanmamış lütfen ayarlayınız \n -> gvtsoygun-log ayarla #kanal
     `)
-    .setFooter("Asperius", client.user.avatarURL())
+    .setFooter("Gravity", client.user.avatarURL())
     message.channel.send(embed)
 } else {
     let cooldown = 20000;
@@ -93,7 +93,7 @@ if(!soygunlog) {
           await db.add(`${message.author.id}.pistol_adet`, 1);
         await db.set(`bakiye_${message.author.id}`, para - 3000);
           dbs.set(`blackmarket_${message.author.id}`, Date.now());
-            client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`Pistol\` satın aldı. Geriye **${para - 3000}**TL'si kaldı.`)
+            client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`Pistol\` satın aldı. Geriye **${para - 3000}**Gvt'si kaldı.`)
         }
       }
 
@@ -114,7 +114,7 @@ if(!soygunlog) {
          await db.add(`${message.author.id}.uzi_adet`, 1);
           await db.set(`bakiye_${message.author.id}`, para - 4000);
           dbs.set(`blackmarket_${message.author.id}`, Date.now());
-          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`Uzi\` satın aldı. Geriye **${para - 4000}**TL'si kaldı.`)
+          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`Uzi\` satın aldı. Geriye **${para - 4000}**Gvt'si kaldı.`)
         }
       }
 
@@ -135,7 +135,7 @@ if(!soygunlog) {
           await db.add(`${message.author.id}.ak47_adet`, 1);
           await db.set(`bakiye_${message.author.id}`, para - 4500);
           dbs.set(`blackmarket_${message.author.id}`, Date.now());
-          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`Ak-47\` satın aldı. Geriye **${para - 4500}**TL'si kaldı.`)
+          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`Ak-47\` satın aldı. Geriye **${para - 4500}**Gvt'si kaldı.`)
         }
       }
       
@@ -148,7 +148,7 @@ message.reply("`M-468` almak için 5000₺ ye ihtiyacın var. Senin paran: **" +
           await db.add(`${message.author.id}.m468_adet`, 1)
           await db.set(`bakiye_${message.author.id}`, para - 5000)
          dbs.set(`blackmarket_${message.author.id}`, Date.now());
-          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`M-468\` satın aldı. Geriye **${para - 5000}**TL'si kaldı.`)
+          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`M-468\` satın aldı. Geriye **${para - 5000}**Gvt'si kaldı.`)
         }
       }
       

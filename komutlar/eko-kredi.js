@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
 Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
 Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
    `)
-   .setFooter("Asperius", client.user.avatarURL())
+   .setFooter("Gravity", client.user.avatarURL())
    .setTimestamp()
  )
 let para = db.fetch(`bakiye_${message.author.id}`)
@@ -18,7 +18,7 @@ if(!args[0]) {
 var banka = new Discord.MessageEmbed()
 .setColor('RED')
 .setTitle('**Hata! :warning:**')
-.setDescription('**a?kredi** komutu bölümlere ayrılır,Mesela para yatırmak istiyorsanız; \n **a?kredi yatır <tutar>** şeklinde olmalı.Mesela para çekmek istiyorsunuz; \n **a?kredi çek <tutar>** şeklinde olmalı.')
+.setDescription('**gvtkredi** komutu bölümlere ayrılır,Mesela para yatırmak istiyorsanız; \n **gvtkredi yatır <tutar>** şeklinde olmalı.Mesela para çekmek istiyorsunuz; \n **gvtkredi çek <tutar>** şeklinde olmalı.')
 .setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
 .setTimestamp()
 message.channel.send(banka)  

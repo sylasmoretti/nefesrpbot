@@ -28,16 +28,16 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
    let deger = db.fetch(`bankabakiye_${message.author.id}`)
 
 const param = new Discord.MessageEmbed()
-.setAuthor("PARAN", client.user.avatarURL())
+.setAuthor("Gravity ", client.user.avatarURL())
 .setDescription(`
 💵 Paranız: ${bakiye}
 
 🏦 Banka İsmİ: ${bankaismi2 ? bankaismi2: "Hesap Oluşturunuz"}
 🏦 Bankadaki Para: ${deger ? deger: "0"}
 
-Eşyalarınızı görmek için: a?çantam
+Eşyalarınızı görmek için: gvtçantam
 `)
-.setFooter("Eko BABA", client.user.avatarURL())
+.setFooter("Discord.gg/gravity", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }

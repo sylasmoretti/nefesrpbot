@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
 Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
 Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
    `)
-   .setFooter("Asperius", client.user.avatarURL())
+   .setFooter("Gravity", client.user.avatarURL())
    .setTimestamp()
  )
     let member = message.author;
@@ -27,15 +27,15 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
   const btc = await db.fetch(`btc_${kllanç.id}`)
 
 const param = new Discord.MessageEmbed()
-.setAuthor("PARAN", client.user.avatarURL())
+.setAuthor("gravity", client.user.avatarURL())
 .setDescription(`
 Bitcoin Değeri: ${btcdeger}
 
 Bitcoinleriniz: ${btc ? btc : 'Yok.'}
 
-Eşyalarınızı görmek için: !çantam
+Eşyalarınızı görmek için: gvtçantam
 `)
-.setFooter("Eko BABA", client.user.avatarURL())
+.setFooter("gravity", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }

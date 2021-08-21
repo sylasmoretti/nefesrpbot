@@ -8,9 +8,9 @@ exports.run = async(client, message, args) => {
    .setAuthor("Sistem Banı!", message.author.avatarURL())
    .setDescription(`
 Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
+Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/jmYBYSvV8J)'na katılarak söyleyebilirsin.
    `)
-   .setFooter("Asperius", client.user.avatarURL())
+   .setFooter("Gravity", client.user.avatarURL())
    .setTimestamp()
  )	  
 	
@@ -23,7 +23,7 @@ let sure = await db.fetch(`calissüre_${message.member.id}`)
         let timeObj = ms(cd - (Date.now() - sure))
       message.channel.send(`Bir daha çalışmak için biraz beklemen gerekli **${timeObj.seconds} saniye** sonra tekrar dene!`)
     } else {
-        if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `a?hesap-oluştur <isim>`")
+        if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `gvthesap-oluştur <isim>`")
         let gelcekpara = Math.round(Math.random() * 200)
         db.add(`bakiye_${message.author.id}`, gelcekpara)
    
