@@ -2,14 +2,14 @@ const codework = require('discord.js')
 
 exports.run = (client, message,args) => {
  const codework1 = new codework.MessageEmbed()
- .setAuthor("Asperius", client.user.avatarURL)
+ .setAuthor("GVT", client.user.avatarURL)
   .setColor('BLACK')
-  .setTitle("**Asperius**") //BURAYA BOTUNUZUN ADINI YAZIN 
- .setURL(`https://discord.com/oauth2/authorize?client_id=781586402742894593&scope=bot&permissions=8`) //BURAYA BOTUNUZUN DAVET LİNKİNİ KOYUN
+  .setTitle("**GVT**") //BURAYA BOTUNUZUN ADINI YAZIN 
+ .setURL(`https://discord.com/oauth2/authorize?client_id=843176655827894343&scope=bot&permissions=805314622`) //BURAYA BOTUNUZUN DAVET LİNKİNİ KOYUN
   .setDescription(`                 
- **a?yardım**, ile yardım alabilirsiniz.
-Örnek komut kullanımı: \`a?çantam\`
-Botu davet etmek için: \`a?davet\`
+ **gvt yardım**, ile yardım alabilirsiniz.
+Örnek komut kullanımı: \`gvt çantam\`
+Botu davet etmek için: \`gvt davet\`
 `)
                   
   .addField("💸 Para komutları", `

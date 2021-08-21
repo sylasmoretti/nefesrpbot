@@ -17,7 +17,7 @@ const http = require("http");
 const express = require("express");
 const app = express();
 app.get("/", (request, response) => {
-  console.log("Asperius pinglendi.");
+  console.log("GVT pinglendi.");
   response.sendStatus(200);
 });
 //app.listen(8000);
@@ -32,14 +32,14 @@ setInterval(() => {
 
 
 client.ayarlar = {
-"prefix":"a?",
-"sahip":["756517457031593995","477050335685509124"],
+"prefix":"gvt ",
+"sahip":["698179015243989003"],
 }
 client.ekoayarlar = {
-  parabirimi: "TL", //Para Birimi TL İsterseniz Dolar Euro Vb. Para Birimleri Girebilirsiniz.
-  botunuzunprefixi: "a?",
+  parabirimi: "GVT", //Para Birimi TL İsterseniz Dolar Euro Vb. Para Birimleri Girebilirsiniz.
+  botunuzunprefixi: "gvt ",
   botunuzunidsi: "822534260953972746", 
- botismi: "Bilmem",
+ botismi: "GVT",
   renk: "RANDOM", //İNGİLİZCE TERCİH ETTİĞİNİZ RENGİ YAZINIZ! EĞER BÖYLE BIRAKIRSANIZ RASTGELE ATAR!
   isimsiz: "İsimsiz", //İSİMSİZ KİŞİLERİN HANGİ İSİM İLE GÖZÜKECEĞİNİ BELİRLEYEBİLİRSİNİZ!
   rastgelepara: false, //EĞER BUNU TRUE YAPARSANIZ RASTGELE PARA VERME ÖZELLİĞİ AKTİF OLUR VE GÜNLÜK PARALARI RASTGELE VERİR!
@@ -48,9 +48,9 @@ client.ekoayarlar = {
   günlükpara: 300, //EĞER RASTGELE PARAYI TRUE YAPTIYSANIZ BURAYI ELLEMENİZE GEREK YOK!
   dbloy: true, //EĞER BOTUNUZ DBL (DİSCORD BOT LİST) DE KAYITLIYSA GÜNLÜK ÖDÜL ALMAK İÇİN OY İSTER FALSE KAPALI, TRUE AKTİF DEMEK!
   dblkey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4MTE5NDEwODg4NTkyNTk0OCIsImJvdCI6dHJ1ZSwiaWF0IjoxNjEwOTE0MjMzfQ.P_HOXh4kUfqf-bITfJkts3ttdqwgjidz6U1pzgVA7Mk", //EĞER DBLOY U AKTİF ETMEDİYSENİZ BURAYA KEY EKLEMENİZE GEREK YOK EĞER AKTİF ETTİYSENİZ DBL SİTESİNDEN BULABİLİRSİNİZ!
-  dblmsj: "Bu komutu kullanabilmek için Carnoxis botuna oy vermeniz gerekmektedir. Oy vermek için a?oyver", //EĞER DBLOY U AKTİF ETMEDİYSENİZ BURAYA MESAJ YAZMANIZA GEREK YOK! EĞER AKTİF ETTİYSENİZ BOTA OY VERMEK İÇİN HANGİ MESAJI YAZACAĞINI AYARLAYABİLİRSİNİZ.
+  dblmsj: "Bu komutu kullanabilmek için Carnoxis botuna oy vermeniz gerekmektedir. Oy vermek için oyver", //EĞER DBLOY U AKTİF ETMEDİYSENİZ BURAYA MESAJ YAZMANIZA GEREK YOK! EĞER AKTİF ETTİYSENİZ BOTA OY VERMEK İÇİN HANGİ MESAJI YAZACAĞINI AYARLAYABİLİRSİNİZ.
   başlangıçparası: 100, //EĞER RASTGELE PARAYI TRUE YAPTIYSANIZ BURAYI ELLEMENİZE GEREK YOK!
-  admin: ["721126378833051670"]//["id","",""]
+  admin: ["698179015243989003"]//["id","",""]
 }
 
 
@@ -169,7 +169,7 @@ client.on("message", async (message) => {
   }, 300000)
   })
 
-client.login(ayarlar.token);
+client.login(process.env.token);
 
 client.on('guildCreate', guild => {
 
@@ -231,7 +231,7 @@ client.on("guildMemberAdd", async member => {
 if(dmhg) {    
     const asperius = new Discord.MessageEmbed()
         .setColor(`RANDOM`)
-        .setAuthor("Asperius")
+        .setAuthor("GVT")
         .setDescription(dmhg)
         .setFooter(`Sunucuya Hoşgeldin.`)
     member.send(asperius);
