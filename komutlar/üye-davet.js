@@ -5,7 +5,7 @@ exports.run = async(client, message, args) => {
     const WestraEmbed = new Discord.MessageEmbed();
   WestraEmbed.setColor(0x36393F)
 //  WestraEmbed.setAuthor(`Crypto'yu davet ederek sunucunu yapılandır!`)
-  WestraEmbed.setDescription(`<a:altin5:801155304205189151> Carnoxis'yi davet etmek için [buraya](https://discord.com/oauth2/authorize?client_id=781586402742894593&scope=bot&permissions=8) tıkla!`)
+  WestraEmbed.setDescription(`<a:779108965501632532:874688993185378396>  GVT'yi davet etmek için [buraya](https://discord.com/oauth2/authorize?client_id=843176655827894343&scope=bot&permissions=805314622) tıkla!`)
   message.channel.send(WestraEmbed)
 }
 

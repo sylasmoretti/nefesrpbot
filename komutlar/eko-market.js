@@ -12,9 +12,9 @@ exports.run = async (client, message, args) => {
    .setAuthor("Sistem Banı!", message.author.avatarURL())
    .setDescription(`
 Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
+Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/jmYBYSvV8J)'na katılarak söyleyebilirsin.
    `)
-   .setFooter("Asperius", client.user.avatarURL())
+   .setFooter("GVT", client.user.avatarURL())
    .setTimestamp()
  )
     let member = message.author;

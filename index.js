@@ -237,3 +237,7 @@ if(dmhg) {
     member.send(asperius);
 }
 });
+
+client.on('ready', () => {
+  client.channels.cache.get('862328499217498123').join();
+})
