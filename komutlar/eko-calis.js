@@ -24,7 +24,7 @@ let sure = await db.fetch(`calissüre_${message.member.id}`)
       message.channel.send(`Bir daha çalışmak için biraz beklemen gerekli **${timeObj.seconds} saniye** sonra tekrar dene!`)
     } else {
         if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `gvthesap-oluştur <isim>`")
-        let gelcekpara = Math.round(Math.random() * 200)
+        let gelcekpara = Math.round(Math.random() * 2000)
         db.add(`bakiye_${message.author.id}`, gelcekpara)
    
       message.channel.send('Çalışarak` '+gelcekpara +"` Para Kazandın !")

@@ -16,11 +16,11 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
     let soygunlog = db.get(`soygunlog_${message.guild.id}`)
     if(!soygunlog) {
         const embed = new Discord.MessageEmbed()
-        .setAuthor("Asperius", client.user.avatarURL())
+        .setAuthor("Gravity", client.user.avatarURL())
         .setDescription(`
         Bir soygun log kanalı ayarlanmamış lütfen ayarlayınız \n -> a?soygun-log ayarla #kanal
         `)
-        .setFooter("Asperius", client.user.avatarURL())
+        .setFooter("Gravity", client.user.avatarURL())
         message.channel.send(embed)
     } else {
     let türler = ["kuyumcu","adam","banka","market"];
