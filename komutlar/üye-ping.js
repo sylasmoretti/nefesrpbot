@@ -11,41 +11,41 @@ exports.run = async(client, message, args) => {
   
  const Embed = new Discord.MessageEmbed()
  .setColor("ff0000")
- .setAuthor("Carnoxis", client.user.avatarURL())
+ .setAuthor("GVT", client.user.avatarURL())
 .setDescription(`
-<a:altin4:829828404249231450> Pingim = **${client.ws.ping} ms**
-<a:altin4:829828404249231450> Mesaj Gecikmem = **${message.createdTimestamp} ms**`)
- .setFooter(`Carnoxis`, message.author.avatarURL())
+<a:872826534740754474:876563309799825478>  Pingim = **${client.ws.ping} ms**
+<a:872826534740754474:876563309799825478>  Mesaj Gecikmem = **${message.createdTimestamp} ms**`)
+ .setFooter(`Gravity`, message.author.avatarURL())
  .setTimestamp() 
  
   const newEmbed = new Discord.MessageEmbed()
  .setColor("ff0000")
- .setAuthor("Carnoxis", client.user.avatarURL())
+ .setAuthor("GVT", client.user.avatarURL())
 .setDescription(`
-<a:altin4:829828404249231450> Pingim = **${client.ws.ping} ms**
-<a:altin4:829828404249231450> Mesaj Gecikmem = **${message.createdTimestamp} ms**
+<a:872826534740754474:876563309799825478>  Pingim = **${client.ws.ping} ms**
+<a:872826534740754474:876563309799825478>  Mesaj Gecikmem = **${message.createdTimestamp} ms**
 `)
- .setFooter(`Carnoxis`, message.author.avatarURL())
+ .setFooter(`Gravity`, message.author.avatarURL())
  .setTimestamp() 
   
    const newEmbed2 = new Discord.MessageEmbed()
  .setColor("f7ff00")
- .setAuthor("Carnoxis", client.user.avatarURL())
+ .setAuthor("GVT", client.user.avatarURL())
 .setDescription(`
-<a:altin4:829828404249231450> Pingim = **${client.ws.ping} ms**
-<a:altin4:829828404249231450> Mesaj Gecikmem = **${message.createdTimestamp} ms**
+<a:872826534740754474:876563309799825478>  Pingim = **${client.ws.ping} ms**
+<a:872826534740754474:876563309799825478>  Mesaj Gecikmem = **${message.createdTimestamp} ms**
 `)
- .setFooter(`Carnoxis`, message.author.avatarURL())
+ .setFooter(`Gravity`, message.author.avatarURL())
  .setTimestamp() 
     setInterval(() => {
   const newEmbed = new Discord.MessageEmbed()
  .setColor("ff0000")
- .setAuthor("Carnoxis", client.user.avatarURL())
+ .setAuthor("GVT", client.user.avatarURL())
 .setDescription(`
-<a:altin4:829828404249231450> Pingim = **${client.ws.ping} ms**
-<a:altin4:829828404249231450> Mesaj Gecikmem = **${message.createdTimestamp} ms**
+<a:872826534740754474:876563309799825478>  Pingim = **${client.ws.ping} ms**
+<a:872826534740754474:876563309799825478>  Mesaj Gecikmem = **${message.createdTimestamp} ms**
 `)
- .setFooter(`Carnoxis`, message.author.avatarURL())
+ .setFooter(`Gravity`, message.author.avatarURL())
  .setTimestamp() 
   
   mesaj.edit(newEmbed)

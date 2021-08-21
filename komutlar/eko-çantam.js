@@ -42,13 +42,13 @@ const taşbalta = db.get(`taşbalta_${message.author.id}`)
   const taşkılıç = db.get(`taşkılıç_${message.author.id}`)
   
 const param = new Discord.MessageEmbed()
-.setAuthor("PARAN", client.user.avatarURL())
+.setAuthor("Gravity", client.user.avatarURL())
 .setDescription(`
-🔫 Silahlarınız: ${silah ? silah : 'Yok.'}
+<a:786530846512775178:862655288418893855>  Silahlarınız: ${silah ? silah : 'Yok.'}
 
-🎣 Oltalarınız: ${olta ? olta : 'Yok.'}
+<a:tac:875852102495260692>  Oltalarınız: ${olta ? olta : 'Yok.'}
 
-📱 Telefonlarınız: ${telefon ? telefon : 'Yok.'}
+<a:872826550045782077:876563316372303912>  Telefonlarınız: ${telefon ? telefon : 'Yok.'}
 
 Bitcoinleriniz: ${btc ? btc : 'Yok.'} \n --> Bitcoin Değeri: ${btcdeger}
 
@@ -76,7 +76,7 @@ Bitcoinleriniz: ${btc ? btc : 'Yok.'} \n --> Bitcoin Değeri: ${btcdeger}
 
 <a:816412608017596448:869179017209733140>  Taş kazmalarınız: ${taşkazma ? taşkazma : 'Yok.'}
 `)
-.setFooter("Asperius", client.user.avatarURL())
+.setFooter("Gravity", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }
@@ -100,7 +100,7 @@ const param = new Discord.MessageEmbed()
 
 <:tas:829792928713015387> Taşlarınız: ${taş ? taş : 'Yok.'}
 `)
-.setFooter("Asperius", client.user.avatarURL())
+.setFooter("Gravity", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }
@@ -122,7 +122,7 @@ Koyu meşe odunlarınız: ${koyumeşe ? koyumeşe : 'Yok.'}
 Ladin odunlarınız: ${ladin ? ladin : 'Yok.'}
 
 `)
-.setFooter("Asperius", client.user.avatarURL())
+.setFooter("Gravity", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }
@@ -152,7 +152,7 @@ Barutlarınız: ${barut ? barut : 'Yok.'}
 
 Enderman gözleriniz: ${enderman ? enderman : 'Yok.'}
 `)
-.setFooter("Asperius", client.user.avatarURL())
+.setFooter("Gravity", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }

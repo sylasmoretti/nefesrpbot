@@ -8,9 +8,9 @@ exports.run = (client, message, args) => {
    .setAuthor("Sistem Banı!", message.author.avatarURL())
    .setDescription(`
 Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
+Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/jmYBYSvV8J)'na katılarak söyleyebilirsin.
    `)
-   .setFooter("Asperius", client.user.avatarURL())
+   .setFooter("Gravity", client.user.avatarURL())
    .setTimestamp()
  )
   let banka = db.fetch(`banka_${message.author.id}`)
@@ -23,15 +23,15 @@ let amaç = db.fetch(`şirketamac_${message.author.id}`)
 let isim = args.slice(1).join(" ");
 
 const embed1 = new Discord.MessageEmbed()
-.setAuthor("Asperius Bank", client.user.avatarURL())
+.setAuthor("Gravity Bank", client.user.avatarURL())
 .setDescription(`
 **Ne yapmak istediğinizi belirtiniz.**
-a?banka hesap-oluştur -> Banka hesabı oluşturursunuz.
-a?banka para-çek -> Bankadaki paranızdan para çekersiniz.
-a?banka para-yatır -> Bankaya pata yatırırsınız.
-a?banka hesap-bilgi -> Banka hesap bilginize bakarsınız.
+gvtbanka hesap-oluştur -> Banka hesabı oluşturursunuz.
+gvtbanka para-çek -> Bankadaki paranızdan para çekersiniz.
+gvtbanka para-yatır -> Bankaya pata yatırırsınız.
+gvtbanka hesap-bilgi -> Banka hesap bilginize bakarsınız.
 `)
-.setFooter("Asperius Bank", message.author.avatarURL())
+.setFooter("Gravity Bank", message.author.avatarURL())
 if(args[0] !== "hesap-oluştur" && args[0] !== "para-çek" && args[0] !== "para-yatır" && args[0] !== "hesap-bilgi") return message.channel.send(embed1)
 if(args[0] === "hesap-oluştur") {
 if(banka) {
@@ -58,7 +58,7 @@ if(!isim) {
 
 var banka1 = new Discord.MessageEmbed()
 .setColor('#FB529C')
-.setTitle('Asperius Bank')
+.setTitle('Gravity Bank')
 .setDescription('Bankanız Kurduk!')
 .addField('**Banka İsmi:**', `${isim}`, true)
 .addField('**Bankadaki Para:**', `${deger ? deger: "0"}`, true)
@@ -73,7 +73,7 @@ let para = args.slice(1).join(" ");
   if(para > bakiye) return message.channel.send(`Kendi parandan daha fazla para yatıramazsın!`)
 if(!args[0]) return message.channel.send(
 new Discord.MessageEmbed()
-.setAuthor("Asperius Bank", client.user.avatarURL())
+.setAuthor("Gravity Bank", client.user.avatarURL())
 .setDescription(`
 Ne kadar yatırmak istediğinizi yazınız
 `)
@@ -88,7 +88,7 @@ let para = args.slice(1).join(" ");
 if(para > bbakiye) return message.channel.send(`Bankandaki bakiyenden daha fazla para çekemezsin!`)
 if(!args[0]) return message.channel.send(
 new Discord.MessageEmbed()
-.setAuthor("Asperius Bank", client.user.avatarURL())
+.setAuthor("Gravity Bank", client.user.avatarURL())
 .setDescription(`
 Ne kadar çekmek istediğinizi yazınız
 `)
@@ -102,9 +102,9 @@ if(!banka) {
 var banka1 = new Discord.MessageEmbed()
 .setColor('#FB529C')
 .setTitle('Banka Ana Merkez')
-.addField(':dollar: Bakiye Miktarı:', '**'+para+'**')
+.addField('💶 Bakiye Miktarı:', '**'+para+'**')
 .addField('🌟 Altın Miktarı:', `${altın ? altın: "Yok"}`)
-.addField(':credit_card: Kredi Kartı Kredisi:', '**'+kredi+'**')
+.addField('💳 Kredi Kartı Kredisi:', '**'+kredi+'**')
 .addField('Şirket Bilgileri:', '------------------------------')
 .addField('**Hata :warning:**', message.member.user.username + ' Adlı kullanıcının bir banka hesabı bulunmuyor!')
 .setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
