@@ -9,11 +9,9 @@ const fs = require("fs");
 require("./util/eventLoader.js")(client);
 const data = require("quick.db");
 const queue = new Map();
-const ytdl = require("ytdl-core");
 const db = require("quick.db")
 
-
-
+4
 client.ayarlar = {
 "prefix":"!",
 "sahip":"671425773902626854",

@@ -2,5 +2,5 @@ echo off
 color 0f
 cls
 :a
-node index.js
+node bot.js
 goto a

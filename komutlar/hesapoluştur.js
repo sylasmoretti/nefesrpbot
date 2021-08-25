@@ -8,17 +8,7 @@ function getRandomInt(min, max) {
 }
 
 exports.run = async (client, message, args, perms) => {
- let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Asperius", client.user.avatarURL())
-   .setTimestamp()
- )			  
+			  
 
   const isim = args.slice(0).join(' ');
   const bakiye = await db.fetch(`bakiye_${message.author.id}`);

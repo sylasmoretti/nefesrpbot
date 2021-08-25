@@ -10,47 +10,36 @@ exports.run = async (client, message, args) => {
   let kllanç = message.mentions.users.first() || message.author;
   
   const bakiye = await db.fetch(`bakiye_${kllanç.id}`);
-  const silah = db.get(`silah_${kllanç.id}`)
-  const olta = db.get(`silah_${kllanç.id}`)
-  const telefon = db.get(`silah_${kllanç.id}`)
-  const balta = db.get(`balta_${kllanç.id}`)
-  const btc = db.get(`btc_${kllanç.id}`)
+  const hesapdurumu = await db.fetch(`hesapdurum_${kllanç.id}`);
+  const hesapismi = await db.fetch(`hesapismi_${kllanç.id}`);
+  const banka = await db.fetch(`bank_${kllanç.id}`)
+  const bankaismi2 = await db.fetch(`banka_${kllanç.id}`)
+   let deger = db.fetch(`bankabakiye_${message.author.id}`)
 
-const market = new Discord.MessageEmbed()
-.setAuthor("Market", client.user.avatarURL())
+const param = new Discord.MessageEmbed()
+.setAuthor("PARAN", client.user.avatarURL())
 .setDescription(`
-Genel
-🔫 Silah ile avlanarak para kazan. \n --> Fiyat: 12.500 💵
-🎣 Olta ile balık tutarak para kazan. \n --> Fiyat: 5.000 💵
-📱 Telefon ile fenomen olarak para kazan. \n --> Fiyat: 10.000 💵
+💵 Paranız: ${bakiye}
 
-Diğer
-₿ Bitcoin al ve bir yatırımcı ol!. \n --> Fiyat: 5.000 💵
+🏦 Banka İsmİ: ${bankaismi2 ? bankaismi2: "Hesap Oluşturunuz"}
+🏦 Bankadaki Para: ${deger ? deger: "0"}
 
-Maden
-⛏️ **Demir kazma satın al, elmas ve altın ile para kazan** \n **-->** Fiyat: 7.500 💵
-⛏️ **Elmas kaznma ssatın al, zümrüt ile para kazan** \n **-->** Fiyat: 12.500 💵
-⛏️ **Taş kazma satın al, demir ile para kazan** \n **-->** Fiyat: 5000 💵
-
-Orman
-🪓 **Elmas balta satın al, ladin, huş, meşe ve koyu meşe den para kazan** \n **-->** Fiyat: 11.500 💵
-🪓 **Demir balta satın al, ladin, huş ve meşe den para kazan** \n **-->** Fiyat: 9750 💵
-🪓 **Taş balta satın al, huş ve meşe den para kazan** \n **-->** Fiyat: 6750 💵
-`) 
-.setFooter("Market", client.user.avatarURL())
-.setTimestamp()
-message.channel.send(market)
+Eşyalarınızı görmek için: !çantam
+`)
+.setFooter("Guard Bot", client.user.avatarURL())
+ .setTimestamp()
+message.channel.send(param)
 }
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['shop'],
+    aliases: ['bakiyem'],
     permLevel: 0,
     katagori: "Ekonomi"
 }
 
 exports.help = {
-    name: 'market',
+    name: 'param',
     description: 'Günlük para alırsınız.',
     usage: 'param'
 }

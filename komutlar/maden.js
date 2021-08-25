@@ -2,17 +2,6 @@ const Discord = require('discord.js');//Fiber <3 LysteX
 const db = require('quick.db')
   const ms = require('ms');
 exports.run = async(client, message, args) => {
-   let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Asperius", client.user.avatarURL())
-   .setTimestamp()
- )
 var bakiye = db.fetch(`para_${message.author.id}`)
 var hesapd = db.fetch(`hesapdurum_${message.author.id}`)
 var demirkazma = db.get(`demirkazma_${message.author.id}`)

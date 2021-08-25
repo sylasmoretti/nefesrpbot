@@ -9,8 +9,10 @@ module.exports = client => {
 }, 8000);
   var msgArray = [
 "BLACK ROLEPLAY",
-"Developer:'Gurkan#3422",
-"LOG"
+"DEVELOPER:' Gurkan#3422",
+"SOYGUN LOG",
+"BLACK BOT",
+"VIP ÖZELLİKLER"
  ];
 
  setInterval(() => {

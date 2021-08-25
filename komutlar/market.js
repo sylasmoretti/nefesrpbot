@@ -2,27 +2,16 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var ayarlar = require('../ayarlar.json');
 const prefix = ayarlar.prefix
-const ms = require('ms')
+const ms = require('parse-ms')
 const db = require('quick.db')
 
 exports.run = async (client, message, args) => {
-   let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/jmYBYSvV8J)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("GVT", client.user.avatarURL())
-   .setTimestamp()
- )
     let member = message.author;
   let kllanç = message.mentions.users.first() || message.author;
   
   const bakiye = await db.fetch(`bakiye_${kllanç.id}`);
   const silah = db.get(`silah_${kllanç.id}`)
-  const olta = db.get(`olta_${kllanç.id}`)
+  const olta = db.get(`silah_${kllanç.id}`)
   const telefon = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
   const btc = db.get(`btc_${kllanç.id}`)
@@ -37,17 +26,11 @@ Genel
 
 Diğer
 ₿ Bitcoin al ve bir yatırımcı ol!. \n --> Fiyat: 5.000 💵
-🛡️ Kalkan satın al ve seni soymaya çalışanlardan korun!. \n --> Fiyat: 3.500 💵
 
 Maden
 ⛏️ **Demir kazma satın al, elmas ve altın ile para kazan** \n **-->** Fiyat: 7.500 💵
 ⛏️ **Elmas kaznma ssatın al, zümrüt ile para kazan** \n **-->** Fiyat: 12.500 💵
 ⛏️ **Taş kazma satın al, demir ile para kazan** \n **-->** Fiyat: 5000 💵
-
-Zindan
-⚔️ **Elmas kılıç satın al, zindanda para kazan** \n **-->** Fiyat: 13.450 💵
-⚔️ **Demir kılıç satın al, zindanda para kazan** \n **-->** Fiyat: 8945 💵
-⚔️ **Taş kılıç satın al, zindanda para kazan** \n **-->** Fiyat: 5375 💵
 
 Orman
 🪓 **Elmas balta satın al, ladin, huş, meşe ve koyu meşe den para kazan** \n **-->** Fiyat: 11.500 💵
