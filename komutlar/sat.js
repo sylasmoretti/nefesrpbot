@@ -2,21 +2,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var ayarlar = require('../ayarlar.json');
 const prefix = ayarlar.prefix
-const ms = require('ms')
+const ms = require('parse-ms')
 const db = require('quick.db')
 
 exports.run = async (client, message, args) => {
-   let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Asperius", client.user.avatarURL())
-   .setTimestamp()
- )
     let member = message.author;
   let kllanç = message.mentions.users.first() || message.author;
   
@@ -26,28 +15,29 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
   const telefon = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
   const btc = db.get(`btc_${kllanç.id}`)
+  const altın = db.get(`altın_${kllanç.id}`)
 
-  if(args[0] !== "silah" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin") return message.channel.send(
+  if(args[0] !== "altın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin") return message.channel.send(
 new Discord.MessageEmbed()
-.setAuthor("Asperius", client.user.avatarURL())
+.setAuthor("Black Roleplay", client.user.avatarURL())
 .setDescription(`
-Satmak istediğiniz eşyanın id sini giriniz. Örnek \n a?sat silah/balta/telefon/olta/bitcoin
+Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olta/bitcoin
 `)
-.setFooter("Asperius", message.author.avatarURL())
+.setFooter("Black Roleplay", message.author.avatarURL())
 .setTimestamp()
                                           )
   
-if(args[0] === "silah") {
-    let fiyatcık = 9000 // istediğiniz fiyat
+if(args[0] === "altın") {
+    let fiyatcık = 40000 // istediğiniz fiyat
     
-if(!silah) return message.reply(`Hiç silahınız bulunmamakta!`)
-  db.delete(`silah_${kllanç.id}`, "Kapalıdır")
+if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
+  db.delete(`altın_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık)
   
   return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık}`)
 }
   if(args[0] === "balta") {
-    let fiyatcık2 = 7000 // istediğiniz fiyat
+    let fiyatcık2 = 5000 // istediğiniz fiyat
     
       db.delete(`balta_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık2)
@@ -55,7 +45,7 @@ if(!silah) return message.reply(`Hiç silahınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık2}`)
 }
   if(args[0] === "telefon") {
-    let fiyatcık3 = 7000 // istediğiniz fiyat
+    let fiyatcık3 = 1000 // istediğiniz fiyat
     
       db.delete(`telefon_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık3)

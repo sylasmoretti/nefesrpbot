@@ -1,24 +1,14 @@
 const Discord = require('discord.js');
 const db = require('quick.db')
 exports.run = (client, message, args) => { 
-     let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Gravity", client.user.avatarURL())
-   .setTimestamp()
- )
+
 let para = db.fetch(`bakiye_${message.author.id}`)
 let kredi = db.fetch(`kredi_${message.author.id}`)  
 if(!args[0]) {
 var banka = new Discord.MessageEmbed()
 .setColor('RED')
 .setTitle('**Hata! :warning:**')
-.setDescription('**gvtkredi** komutu bölümlere ayrılır,Mesela para yatırmak istiyorsanız; \n **gvtkredi yatır <tutar>** şeklinde olmalı.Mesela para çekmek istiyorsunuz; \n **gvtkredi çek <tutar>** şeklinde olmalı.')
+.setDescription('Kredi komutu bölümlere ayrılır,Mesela para yatırmak istiyorsanız; \n **!kredi yatır <tutar>** şeklinde olmalı.Mesela para çekmek istiyorsunuz; \n **!kredi çek <tutar>** şeklinde olmalıdır.')
 .setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
 .setTimestamp()
 message.channel.send(banka)  
@@ -62,10 +52,10 @@ db.add(`bakiye_${message.author.id}`, + sonuc)
      var banka = new Discord.MessageEmbed()
 .setColor('GREEN')
 .setTitle('**Başarılı!**')
-.setDescription('Merhaba,**'+message.member.user.username + '**, \n Gerekli işlemleri başarıyla sisteme kaydettik.Detayları aşağıya bırakıyoruz! yine bekleriz :)')
+.setDescription('Merhaba,**'+message.member.user.username + '**, \n Gerekli işlemleri başarıyla sisteme kaydettik.Detayların kopyasını aşağıya bırakıyoruz! yine bekleriz :)')
 .setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
 .addField('**+** Çekilen Para Miktarı:', '**'+args[1]+'**')
-.addField('**-** Banka Yatırım Ücreti:', '**5**')
+.addField('**-** Banka Yatırım Ücreti:', '**100**')
 .addField('**-** Yatırım Ücretinden Sonra Çekilen Para:', sonuc)
 .addField('**=** Kredi Kartında Kalan Miktar:', '**'+ toplam + '**')
 .setTimestamp()

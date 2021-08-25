@@ -54,14 +54,6 @@ client.ekoayarlar = {
 }
 
 
-
-
-
-
-
-
-
-
 var prefix = ayarlar.prefix;
 
 const log = message => {

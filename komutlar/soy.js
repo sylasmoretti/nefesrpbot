@@ -2,37 +2,27 @@ const Discord = require('discord.js');
 const db = require('quick.db');
 
 exports.run = async(client, message, args) => {
-   let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Asperius", client.user.avatarURL())
-   .setTimestamp()
- )
     let soygunlog = db.get(`soygunlog_${message.guild.id}`)
     if(!soygunlog) {
         const embed = new Discord.MessageEmbed()
-        .setAuthor("Gravity", client.user.avatarURL())
+        .setAuthor("Guard Bot", client.user.avatarURL())
         .setDescription(`
-        Bir soygun log kanalı ayarlanmamış lütfen ayarlayınız \n -> a?soygun-log ayarla #kanal
+        Bir soygun log kanalı ayarlanmamış lütfen ayarlayınız \n -> !soygun-log ayarla #kanal
         `)
-        .setFooter("Gravity", client.user.avatarURL())
+        .setFooter("Guard Bot", client.user.avatarURL())
         message.channel.send(embed)
     } else {
-    let türler = ["kuyumcu","adam","banka","market"];
+    let türler = ["kuyumcu","adam","hacker","market","ev"];
     if (!türler.includes(args[0]))
       return message.channel.send(
         `Soyabiliceğiniz şeyler: \`${türler}\`
 \`\`\`Bilgi;\`\`\`
-**⭐ Ak47 ile Banka soyarsınız almak için (a?blackmarket ak47)
-⭐ Uzi ile Kuyumcu soyarsınız almak için (a?blackmarket uzi)
-⭐Pistol ile Market soyarsınız almak için (a?blackmarket pistol)
-⭐Bıçak ile adam bıçaklarsınız almak için (a?blackmarket bıçak)**
-*Örnek: a?soy adam @Kullanıcı*
+**⭐ Pompalı ile bitcoin soyarsınız almak için (!blackmarket bitcoin)
+⭐ Uzi ile Kuyumcu soyarsınız almak için (!blackmarket uzi)
+⭐hacker ile sistemi soyarsınız almak için (!blackmarket hacker)
+⭐Maymuncuk ile evi soyarsınız almak için (!blackmarket maymuncuk)
+⭐Bıçak ile adam bıçaklarsınız almak için (!blackmarket bıçak)**
+*Örnek: !soy adam @Kullanıcı*
 `
       );
   /*global client*/
@@ -40,7 +30,7 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
 
   let timeout = 300000;
 
-  let dbs = require("coders.db");
+  let dbs = require("quick.db");
 
   let weekly = await dbs.get(`soygun_${message.author.id}`);
 
@@ -58,7 +48,7 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
 
     let timeout = 300000;
 
-    let dbs = require("coders.db");
+    let dbs = require("quick.db");
 
     let weekly = await dbs.get(`kuyumcusoygun_${message.author.id}`);
 
@@ -86,13 +76,13 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
 
         let embed = new Discord.MessageEmbed()
           .setDescription(
-            `${message.author.tag}, Kuyumcuyu soydun ve ${para} TL kazandın **burdan uzaklaş polis yaklaşıyor**.`
+            `${message.author.tag}, Kuyumcuyu soydun ve ${para} $ kazandın **burdan uzaklaş polis yaklaşıyor**.`
           )
           .setColor("GREEN")
         .setImage("https://media.indiedb.com/images/groups/1/25/24269/giphy.gif")
           .setTimestamp();
         message.channel.send(embed);
-        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`Kuyumcu\`'yu soydu ${para}TL kazandı.`)
+        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`Kuyumcu\`'yu soydu ${para}$ kazandı.`)
       }
     }
   }
@@ -111,8 +101,8 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
      return message.reply(`Botları soycak kadar cani olamazsın.`);
     }
 
-    if (author < 50) {
-      return message.reply(":x: Birini Soymak için 50₺'ye ihtiyacın var.");
+    if (author < 6000) {
+      return message.reply(":x: Birini Soymak için 6000$'ye ihtiyacın var.");
     }
 
     if (!targetuser) {
@@ -125,14 +115,14 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
   if(!bıçak) return message.reply(`**${user.tag}** adlı kullanıcıyı soymak için \`Bıçak\` lazım.`)
     
     if(db.has(`${user.id}.kalkan`) === true) {
-      db.set(`bakiye_${message.author.id}`, author - 500)
-    db.set(`bakiye_${user.id}`, targetuser + 500);
+      db.set(`bakiye_${message.author.id}`, author - 1000)
+    db.set(`bakiye_${user.id}`, targetuser + 1000);
       client.channels.cache.get(soygunlog).send(`😂 **${message.author.tag}** Adlı kullanıcı **${user.tag}**'ı soycak iken kalkan'a takıldı! ve **${user.tag}** korundu...`)
-      return message.reply(`Maalesef! **${user.tag}** Adlı kullanıcı marketten \`1 Günlük Kalkan\` aldığı için onu soyamazsın! (500TL kaybettiniz)`)
+      return message.reply(`Maalesef! **${user.tag}** Adlı kullanıcı marketten \`1 Günlük Kalkan\` aldığı için onu soyamazsın! (1000 $ kaybettiniz)`)
     }
   if(db.has(`${user.id}.kalkan`) === false) {
   
-    let random = Math.floor(Math.random() * 150) + 1;
+    let random = Math.floor(Math.random() * 1000) + 1;
 
     db.set(`para_${message.author.id}`, author + random);
 
@@ -144,7 +134,7 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
     
     let embed = new Discord.MessageEmbed()
       .setDescription(
-        `${message.author.tag}, **${user.tag}** Soyuldu ve ${random}TL para kaçırdın`
+        `${message.author.tag}, **${user.tag}** Soyuldu ve ${random} $ para kaçırdın`
       )
       .setColor("GREEN")
     .setImage("https://i.makeagif.com/media/4-27-2015/aBLrDU.gif")
@@ -152,21 +142,21 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
     message.channel.send(embed);
 
     user.send(
-      `**${message.author.tag}** adlı kişi tarafından soyuldun ve ${random}TL paran gitti.`
+      `**${message.author.tag}** adlı kişi tarafından soyuldun ve ${random}$ paran gitti.`
     ).catch(_ => message.channel.send(`**${user.tag}** adlı kullanıcının DMsine mesaj gönderilemedi\ngönderilecek mesaj: \`{message.author.tag} adlı kişi tarafından soyuldun ve ${random}TL paran gitti.\``))
     
-     client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`${user.tag}\` Adlı kullanıcıyı soydu ve ${random}TL kazandı.`)
+     client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`${user.tag}\` Adlı kullanıcıyı soydu ve ${random}$ kazandı.`)
   }
   }
-    if (args[0] === "market") {
+    if (args[0] === "hacker") {
       
       let ms = require("parse-ms");
 
     let timeout = 300000;
 
-    let dbs = require("coders.db");
+    let dbs = require("quick.db");
 
-    let weekly = await dbs.get(`marketsoygun_${message.author.id}`);
+    let weekly = await dbs.get(`hackersoygun_${message.author.id}`);
 
     if (weekly !== null && timeout - (Date.now() - weekly) > 0) {
       let time = ms(timeout - (Date.now() - weekly));
@@ -175,76 +165,121 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
         `Polisler seni heryerde seni arıyor ortalık temizlenince tekrardan, marketi soyabilirsin. (**${time.minutes}dakika ${time.seconds}saniye** beklemelisin)`
       );
     } else {
-     var pistoladet = await db.fetch(`${message.author.id}.pistol_adet`);
-      if (!pistoladet) {
-        message.reply("**Yanında `Pistol` olmadığı için marketi soyamadın ve Polis seni kıskıvrak yakaladı ve 1000 TL para cezası kesti.**");
-         await db.set(`para_${message.author.id}`, para - 1000)
+     var hackerusbadet = await db.fetch(`${message.author.id}.hackerusb_adet`);
+      if (!hackerusbadet) {
+        message.reply("**Yanında `hackerusb` olmadığı için sistemi soyamadın ve Polis seni kıskıvrak yakaladı ve 10000 $ para cezası kesti.**");
+         await db.set(`bakiye_${message.author.id}`, para - 10000)
       }
-      if (pistoladet) {
+      if (hackerusbadet) {
 
-        let para = Math.floor(Math.random() * 550) + 1;
+        let para = Math.floor(Math.random() * 10000) + 1;
 
-        db.add(`para_${message.author.id}`, para);
+        db.add(`bakiye_${message.author.id}`, para);
 
-        db.set(`${message.author.id}.pistol_adet`, pistoladet - 1);
+        db.set(`${message.author.id}.hackerusb_adet`, hackerusbadet - 1);
 
-        db.set(`marketsoygun_${message.author.id}`, Date.now());
+        db.set(`hackersoygun_${message.author.id}`, Date.now());
 
         let embed = new Discord.MessageEmbed()
           .setDescription(
-            `${message.author.tag}, Marketi soydun ve ${para} TL kazandın **burdan uzaklaş polis yaklaşıyor**.`
+            `${message.author.tag}, hacker oldun ve sistemi soydun ve ${para}  $ kazandın **burdan uzaklaş polis yaklaşıyor**.`
           )
           .setColor("GREEN")
           .setTimestamp()
-        .setImage("https://static.wixstatic.com/media/f9f6e8_dfe88e43dc4044ceb8e2775ca3b17b49~mv2.gif/v1/fit/w_2500,h_1330,al_c/f9f6e8_dfe88e43dc4044ceb8e2775ca3b17b49~mv2.gif");
+        .setImage("https://cdn.glitch.com/476097bf-4551-4664-91d1-36efdac82503%2F1482260726_giphy.gif?v=1629553359446");
         message.channel.send(embed);
-        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`Market\`'i soydu ${para}TL kazandı.`)
+        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`sistem\`'i soydu ${para}TL kazandı.`)
       }
     }
       
     }
-    
-          if (args[0] === "banka") {
+    if (args[0] === "ev") {
       
       let ms = require("parse-ms");
 
     let timeout = 300000;
 
-    let dbs = require("coders.db");
+    let dbs = require("quick.db");
 
-    let weekly = await dbs.get(`bankasoygun_${message.author.id}`);
+    let weekly = await dbs.get(`evsoygun_${message.author.id}`);
 
     if (weekly !== null && timeout - (Date.now() - weekly) > 0) {
       let time = ms(timeout - (Date.now() - weekly));
 
       message.reply(
-        `Polisler seni heryerde seni arıyor ortalık temizlenince tekrardan, bankayı soyabilirsin. (**${time.minutes}dakika ${time.seconds}saniye** beklemelisin)`
+        `Polisler seni heryerde seni arıyor ortalık temizlenince tekrardan, evi soyabilirsin. (**${time.minutes}dakika ${time.seconds}saniye** beklemelisin)`
       );
     } else {
-     var ak47adet = await db.fetch(`${message.author.id}.ak47_adet`);
-      if (!ak47adet) {
-        message.reply("**Yanında `AK-47` olmadığı için marketi soyamadın ve Polis seni kıskıvrak yakaladı ve 1000 TL para cezası kesti.**");
-         await db.set(`para_${message.author.id}`, para - 1000)
+     var maymuncukadet = await db.fetch(`${message.author.id}.maymuncuk_adet`);
+      if (!maymuncukadet) {
+        message.reply("**Yanında `Maymuncuk` olmadığı için evi soyamadın ve Polis seni kıskıvrak yakaladı ve 30000 $ para cezası kesti.**");
+         await db.set(`para_${message.author.id}`, para - 30000)
       }
-      if (ak47adet) {
+      if (maymuncukadet) {
 
-        let para = Math.floor(Math.random() * 1500) + 1;
+        let para = Math.floor(Math.random() * 550) + 1;
 
         db.add(`para_${message.author.id}`, para);
 
-        db.set(`${message.author.id}.ak47_adet`, ak47adet - 1);
+        db.set(`${message.author.id}.maymuncuk_adet`, maymuncukadet - 1);
 
-        db.set(`bankasoygun_${message.author.id}`, Date.now());
+        db.set(`evsoygun_${message.author.id}`, Date.now());
 
         let embed = new Discord.MessageEmbed()
           .setDescription(
-            `${message.author.tag}, Bankayı soydun ve ${para} TL kazandın. Birde rehine :wink: kazandın. **Burdan uzaklaşmalısın polis yaklaşıyor**. `
+            `${message.author.tag}, Evi soydun ve ${para}  $ kazandın **burdan uzaklaş polis yaklaşıyor**.`
           )
           .setColor("GREEN")
           .setTimestamp()
-        .setImage("https://i.makeagif.com/media/5-09-2017/-_aKCL.gif");
+        .setImage("https://static.wixstatic.com/media/f9f6e8_dfe88e43dc4044ceb8e2775ca3b17b49~mv2.gif/v1/fit/w_2500,h_1330,al_c/f9f6e8_dfe88e43dc4044ceb8e2775ca3b17b49~mv2.gif");
         message.channel.send(embed);
-        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`Banka\`'yı soydu ${para}TL kazandı.`)
+        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`ev\`'i soydu ${para} $ kazandı.`)
+      }
+    }
+      
+    }
+    
+           if (args[0] === "bitcoin") {
+      
+      let ms = require("parse-ms");
+
+    let timeout = 300000;
+
+    let dbs = require("quick.db");
+
+    let weekly = await dbs.get(`bitcoinsoygun_${message.author.id}`);
+
+    if (weekly !== null && timeout - (Date.now() - weekly) > 0) {
+      let time = ms(timeout - (Date.now() - weekly));
+
+      message.reply(
+        `Polisler seni heryerde seni arıyor ortalık temizlenince tekrardan, bitcoin soyabilirsin. (**${time.minutes}dakika ${time.seconds}saniye** beklemelisin)`
+      );
+    } else {
+     var pompalıadet = await db.fetch(`${message.author.id}.pompalı_adet`);
+      if (!pompalıadet) {
+        message.reply("**Yanında `pompalı` olmadığı için marketi soyamadın ve Polis seni kıskıvrak yakaladı ve 10000 $ para cezası kesti.**");
+         await db.set(`para_${message.author.id}`, para - 10000)
+      }
+      if (pompalıadet) {
+
+        let para = Math.floor(Math.random() * 3000) + 1;
+
+        db.add(`para_${message.author.id}`, para);
+
+        db.set(`${message.author.id}.pompalı_adet`, pompalıadet - 1);
+
+        db.set(`bitcoinsoygun_${message.author.id}`, Date.now());
+
+        let embed = new Discord.MessageEmbed()
+          .setDescription(
+            `${message.author.tag}, Bitcoin soydun ve ${para}  $ kazandın **burdan uzaklaş polis yaklaşıyor**.`
+          )
+          .setColor("GREEN")
+          .setTimestamp()
+        .setImage("https://static.wixstatic.com/media/f9f6e8_dfe88e43dc4044ceb8e2775ca3b17b49~mv2.gif/v1/fit/w_2500,h_1330,al_c/f9f6e8_dfe88e43dc4044ceb8e2775ca3b17b49~mv2.gif");
+        message.channel.send(embed);
+        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`bitcoin\`'i soydu ${para} $ kazandı.`)
       }
     }
       
