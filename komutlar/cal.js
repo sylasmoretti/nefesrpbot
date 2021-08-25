@@ -2,17 +2,7 @@ const Discord = require('discord.js');//Fiber <3 LysteX
 const db = require('quick.db')
   const ms = require('ms');
 exports.run = async(client, message, args) => {
- let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Asperius", client.user.avatarURL())
-   .setTimestamp()
- )		  
+	  
 	    var sans = ["Sokaktaki teyzenin cüzdanını çalarak", "Evsiz bir adamın cüzdanını çalarak", "Sokakta rastgele birinin montunu çalıp sattın ve", "Eren'in kasasının içine girip", "Muratın cüzdanını çalarak", "Sokaktaki bir kızın telefonunu çalıp sattın ve", "Sokaktaki bir arabayı çalıp sattın ve"];
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
 var bakiye = db.fetch(`para_${message.author.id}`)

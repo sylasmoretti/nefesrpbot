@@ -2,21 +2,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var ayarlar = require('../ayarlar.json');
 const prefix = ayarlar.prefix
-const ms = require('ms')
+const ms = require('parse-ms')
 const db = require('quick.db')
 
 exports.run = async (client, message, args) => {
-   let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Gravity", client.user.avatarURL())
-   .setTimestamp()
- )
     let member = message.author;
   let kllanç = message.mentions.users.first() || message.author;
   let btcdeger = 4532
@@ -27,15 +16,15 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
   const btc = await db.fetch(`btc_${kllanç.id}`)
 
 const param = new Discord.MessageEmbed()
-.setAuthor("gravity", client.user.avatarURL())
+.setAuthor("PARAN", client.user.avatarURL())
 .setDescription(`
 Bitcoin Değeri: ${btcdeger}
 
 Bitcoinleriniz: ${btc ? btc : 'Yok.'}
 
-Eşyalarınızı görmek için: gvtçantam
+Eşyalarınızı görmek için: !çantam
 `)
-.setFooter("gravity", client.user.avatarURL())
+.setFooter("Black Roleplay Bot", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }

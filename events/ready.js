@@ -8,9 +8,9 @@ module.exports = client => {
  setInterval(function() {
 }, 8000);
   var msgArray = [
-"🔧 gvt yardım - gvt help",
-"💖 Gravity Ekonomi Botu",
-"gvt davet 🎉 "
+"BLACK ROLEPLAY",
+"Developer:'Gurkan#3422",
+"LOG"
  ];
 
  setInterval(() => {

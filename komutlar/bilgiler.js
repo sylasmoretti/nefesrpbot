@@ -5,26 +5,15 @@ var ayarlar = require('../ayarlar.json');
 
 
 exports.run = async (client, message, args) => {
-		   let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Asperius", client.user.avatarURL())
-   .setTimestamp()
- )
-
+		  
 	
   let kllanç = message.mentions.users.first() || message.author;
   const bakiye = await db.fetch(`bakiye_${kllanç.id}`);
   const hesapdurumu = await db.fetch(`hesapdurum_${kllanç.id}`);
   const hesapismi = await db.fetch(`hesapismi_${kllanç.id}`);
-  const hesaptarihyıl = await db.fetch(`hesaptarihiçdayreyıl-${kllanç.id}`);
-  const hesaptarihay = await db.fetch(`hesaptarihiçdayreay-${kllanç.id}`);
-  const hesaptarihgün = await db.fetch(`hesaptarihiçdayregün-${kllanç.id}`)
+  const hesaptarihyıl = await db.fetch(`hesaptarihyıl${kllanç.id}`);
+  const hesaptarihay = await db.fetch(`hesaptarihay${kllanç.id}`);
+  const hesaptarihgün = await db.fetch(`hesaptarihgün${kllanç.id}`)
   
   if(!hesapdurumu) {
     if(args[0]) return message.reply(`Bakmak istediğin kullanıcının bir hesabı bulunmamakta.`)
@@ -41,7 +30,7 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
           if(hesapismi) {
             const embedczdnv2 = new Discord.MessageEmbed()
             .setColor(client.ekoayarlar.renk)
-            .setDescription(`Hesap İsmi: ${hesapismi}\n Bakiye: ${bakiye}\n Hesap Oluşturma Tarihi: *${hesaptarihay}/ ${hesaptarihgün}/${hesaptarihyıl}* gününde hesabın oluşturuldu!`)
+            .setDescription(`Black Banka Hesap İsmi: ${hesapismi}\n Bakiye: ${bakiye}\n Hesap Oluşturma Tarihi: *${hesaptarihay}/ ${hesaptarihgün}/${hesaptarihyıl}* gününde hesabın oluşturuldu!`)
             message.channel.send(embedczdnv2)
           }
         }

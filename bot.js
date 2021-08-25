@@ -26,31 +26,31 @@ app.get("/", (request, response) => {
 
 app.listen(process.env.PORT);
 setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+  http.get(`https://guard-yeni-atlyap.glitch.me/`);
 }, 280000);
 //-----------------------------------------------\\
 
 
 client.ayarlar = {
-"prefix":"gvt ",
-"sahip":["698179015243989003"],
+"prefix":"!",
+"sahip":["671425773902626854"],
 }
 client.ekoayarlar = {
-  parabirimi: "GVT", //Para Birimi TL İsterseniz Dolar Euro Vb. Para Birimleri Girebilirsiniz.
-  botunuzunprefixi: "gvt",
-  botunuzunidsi: "822534260953972746", 
- botismi: "GVT",
-  renk: "BLACK", //İNGİLİZCE TERCİH ETTİĞİNİZ RENGİ YAZINIZ! EĞER BÖYLE BIRAKIRSANIZ RASTGELE ATAR!
-  isimsiz: "İsimsiz", //İSİMSİZ KİŞİLERİN HANGİ İSİM İLE GÖZÜKECEĞİNİ BELİRLEYEBİLİRSİNİZ!
-  rastgelepara: false, //EĞER BUNU TRUE YAPARSANIZ RASTGELE PARA VERME ÖZELLİĞİ AKTİF OLUR VE GÜNLÜK PARALARI RASTGELE VERİR!
-  minpara: 10, //EĞER RASTGELE PARA DURUMUNU AKTİF ETTİYSENİZ BURADAN RASTGELE PARA PARAMETRESİNİNİN MİNUMUM PARASINI BELİRTİNİZ!
-  maxpara: 200, //EĞER RASTGELE PARA DURUMUNU AKTİF ETTİYSENİZ BURADAN RASTGELE PARA PARAMETRESİNİNİN MAXİMUM PARASINI BELİRTİNİZ!
-  günlükpara: 300, //EĞER RASTGELE PARAYI TRUE YAPTIYSANIZ BURAYI ELLEMENİZE GEREK YOK!
-  dbloy: true, //EĞER BOTUNUZ DBL (DİSCORD BOT LİST) DE KAYITLIYSA GÜNLÜK ÖDÜL ALMAK İÇİN OY İSTER FALSE KAPALI, TRUE AKTİF DEMEK!
-  dblkey: "", //EĞER DBLOY U AKTİF ETMEDİYSENİZ BURAYA KEY EKLEMENİZE GEREK YOK EĞER AKTİF ETTİYSENİZ DBL SİTESİNDEN BULABİLİRSİNİZ!
-  dblmsj: "", //EĞER DBLOY U AKTİF ETMEDİYSENİZ BURAYA MESAJ YAZMANIZA GEREK YOK! EĞER AKTİF ETTİYSENİZ BOTA OY VERMEK İÇİN HANGİ MESAJI YAZACAĞINI AYARLAYABİLİRSİNİZ.
-  başlangıçparası: 100, //EĞER RASTGELE PARAYI TRUE YAPTIYSANIZ BURAYI ELLEMENİZE GEREK YOK!
-  admin: ["698179015243989003"]//["id","",""]
+  parabirimi: "USD",
+  botunuzunprefixi: "!",
+  botunuzunidsi: "876619784693899334", 
+ botismi: "BLACK ROLEPLAY",
+  renk: "BLACK", 
+  isimsiz: "İsimsiz", 
+  rastgelepara: false, 
+  minpara: 30, 
+  maxpara: 800,
+  günlükpara: 300,
+  dbloy: false, 
+  dblkey: "KEY",
+  dblmsj: "Bu komutu kullanabilmek için", 
+  başlangıçparası: 2000, 
+  admin: ["671425773902626854","748235512497569832","331876597147631619"]
 }
 
 
@@ -183,7 +183,7 @@ let rrrsembed = new Discord.MessageEmbed()
 .addField("Sunucunun Kurulu Olduğu Bölge:", guild.region)
 .addField("Sunucudaki Kişi Sayısı:", guild.memberCount)
 
-   client.channels.cache.get('801875365328453653').send(rrrsembed);
+   client.channels.cache.get('843826107705851945').send(rrrsembed);
 
 });
 
@@ -199,7 +199,7 @@ client.on('guildDelete', guild => {
   .addField("Sunucunun Kurulu Olduğu Bölge:", guild.region)
   .addField("Sunucudaki Kişi Sayısı:", guild.memberCount)
   
-     client.channels.cache.get('801875365328453653').send(rrrsembed);
+     client.channels.cache.get('843826107705851945').send(rrrsembed);
   
   });
 
@@ -224,20 +224,3 @@ client.on('guildDelete', guild => {
         data.delete(`${msg.author.id}.kalkan_süre2`)
     }
   });
-  
-//Asperius
-client.on("guildMemberAdd", async member => {
-    let dmhg = db.get(`dmhg_${member.guild.id}`)
-if(dmhg) {    
-    const asperius = new Discord.MessageEmbed()
-        .setColor(`RANDOM`)
-        .setAuthor("GVT")
-        .setDescription(dmhg)
-        .setFooter(`Sunucuya Hoşgeldin.`)
-    member.send(asperius);
-}
-});
-
-client.on('ready', () => {
-  client.channels.cache.get('862328499217498123').join();
-})

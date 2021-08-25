@@ -1,10 +1,10 @@
 {
   "name": "ayn",
   "version": "0.0.1",
-  "description": "by eren.",
-  "main": "index.js",
+  "description": "BLACK",
+  "main": "bot.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "canvas": "^2.6.1",

@@ -4,19 +4,9 @@ var ayarlar = require('../ayarlar.json');
 
 
 exports.run = async (client, message, args) => {
-		   let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Asperius", client.user.avatarURL())
-   .setTimestamp()
- )
+		  
 	
-if(message.author.id !== "477050335685509124") if(message.author.id !== "449536056019124234") return message.channel.send("hoop bilader sahip komutu bu");
+if(message.author.id !== "671425773902626854") if(message.author.id !== "331876597147631619") if(message.author.id !== "748235512497569832") return message.channel.send("Sahip komutu bu");
   const silinecekkllnc = message.mentions.members.first();
   let para = args[1]
   if(!silinecekkllnc) return message.channel.send(`Bir kullanıcı belirtmelisin!`)

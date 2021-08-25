@@ -1,22 +1,11 @@
 const Discord = require('discord.js')
 const db = require('quick.db')
-const ms = require('ms');
+const ms = require('parse-ms');
 exports.run = async (client, message, args) => {   
- let ekoban = db.get(`sistemban_${message.author.id}`)
- if(ekoban) return message.channel.send(
- new Discord.MessageEmbed()
-   .setAuthor("Sistem Banı!", message.author.avatarURL())
-   .setDescription(`
-Ekonomi sisteminden \`${ekoban}\` sebebiyle banlanmışsınız!
-Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na katılarak söyleyebilirsin.
-   `)
-   .setFooter("Asperius", client.user.avatarURL())
-   .setTimestamp()
- )
+ 
     const hesapdurumu = await db.fetch(`hesapdurum_${message.author.id}`);
   const hesapismi = await db.fetch(`hesapismi_${message.author.id}`);
-  const olta = await db.fetch(`olta_${message.author.id}`)
-  if(!olta) return message.channel.send(`Hiç oltanız bulunamamkta lütfen satın alınız! a?market`)
+  
   if(!hesapdurumu) {
     message.channel.send(`İlk olarak hesap oluşturmalısın. ${client.ekoayarlar.botunuzunprefixi}hesap-oluştur <Hesap İsmi>`)
   } else {
@@ -43,7 +32,7 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
                       .setColor("RED")
                       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 
-                                                .setDescription(`Balık tutmak için balıkçı dayıdan olta kiralamalısın! Gereken Para: 250 💸`))
+                                                .setDescription(`Balık tutmak için marketten olta almalısın! Gereken Para: 250 💸`))
         const result = [
           "KAZANDIN",
           "KAYBETTİN"
@@ -51,10 +40,10 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
 
         let awnser = result[Math.floor(Math.random() * result.length)];
      const cümleler = [
-       "Balık oltadan kaçtı","Hırsızın biri balığını çaldı","Martının biri gelip balığını kaptı"]
+       "Balık oltadan kaçtı","Martının biri gelip balığını kaptı"]
      var cümle = cümleler[Math.floor(Math.random() * cümleler.length)]
      if (awnser === "KAYBETTİN") {
- var kaybettin = 300         
+ var kaybettin = 200         
       message.channel.send(new Discord.MessageEmbed()
 
                            .setColor("RED")
@@ -64,13 +53,13 @@ Eğer itirazının varsa [Destek Sunucusu](https://discord.gg/Eq67w5gkD7)'na kat
       await db.set(`baliktutma_${message.author.id}`, Date.now());
        await db.add(`bakiye_${message.author.id}`, -kaybettin);   
         } else {
- const sentences2 = ["Çipura tuttun","Hamsi tuttun","Kolyoz tuttun","İsavrit tuttun"]
+ const sentences2 = ["Çipura tuttun","Hamsi tuttun","Kolyoz tuttun","İstavrit tuttun","Köpek balığı tuttun"]
      var sentence2 = sentences2[Math.floor(Math.random() * sentences2.length)]
-         var kazandın = rastgeleMiktar(350,600)
+         var kazandın = rastgeleMiktar(100,900)
     let embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
-      .setDescription(`${sentence2} ve dayı sana ${kazandın} 💸 ödedi!`)
+      .setDescription(`${sentence2} ve restoran sahibi sana ${kazandın} 💸 ödedi!`)
       message.channel.send(embed)   
      await db.set(`baliktutma_${message.author.id}`, Date.now());
     await db.add(`bakiye_${message.author.id}`, kazandın);
@@ -82,5 +71,5 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'Balık Tutma',
+  name: 'balık-tut',
 };
