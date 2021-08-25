@@ -12,23 +12,6 @@ const queue = new Map();
 const ytdl = require("ytdl-core");
 const db = require("quick.db")
 
-//-----------------------------------------------\\
-const http = require("http");
-const express = require("express");
-const app = express();
-app.get("/", (request, response) => {
-  console.log("GVT pinglendi.");
-  response.sendStatus(200);
-});
-//app.listen(8000);
-
-//----------------Projeyi Aktif Tutma----------------\\
-
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`https://guard-yeni-atlyap.glitch.me/`);
-}, 280000);
-//-----------------------------------------------\\
 
 
 client.ayarlar = {

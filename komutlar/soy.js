@@ -186,9 +186,9 @@ exports.run = async(client, message, args) => {
           )
           .setColor("GREEN")
           .setTimestamp()
-        .setImage("https://cdn.glitch.com/476097bf-4551-4664-91d1-36efdac82503%2F1482260726_giphy.gif?v=1629553359446");
+        .setImage("https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2F1482260726_giphy.gif?v=1629900404249");
         message.channel.send(embed);
-        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`sistem\`'i soydu ${para}TL kazandı.`)
+        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`sistem\`'i soydu ${para}USD kazandı.`)
       }
     }
       
