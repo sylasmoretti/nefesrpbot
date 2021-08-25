@@ -16,7 +16,7 @@ const db = require("quick.db")
 
 client.ayarlar = {
 "prefix":"!",
-"sahip":["671425773902626854"],
+"sahip":"671425773902626854",
 }
 client.ekoayarlar = {
   parabirimi: "USD",
