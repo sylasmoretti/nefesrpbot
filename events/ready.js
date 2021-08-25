@@ -19,5 +19,5 @@ module.exports = client => {
   var rastgeleOyun = Math.floor(Math.random() * msgArray.length);
   client.user.setActivity(`${msgArray[rastgeleOyun]}`)
 }, 5000);
-    console.log(`GVT başarıyla giriş yaptı.`);
+    console.log(`BLACK ROLEPLAY Botu başarıyla giriş yaptı.`);
 }
