@@ -12,7 +12,7 @@ exports.run = async(client, message, args) => {
         .setFooter("Guard Bot", client.user.avatarURL())
         message.channel.send(embed)
     } else {
-    let türler = ["kuyumcu","adam","hacker","market","ev"];
+    let türler = ["kuyumcu","adam","hacker","market","ev","bankaaraç"];
     if (!türler.includes(args[0]))
       return message.channel.send(
         `Soyabiliceğiniz şeyler: \`${türler}\`
@@ -21,7 +21,7 @@ exports.run = async(client, message, args) => {
 ⭐ Uzi ile Kuyumcu soyarsınız almak için (!blackmarket uzi)
 ⭐hacker ile sistemi soyarsınız almak için (!blackmarket hacker)
 ⭐Maymuncuk ile evi soyarsınız almak için (!blackmarket maymuncuk)
-⭐Elektronik kart ile banka aracını soyarsınız kartı almak için (!blackmarket illegalkart) soymak için de !soy bankaaraç
+⭐illegalkart ile banka aracını soyarsınız kartı almak için (!blackmarket illegalkart)
 ⭐Bıçak ile adam bıçaklarsınız almak için (!blackmarket bıçak)**
 *Örnek: !soy adam @Kullanıcı*
 `
@@ -94,7 +94,7 @@ exports.run = async(client, message, args) => {
     let targetuser = await db.fetch(`bakiye_${user.id}`);
     let author = await db.fetch(`bakiye_${message.author.id}`);
 
-    let random1 = Math.floor(Math.random() * 150) + 1;
+    let random1 = Math.floor(Math.random() * 4000) + 1;
 
     if (user.id === message.author.id)
       return message.reply(`Soymak istediğiniz kişi siz olamazsınız.`);
@@ -202,7 +202,7 @@ exports.run = async(client, message, args) => {
 
     let dbs = require("quick.db");
 
-    let weekly = await dbs.get(`bankaaraçsoygun_${message.author.id}`);
+    let weekly = await dbs.get(`araçsoygun_${message.author.id}`);
 
     if (weekly !== null && timeout - (Date.now() - weekly) > 0) {
       let time = ms(timeout - (Date.now() - weekly));
@@ -213,18 +213,18 @@ exports.run = async(client, message, args) => {
     } else {
      var illegalkartadet = await db.fetch(`${message.author.id}.illegalkart_adet`);
       if (!illegalkartadet) {
-        message.reply("**Yanında `illegalkart` olmadığı için sistemi soyamadın ve Polis seni kıskıvrak yakaladı ve 14000 $ para cezası kesti.**");
-         await db.set(`bakiye_${message.author.id}`, para - 14000)
+        message.reply("**Yanında `illegalkart` olmadığı için banka aracını soyamadın ve Polis seni kıskıvrak yakaladı ve 8000 $ para cezası kesti.**");
+         await db.set(`bakiye_${message.author.id}`, para - 8000)
       }
       if (illegalkartadet) {
 
-        let para = Math.floor(Math.random() * 20000) + 1;
+        let para = Math.floor(Math.random() * 16000) + 1;
 
         db.add(`bakiye_${message.author.id}`, para);
 
         db.set(`${message.author.id}.illegalkart_adet`, illegalkartadet - 1);
 
-        db.set(`bankaaraçsoygun_${message.author.id}`, Date.now());
+        db.set(`araçsoygun_${message.author.id}`, Date.now());
 
         let embed = new Discord.MessageEmbed()
           .setDescription(
@@ -232,7 +232,7 @@ exports.run = async(client, message, args) => {
           )
           .setColor("GREEN")
           .setTimestamp()
-        .setImage("https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2F1482260726_giphy.gif?v=1629900404249");
+        .setImage("https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2Fgta%20v%20soygun.jpg?v=1629988661500");
         message.channel.send(embed);
         client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`banka aracını\`'i soydu ${para}USD kazandı.`)
       }

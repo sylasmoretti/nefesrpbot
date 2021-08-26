@@ -33,7 +33,7 @@ if(!soygunlog) {
   
       let para = (await db.fetch(`bakiye_${message.author.id}`)) || 0;
 
-      let eşyalar = ["deagle", "ak47", "uzi", "bıçak","pompalı","maymuncuk","hackerusb"];
+      let eşyalar = ["deagle", "ak47", "uzi", "bıçak","pompalı","maymuncuk","hackerusb","illegalkart"];
       if (!eşyalar.includes(args[0]))
         return message.channel.send(
           `Black Markette Olan Eşyalar: \`${eşyalar}\``
@@ -98,6 +98,27 @@ if(!soygunlog) {
         await db.set(`bakiye_${message.author.id}`, para - 125000);
           dbs.set(`blackmarket_${message.author.id}`, Date.now());
             client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`deagle\` satın aldı. Geriye **${para - 125000}**$ kaldı.`)
+        }
+      }
+     
+      if (args[0] === "illegalkart") {
+        if (para < 3000) {
+          message.reply(
+            "`illegalkart` almak için 3.000 $ ye ihtiyacın var. Senin paran: **" +
+              para +
+              "**"
+          );
+        }
+
+        if (para > 3000) {
+          message.reply(
+            `Black Marketten **1** adet \`illegalkart\` aldın. Şuanki paran: ${para -
+              3000} `
+          );
+          await db.add(`${message.author.id}.illegalkart_adet`, 1);
+          await db.set(`bakiye_${message.author.id}`, para -3000);
+          dbs.set(`blackmarket_${message.author.id}`, Date.now());
+          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`illegalkart\` satın aldı. Geriye **${para - 3000}**$ kaldı.`)
         }
       }
         if (args[0] === "hackerusb") {
