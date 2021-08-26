@@ -72,7 +72,7 @@ exports.conf = {
 }
 
 exports.help = {
-    name: 'kasa-aç',
+    name: 'xkasa-aç',
     description: 'Asreaper',
-    usage: 'kasa-aç'
+    usage: 'xkasa-aç'
 }

@@ -33,7 +33,7 @@ exports.conf = {
 }
 
 exports.help = {
-    name: 'kasa-bilgi',
+    name: 'xkasa-bilgi',
     description: 'Kasa hakkında bilgi',
-    usage: 'kasa-bilgi'
+    usage: 'xkasa-bilgi'
 }

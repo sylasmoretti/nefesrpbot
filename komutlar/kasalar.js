@@ -22,7 +22,7 @@ exports.conf = {
 }
 
 exports.help = {
-    name: 'kasalar',
+    name: 'xkasalar',
     description: 'Kasalar',
-    usage: 'kasalar'
+    usage: 'xkasalar'
 }

@@ -29,7 +29,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'ykasa',
+  name: 'xykasa',
   description: 'Bot ile ilgili bilgi verir.',
-  usage: 'bilgi'
+  usage: 'xbilgi'
 };
