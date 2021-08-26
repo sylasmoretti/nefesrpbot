@@ -45,7 +45,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık2}`)
 }
   if(args[0] === "telefon") {
-    let fiyatcık3 = 1000 // istediğiniz fiyat
+    let fiyatcık3 = 800 // istediğiniz fiyat
     
       db.delete(`telefon_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık3)
@@ -53,7 +53,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık3}`)
 }
   if(args[0] === "olta") {
-    let fiyatcık4 = 3000 // istediğiniz fiyat
+    let fiyatcık4 = 400 // istediğiniz fiyat
     
       db.delete(`olta_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -61,7 +61,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "bitcoin") {
-    let fiyatcık5 = 4352 // istediğiniz fiyat
+    let fiyatcık5 = 5000 // istediğiniz fiyat
     
       db.delete(`btc_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık5)
