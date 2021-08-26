@@ -11,7 +11,7 @@ module.exports = client => {
 "BLACK ROLEPLAY",
 "DEVELOPER:' Gürkan#3422",
 "SOYGUN LOG",
-"BLACK BOT",
+"BLACK SUNUCU BOT",
 "VIP ÖZELLİKLER"
  ];
 
