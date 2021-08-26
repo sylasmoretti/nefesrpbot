@@ -10,7 +10,7 @@ module.exports = client => {
   var msgArray = [
 "BLACK ROLEPLAY",
 "DEVELOPER:' Gürkan#3422",
-"SOYGUN LOG",
+"LOG SİSTEMİ",
 "BLACK SUNUCU BOT",
 "VIP ÖZELLİKLER"
  ];
