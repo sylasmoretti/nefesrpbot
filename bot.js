@@ -11,7 +11,7 @@ const data = require("quick.db");
 const queue = new Map();
 const db = require("quick.db")
 
-4
+
 client.ayarlar = {
 "prefix":"!",
 "sahip":"671425773902626854",
