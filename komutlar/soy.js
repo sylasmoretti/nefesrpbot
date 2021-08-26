@@ -21,6 +21,7 @@ exports.run = async(client, message, args) => {
 ⭐ Uzi ile Kuyumcu soyarsınız almak için (!blackmarket uzi)
 ⭐hacker ile sistemi soyarsınız almak için (!blackmarket hacker)
 ⭐Maymuncuk ile evi soyarsınız almak için (!blackmarket maymuncuk)
+⭐Elektronik kart ile banka aracını soyarsınız kartı almak için (!blackmarket illegalkart) soymak için de !soy bankaaraç
 ⭐Bıçak ile adam bıçaklarsınız almak için (!blackmarket bıçak)**
 *Örnek: !soy adam @Kullanıcı*
 `
@@ -189,6 +190,51 @@ exports.run = async(client, message, args) => {
         .setImage("https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2F1482260726_giphy.gif?v=1629900404249");
         message.channel.send(embed);
         client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`sistem\`'i soydu ${para}USD kazandı.`)
+      }
+    }
+      
+    }
+     if (args[0] === "bankaaraç") {
+      
+      let ms = require("parse-ms");
+
+    let timeout = 300000;
+
+    let dbs = require("quick.db");
+
+    let weekly = await dbs.get(`bankaaraçsoygun_${message.author.id}`);
+
+    if (weekly !== null && timeout - (Date.now() - weekly) > 0) {
+      let time = ms(timeout - (Date.now() - weekly));
+
+      message.reply(
+        `Polisler seni heryerde seni arıyor ortalık temizlenince tekrardan, banka aracını soyabilirsin. (**${time.minutes}dakika ${time.seconds}saniye** beklemelisin)`
+      );
+    } else {
+     var illegalkartadet = await db.fetch(`${message.author.id}.illegalkart_adet`);
+      if (!illegalkartadet) {
+        message.reply("**Yanında `illegalkart` olmadığı için sistemi soyamadın ve Polis seni kıskıvrak yakaladı ve 14000 $ para cezası kesti.**");
+         await db.set(`bakiye_${message.author.id}`, para - 14000)
+      }
+      if (illegalkartadet) {
+
+        let para = Math.floor(Math.random() * 20000) + 1;
+
+        db.add(`bakiye_${message.author.id}`, para);
+
+        db.set(`${message.author.id}.illegalkart_adet`, illegalkartadet - 1);
+
+        db.set(`bankaaraçsoygun_${message.author.id}`, Date.now());
+
+        let embed = new Discord.MessageEmbed()
+          .setDescription(
+            `${message.author.tag}, soyguncu oldun ve banka aracını soydun ve ${para}  $ kazandın **burdan uzaklaş polis yaklaşıyor**.`
+          )
+          .setColor("GREEN")
+          .setTimestamp()
+        .setImage("https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2F1482260726_giphy.gif?v=1629900404249");
+        message.channel.send(embed);
+        client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı \`banka aracını\`'i soydu ${para}USD kazandı.`)
       }
     }
       
