@@ -26,7 +26,7 @@ message.channel.send(`
 Ormandayken ladin odunu kırıyodun ve ${odun3} adet ladin odunu kazandın
 `)
 }
-if(args[0] === "koyu-meşe") {
+if(args[0] === "koyumeşe") {
   if(!demirbalta) return message.reply(`Hiç demir kazmanız bulunmamaktadır! !market`)
       let odun2 = Math.round(Math.random() * 5)
         db.add(`koyumeseodunu_${message.author.id}`, +odun2)
