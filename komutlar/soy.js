@@ -218,7 +218,7 @@ exports.run = async(client, message, args) => {
       }
       if (illegalkartadet) {
 
-        let para = Math.floor(Math.random() * 16000) + 1;
+        let para = Math.floor(Math.random() * 12000) + 1;
 
         db.add(`bakiye_${message.author.id}`, para);
 
