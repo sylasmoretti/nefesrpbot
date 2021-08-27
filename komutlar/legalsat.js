@@ -9,13 +9,13 @@ exports.run = async (client, message, args) => {
     let member = message.author;
   let kllanç = message.mentions.users.first() || message.author;
   
-  const bakiye = await db.fetch(`bakiye_${kllanç.id}`);
-  const mltın = db.get(`maltın_${kllanç.id}`)
-  const silah = db.get(`silah_${kllanç.id}`)
-  const olta = db.get(`silah_${kllanç.id}`)
-  const telefon = db.get(`silah_${kllanç.id}`)
-  const balta = db.get(`balta_${kllanç.id}`)
-  const btc = db.get(`btc_${kllanç.id}`)
+  const para = await db.fetch(`bakiye_${kllanç.id}`);
+  const altın = db.get(`altın_${kllanç.id}`)
+  const elmas = db.get(`elmas_${kllanç.id}`)
+  const demir = db.get(`demir_${kllanç.id}`)
+  const taş = db.get(`taş_${kllanç.id}`)
+  const zümrüt = db.get(`zümrüt_${kllanç.id}`)
+  const ladin = db.get(`ladin_${kllanç.id}`)
 
 
   if(args[0] !== "altın" && args[0] !== "elmas" && args[0] !== "demir" && args[0] !== "taş" !== "zümrüt" && args[0] !== "ladin" && args[0] !== "koyumeşe" && args[0] !== "meşe" && args[0] !== "huş" && args[0])
@@ -100,7 +100,6 @@ Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !lsat maltın/melmas/md
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-
 }
 }
 exports.conf = {
@@ -108,11 +107,11 @@ exports.conf = {
     guildOnly: false,
     aliases: [],
     permLevel: 0,
-    katagori: "Ekonomi"
+    katagori: "Legal satma"
 }
 
 exports.help = {
-    name: 'satlegal',
+    name: 'lsat',
     description: 'Günlük para alırsınız.',
     usage: 'param'
 }
