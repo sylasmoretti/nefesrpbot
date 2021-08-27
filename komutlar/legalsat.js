@@ -10,9 +10,13 @@ exports.run = async (client, message, args) => {
   let kllanç = message.mentions.users.first() || message.author;
   
   const bakiye = await db.fetch(`bakiye_${kllanç.id}`);
-  const altın = db.get(`altın_${kllanç.id}`)
+  const altın = db.get(`maltın_${kllanç.id}`)
+  const elmas = db.get(`melmas_${kllanç.id}`)
+  const demir = db.get(`maltın_${kllanç.id}`)
+  const taş = db.get(`maltın_${kllanç.id}`)
+  const altın = db.get(`maltın_${kllanç.id}`)
 
-  if(args[0] !== "altın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin") return message.channel.send(
+  if(args[0] !== "maltın" && args[0] !== "melmas" && args[0] !== "mdemir" && args[0] !== "mtaş" !== "mzümrüt" && args[0] !== "ladin" && args[0] !== "koyu-meşe" && args[0] !== "meşe" && args[0] !== "huş" && args[0]) return message.channel.send(
 new Discord.MessageEmbed()
 .setAuthor("Black Roleplay", client.user.avatarURL())
 .setDescription(`
