@@ -2324,7 +2324,7 @@ specifiers:
   coders.db: ^7.5.3
   common-tags: ^1.8.0
   dblapi.js: ^2.4.1
-  discord.js: ^12.1.0
+  discord.js: ^12.1.2
   discord.js-commando: ^0.12.3
   express: ^4.17.1
   jimp: ^0.16.1

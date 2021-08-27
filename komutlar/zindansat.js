@@ -21,11 +21,11 @@ exports.run = async (client, message, args) => {
     if(args[0] !== "zombi-et" && args[0] !== "örümcek-göz" && args[0] !== "ok" && args[0] !== "yay" && args[0] !== "ip" && args[0] !== "barut" && args[0] !== "enderman-gözü") return message.channel.send(
     new Discord.MessageEmbed()
 .setColor("BLUE")
-.setAuthor("Asperius", client.user.avatarURL())
+.setAuthor("Black", client.user.avatarURL())
 .setDescription(`
-Satmak istediğiniz eşyanın id sini giriniz. Örnek \n a?zindan-sat zombi-et/örümcek-göz/ok/yay/ip/barut/enderman-gözü
+Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !zindan-sat zombi-et/örümcek-göz/ok/yay/ip/barut/enderman-gözü
 `)
-.setFooter("Asperius", client.user.avatarURL())
+.setFooter("Black", client.user.avatarURL())
 .setTimestamp()
 )
   
