@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
 new Discord.MessageEmbed()
 .setAuthor("Black Roleplay", client.user.avatarURL())
 .setDescription(`
-Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olta/bitcoin/maltın/melmas/mdemir/mtaş/mzümrüt/ladin/koyu-meşe/meşe/huş
+Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olta/bitcoin
 `)
 .setFooter("Black Roleplay", message.author.avatarURL())
 .setTimestamp()
@@ -56,78 +56,6 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     let fiyatcık4 = 400 // istediğiniz fiyat
     
       db.delete(`olta_${kllanç.id}`, "Kapalıdır")
-  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
-    
-    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-}
-   if(args[0] === "maltın") {
-    let fiyatcık4 = 500 // istediğiniz fiyat
-    
-      db.delete(`maltın_${kllanç.id}`, "Kapalıdır")
-  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
-    
-    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-}
-  if(args[0] === "melmas") {
-    let fiyatcık4 = 600 // istediğiniz fiyat
-    
-      db.delete(`melmas_${kllanç.id}`, "Kapalıdır")
-  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
-    
-    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-}
-  if(args[0] === "mzümrüt") {
-    let fiyatcık4 = 630 // istediğiniz fiyat
-    
-      db.delete(`mzümrüt_${kllanç.id}`, "Kapalıdır")
-  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
-    
-    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-}
-  if(args[0] === "mtaş") {
-    let fiyatcık4 = 620 // istediğiniz fiyat
-    
-      db.delete(`mtaş_${kllanç.id}`, "Kapalıdır")
-  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
-    
-    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-}
-  if(args[0] === "mdemir") {
-    let fiyatcık4 = 550 // istediğiniz fiyat
-    
-      db.delete(`mdemir_${kllanç.id}`, "Kapalıdır")
-  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
-    
-    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-}
-   if(args[0] === "ladin") {
-    let fiyatcık4 = 250 // istediğiniz fiyat
-    
-      db.delete(`ladin_${kllanç.id}`, "Kapalıdır")
-  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
-    
-    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-}
-    if(args[0] === "koyu-meşe") {
-    let fiyatcık4 = 300 // istediğiniz fiyat
-    
-      db.delete(`koyu-meşe_${kllanç.id}`, "Kapalıdır")
-  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
-    
-    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-}
-    if(args[0] === "meşe") {
-    let fiyatcık4 = 310 // istediğiniz fiyat
-    
-      db.delete(`meşe_${kllanç.id}`, "Kapalıdır")
-  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
-    
-    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
-}
-     if(args[0] === "huş") {
-    let fiyatcık4 = 400 // istediğiniz fiyat
-    
-      db.delete(`huş_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
