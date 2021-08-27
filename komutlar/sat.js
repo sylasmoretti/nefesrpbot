@@ -15,9 +15,9 @@ exports.run = async (client, message, args) => {
   const telefon = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
   const btc = db.get(`btc_${kllanç.id}`)
-  const altın = db.get(`altın_${kllanç.id}`)
+  const altın = db.get(`daltın_${kllanç.id}`)
 
-  if(args[0] !== "altın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin") return message.channel.send(
+  if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin") return message.channel.send(
 new Discord.MessageEmbed()
 .setAuthor("Black Roleplay", client.user.avatarURL())
 .setDescription(`
@@ -27,11 +27,11 @@ Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olt
 .setTimestamp()
                                           )
   
-if(args[0] === "altın") {
+if(args[0] === "daltın") {
     let fiyatcık = 1000 // istediğiniz fiyat
     
 if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
-  db.delete(`altın_${kllanç.id}`, "Kapalıdır")
+  db.delete(`daltın_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık)
   
   return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık}`)

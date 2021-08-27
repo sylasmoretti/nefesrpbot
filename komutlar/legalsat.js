@@ -10,24 +10,17 @@ exports.run = async (client, message, args) => {
   let kllanç = message.mentions.users.first() || message.author;
   
   const bakiye = await db.fetch(`bakiye_${kllanç.id}`);
-  const maltın = db.get(`maltın_${kllanç.id}`)
+  const mltın = db.get(`maltın_${kllanç.id}`)
   const silah = db.get(`silah_${kllanç.id}`)
   const olta = db.get(`silah_${kllanç.id}`)
   const telefon = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
   const btc = db.get(`btc_${kllanç.id}`)
-  const altın = db.get(`altın_${kllanç.id}`)
-  const melmas = db.get(`melmas_${kllanç.id}`)
-  const mdemir = db.get(`mdemir_${kllanç.id}`)
-  const mtaş = db.get(`mtaş_${kllanç.id}`)
-  const mzümrüt = db.get(`mzümrüt_${kllanç.id}`)
-  const ladin = db.get(`ladinodunu_${kllanç.id}`)
-  const koyumeşe = db.get(`koyumeseodunu_${kllanç.id}`)
-  const meşe = db.get(`meseodunu_${kllanç.id}`)
-  const huş = db.get(`husodunu_${kllanç.id}`)
 
-  if(args[0] !== "maltın" && args[0] !== "melmas" && args[0] !== "mdemir" && args[0] !== "mtaş" !== "mzümrüt" && args[0] !== "ladin" && args[0] !== "koyumeşe" && args[0] !== "meşe" && args[0] !== "huş" && args[0])
-return message.channel.send(new Discord.MessageEmbed()
+
+  if(args[0] !== "altın" && args[0] !== "elmas" && args[0] !== "demir" && args[0] !== "taş" !== "zümrüt" && args[0] !== "ladin" && args[0] !== "koyumeşe" && args[0] !== "meşe" && args[0] !== "huş" && args[0])
+ return message.channel.send( 
+ new Discord.MessageEmbed()
 .setAuthor("Black Roleplay", client.user.avatarURL())
 .setDescription(`
 Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !lsat maltın/melmas/mdemir/mtaş/mzümrüt/ladin/koyumeşe/meşe/huş
@@ -36,42 +29,42 @@ Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !lsat maltın/melmas/md
 .setTimestamp()
                                           )
   
-   if(args[0] === "maltın") {
+   if(args[0] === "altın") {
     let fiyatcık4 = 500 // istediğiniz fiyat
     
-      db.delete(`maltın_${kllanç.id}`, "Kapalıdır")
+      db.delete(`altın_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
-  if(args[0] === "melmas") {
+  if(args[0] === "elmas") {
     let fiyatcık4 = 600 // istediğiniz fiyat
     
-      db.delete(`melmas_${kllanç.id}`, "Kapalıdır")
+      db.delete(`elmas_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
-  if(args[0] === "mzümrüt") {
+  if(args[0] === "zümrüt") {
     let fiyatcık4 = 630 // istediğiniz fiyat
     
-      db.delete(`mzümrüt_${kllanç.id}`, "Kapalıdır")
+      db.delete(`zümrüt_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
-  if(args[0] === "mtaş") {
+  if(args[0] === "taş") {
     let fiyatcık4 = 620 // istediğiniz fiyat
     
-      db.delete(`mtaş_${kllanç.id}`, "Kapalıdır")
+      db.delete(`taş_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
-  if(args[0] === "mdemir") {
+  if(args[0] === "demir") {
     let fiyatcık4 = 550 // istediğiniz fiyat
     
-      db.delete(`mdemir_${kllanç.id}`, "Kapalıdır")
+      db.delete(`demir_${kllanç.id}`, "Kapalıdır")
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
@@ -119,7 +112,7 @@ exports.conf = {
 }
 
 exports.help = {
-    name: '!sat',
+    name: 'satlegal',
     description: 'Günlük para alırsınız.',
     usage: 'param'
 }

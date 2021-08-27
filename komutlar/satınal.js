@@ -138,11 +138,11 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     
     return message.reply(`Ürünü başarıyla aldınız`)
 }
-  if(args[0] === "altın") {
+  if(args[0] === "daltın") {
     let fiyatcık5 = 12000 // istediğiniz fiyat
     
     if (bakiye < fiyatcık5) return message.reply('Yeterli Paran Yok!')
-      db.set(`altın_${kllanç.id}`, "Var")
+      db.set(`daltın_${kllanç.id}`, "Var")
   db.add(`bakiye_${kllanç.id}`, -fiyatcık5)
     
     return message.reply(`Ürünü başarıyla aldınız`)
