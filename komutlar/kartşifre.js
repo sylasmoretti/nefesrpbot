@@ -16,7 +16,7 @@ if(şifre) {
 .setThumbnail('https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2Fwarning.png?v=1630085460014')
 .setDescription('Anlaşılan bir şifre zaten eklemişsiniz :) \n **!şifre-al** yazarak şifrenizi tekrar alabilirsiniz.')
 .setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
-.addField('Black')
+.addField('BLACK L.Ş.T.D.i')
 .setTimestamp()  
 message.channel.send(embed)
   return
@@ -30,7 +30,7 @@ message.channel.send(embed)
 .setThumbnail('https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2Fwarning.png?v=1630085460014')
 .setDescription('Lütfen sisteme kayıt olacak olan kart şifrenizi girin; \n **!şifre 1234** gibi.')
 .setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
-.addField('Black')
+.addField('BLACK L.Ş.T.D.i')
 .setTimestamp()  
  message.channel.send(embed)
       return  

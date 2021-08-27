@@ -28,7 +28,7 @@ Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olt
                                           )
   
 if(args[0] === "altın") {
-    let fiyatcık = 1 // istediğiniz fiyat
+    let fiyatcık = 1000 // istediğiniz fiyat
     
 if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
   db.delete(`altın_${kllanç.id}`, "Kapalıdır")
