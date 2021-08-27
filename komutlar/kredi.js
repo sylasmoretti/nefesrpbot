@@ -19,7 +19,7 @@ return
  var banka = new Discord.MessageEmbed()
 .setColor('RED')
 .setTitle('**Hata! :warning:**')
-.setDescription('Merhaba,**'+message.member.user.username + '**, \n Anlaşılan Kredi Kartından para çekmek istiyorsun.Çekmek istediğin miktarı belirtmen gerekiyor. \n **a?kredi çek <miktar>** \n şeklinde tekrar yaz lütfen.')
+.setDescription('Merhaba,**'+message.member.user.username + '**, \n Anlaşılan Kredi Kartından para çekmek istiyorsun.Çekmek istediğin miktarı belirtmen gerekiyor. \n **!kredi çek <miktar>** \n şeklinde tekrar yaz lütfen.')
 .setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
 .setTimestamp()
 message.channel.send(banka)   
