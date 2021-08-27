@@ -41,7 +41,7 @@ message.channel.send(`
 Madendeyken Altın kazıyodun ve ${maden3} adet altın kazandın
 `)
 }
-if(args[0] === "demir") {
+if(args[0] === "mdemir") {
       if(!taşkazma) return message.reply(`Hiç taş kazmanız bulunmamaktadır! a?market`)
         let maden2 = Math.round(Math.random() * 8)
         db.add(`mdemir_${message.author.id}`, +maden2)
