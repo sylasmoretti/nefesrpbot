@@ -95,7 +95,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'zindan', 
+  name: 'xzindan', 
   description: "Sunucuya bot eklemenizi sağlar.",
   usage: 'botekle <botid> <prefix>'
 };
