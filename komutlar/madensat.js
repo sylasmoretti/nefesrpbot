@@ -20,11 +20,11 @@ exports.run = async (client, message, args) => {
     if(args[0] !== "elmas" && args[0] !== "zümrüt" && args[0] !== "altın" && args[0] !== "demir" && args[0] !== "taş") return message.channel.send(
     new Discord.MessageEmbed()
 .setColor("BLUE")
-.setAuthor("Asperius", client.user.avatarURL())
+.setAuthor("Black rp", client.user.avatarURL())
 .setDescription(`
 Satmak istediğiniz eşyanın id sini giriniz. Örnek \n a?maden-sat elmas/zümrüt/altın/demir/taş
 `)
-.setFooter("Asperius", client.user.avatarURL())
+.setFooter("Black rp", client.user.avatarURL())
 .setTimestamp()
 )
   

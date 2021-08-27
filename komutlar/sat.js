@@ -28,7 +28,7 @@ Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olt
                                           )
   
 if(args[0] === "altın") {
-    let fiyatcık = 40000 // istediğiniz fiyat
+    let fiyatcık = 1 // istediğiniz fiyat
     
 if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
   db.delete(`altın_${kllanç.id}`, "Kapalıdır")
@@ -60,6 +60,14 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
+   if(args[0] === "olta") {
+    let fiyatcık4 = 400 // istediğiniz fiyat
+    
+      db.delete(`olta_${kllanç.id}`, "Kapalıdır")
+  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
+    
+    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
+}
   if(args[0] === "bitcoin") {
     let fiyatcık5 = 5000 // istediğiniz fiyat
     
@@ -67,6 +75,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık5)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık5}`)
+
 }
 }
 exports.conf = {
