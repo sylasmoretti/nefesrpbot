@@ -14,7 +14,7 @@ let sure = await db.fetch(`calissüre2_${message.member.id}`)
         let timeObj = ms(cd - (Date.now() - sure)) 
       message.channel.send(`Bir daha çalışmak için biraz beklemen gerekli **${timeObj.seconds} saniye** sonra tekrar dene!`).then(msg => msg.delete({ timeout: `${cd}`}))
     } else {
-        if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `a?hesap-oluştur <isim>`")
+        if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `!hesap-oluştur <isim>`")
         let gelcekpara = Math.round(Math.random() * 200)
         db.add(`bakiye_${message.author.id}`, gelcekpara)
    
