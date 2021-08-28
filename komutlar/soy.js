@@ -12,7 +12,7 @@ exports.run = async(client, message, args) => {
         .setFooter("Guard Bot", client.user.avatarURL())
         message.channel.send(embed)
     } else {
-    let türler = ["kuyumcu","adam","hacker","market","ev","bankaaraç"];
+    let türler = ["kuyumcu","adam","hacker","bitcoin","ev","bankaaraç"];
     if (!türler.includes(args[0]))
       return message.channel.send(
         `Soyabiliceğiniz şeyler: \`${türler}\`
@@ -173,7 +173,7 @@ exports.run = async(client, message, args) => {
       }
       if (hackerusbadet) {
 
-        let para = Math.floor(Math.random() * 10000) + 1;
+        let para = Math.floor(Math.random() * 25000) + 1;
 
         db.add(`bakiye_${message.author.id}`, para);
 
@@ -273,7 +273,7 @@ exports.run = async(client, message, args) => {
 
         let embed = new Discord.MessageEmbed()
           .setDescription(
-            `${message.author.tag}, Evi soydun ve ${para}  $ kazandın **burdan uzaklaş polis yaklaşıyor**.`
+            `${message.author.tag}, Evi soydun ve ${para} $ kazandın **burdan uzaklaş polis yaklaşıyor**.`
           )
           .setColor("GREEN")
           .setTimestamp()
@@ -309,7 +309,7 @@ exports.run = async(client, message, args) => {
       }
       if (pompalıadet) {
 
-        let para = Math.floor(Math.random() * 3000) + 1;
+        let para = Math.floor(Math.random() * 12000) + 1;
 
         db.add(`para_${message.author.id}`, para);
 

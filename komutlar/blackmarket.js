@@ -40,23 +40,23 @@ if(!soygunlog) {
         );
 
       if (args[0] === "bıçak") {
-        if (para < 50000) {
+        if (para < 25000) {
           message.reply(
-            "`Bıçak` almak için 50.000 $ ye ihtiyacın var. Senin paran: **" +
+            "`Bıçak` almak için 25.000 $ ye ihtiyacın var. Senin paran: **" +
               para +
               "**"
           );
         }
 
-        if (para > 50000) {
+        if (para > 25000) {
           message.reply(
             `Black Marketten **1** adet \`Bıçak\` aldın. Şuanki paran: ${para -
-              50000} `
+              25000} `
           );
           await db.add(`${message.author.id}.bıçak_adet`, 1);
-          await db.set(`bakiye_${message.author.id}`, para -50000);
+          await db.set(`bakiye_${message.author.id}`, para -25000);
           dbs.set(`blackmarket_${message.author.id}`, Date.now());
-          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`Bıçak\` satın aldı. Geriye **${para - 50000}**$ kaldı.`)
+          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`Bıçak\` satın aldı. Geriye **${para - 25000}**$ kaldı.`)
         }
       }
       
@@ -185,15 +185,15 @@ if(!soygunlog) {
       }
       
       if(args[0] === "pompalı"){
-        if(para < 750000){
-message.reply("`pompalı` almak için 750000 $ ihtiyacın var. Senin paran: **" +para + "**")
+        if(para < 500000){
+message.reply("`pompalı` almak için 500000 $ ihtiyacın var. Senin paran: **" +para + "**")
         }
-        if(para > 750000){
-          message.reply(`Black Marketten **1** adet \`pompalı\` aldın. Şuanki paran: ${para - 750000}`)
+        if(para > 500000){
+          message.reply(`Black Marketten **1** adet \`pompalı\` aldın. Şuanki paran: ${para - 500000}`)
           await db.add(`${message.author.id}.pompalı_adet`, 1)
-          await db.set(`bakiye_${message.author.id}`, para - 750000)
+          await db.set(`bakiye_${message.author.id}`, para - 500000)
          dbs.set(`blackmarket_${message.author.id}`, Date.now());
-          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`pompalı\` satın aldı. Geriye **${para - 750000}** $ kaldı.`)
+          client.channels.cache.get(soygunlog).send(`**${message.author.tag}**, Adlı kullanıcı black marketten \`pompalı\` satın aldı. Geriye **${para - 500000}** $ kaldı.`)
         }
       }
       
