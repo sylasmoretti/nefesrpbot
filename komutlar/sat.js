@@ -26,11 +26,11 @@ exports.run = async (client, message, args) => {
   const demir = db.get(`demir_${kllanç.id}`)
   const taş = db.get(`taş_${kllanç.id}`)
 
-  if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin" && args[0] !== "ladin" && args[0] !== "koyumese" && args[0] !== "meşe" && args[0] !== "huş" && args[0] !== "zümrüt" && args[0] !== "elmas" && args[0] !== "altın" && args[0] !== "demir" && args[0] !== "taş") return message.channel.send(
+  if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin" && args[0] !== "ladin" && args[0] !== "koyumeşe" && args[0] !== "meşe" && args[0] !== "huş" && args[0] !== "zümrüt" && args[0] !== "elmas" && args[0] !== "altın" && args[0] !== "demir" && args[0] !== "taş") return message.channel.send(
 new Discord.MessageEmbed()
 .setAuthor("Black Roleplay", client.user.avatarURL())
 .setDescription(`
-Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olta/bitcoin/ladin/koyumese/meşe/huş/zümrüt/elmas/altın/demir/taş
+Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olta/bitcoin/ladin/koyumeşe/meşe/huş/zümrüt/elmas/altın/demir/taş
 `)
 .setFooter("Black Roleplay", message.author.avatarURL())
 .setTimestamp()
@@ -77,7 +77,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
-  if(args[0] === "koyumese") {
+  if(args[0] === "koyumeşe") {
     let fiyatcık4 = 460 // istediğiniz fiyat
     
       db.delete(`koyumeseodunu_${kllanç.id}`, "Yok", -1)

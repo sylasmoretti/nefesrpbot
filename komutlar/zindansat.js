@@ -115,7 +115,7 @@ exports.conf = {
 }
 
 exports.help = {
-    name: 'zindansat',
+    name: 'xzindansat',
     description: 'Günlük para alırsınız.',
-    usage: 'param'
+    usage: 'xzindan'
 }

@@ -12,7 +12,7 @@ let sure = await db.fetch(`calissüre_${message.member.id}`)
         let timeObj = ms(cd - (Date.now() - sure)) 
       message.channel.send(`Bir daha savaşmak için biraz beklemen gerekli **${timeObj.seconds} saniye** sonra tekrar dene!`).then(msg => msg.delete({ timeout: `${cd}`}))
     } else {
-        if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `a?hesap-oluştur <isim>`")
+        if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `!hesap-oluştur <isim>`")
   const zombiet = db.get(`zombiet_${message.author.id}`)
   const örümcekgöz = db.get(`örümcekgöz_${message.author.id}`)
   const ok = db.get(`ok_${message.author.id}`)
@@ -95,7 +95,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'zindan', 
+  name: 'xzindan', 
   description: "Sunucuya bot eklemenizi sağlar.",
-  usage: 'botekle <botid> <prefix>'
+  usage: 'xzindan'
 };

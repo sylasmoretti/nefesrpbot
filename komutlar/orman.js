@@ -12,14 +12,14 @@ let sure = await db.fetch(`calissüre_${message.member.id}`)
         let timeObj = ms(cd - (Date.now() - sure)) 
       message.channel.send(`Bir daha odun kesmek için biraz beklemen gerekli **${timeObj.seconds} saniye** sonra tekrar dene!`).then(msg => msg.delete({ timeout: `${cd}`}))
     } else {
-        if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `a?hesap-oluştur <isim>`")
+        if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `!hesap-oluştur <isim>`")
 const elmasbalta = db.get(`elmasbalta_${message.author.id}`)
 const demirbalta = db.get(`demirbalta_${message.author.id}`)
 const taşbalta = db.get(`taşbalta_${message.author.id}`)
       
     if(!args[0]) return message.reply(`Bir maden belirtiniz. Örnek: !orman ladin/koyu-meşe/meşe/huş`)
 if(args[0] === "ladin") {
-    if(!elmasbalta) return message.reply(`Hiç elmas kazmanız bulunmamaktadır! a?market`)
+    if(!elmasbalta) return message.reply(`Hiç elmas kazmanız bulunmamaktadır! !market`)
 let odun3 = Math.round(Math.random() * 8)
         db.add(`ladinodunu_${message.author.id}`, odun3)
 message.channel.send(`
