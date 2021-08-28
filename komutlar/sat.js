@@ -19,12 +19,14 @@ exports.run = async (client, message, args) => {
   const ladin = db.get(`ladinodunu_${kllanç.id}`)
   const koyumeşe = db.get(`koyumeseodunu_${kllanç.id}`)
   const meşe = db.get(`meseodunu_${kllanç.id}`)
+  const huş = db.get(`husodunu_${kllanç.id}`)
+  const zümrüt = db.get(`husodunu_${kllanç.id}`)
 
-  if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin" && args[0] !== "ladin" && args[0] !== "koyumese" && args[0] !== "meşe" && args[0] !== "huş") return message.channel.send(
+  if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin" && args[0] !== "ladin" && args[0] !== "koyumese" && args[0] !== "meşe" && args[0] !== "huş" && args[0] !== "zümrüt" && args[0] !== "elmas" && args[0] !== "altın" && args[0] !== "demir" && args[0] !== "taş") return message.channel.send(
 new Discord.MessageEmbed()
 .setAuthor("Black Roleplay", client.user.avatarURL())
 .setDescription(`
-Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olta/bitcoin/ladin/koyumese/meşe/huş
+Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olta/bitcoin/ladin/koyumese/meşe/huş/zümrüt/elmas/altın/demir/taş
 `)
 .setFooter("Black Roleplay", message.author.avatarURL())
 .setTimestamp()
@@ -34,7 +36,7 @@ if(args[0] === "daltın") {
     let fiyatcık = 1000 // istediğiniz fiyat
     
 if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
-  db.delete(`daltın_${kllanç.id}`, "Kapalıdır")
+  db.delete(`daltın_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık)
   
   return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık}`)
@@ -42,7 +44,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
   if(args[0] === "balta") {
     let fiyatcık2 = 5000 // istediğiniz fiyat
     
-      db.delete(`balta_${kllanç.id}`, "Kapalıdır")
+      db.delete(`balta_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık2)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık2}`)
@@ -50,7 +52,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
   if(args[0] === "telefon") {
     let fiyatcık3 = 800 // istediğiniz fiyat
     
-      db.delete(`telefon_${kllanç.id}`, "Kapalıdır")
+      db.delete(`telefon_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık3)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık3}`)
@@ -58,47 +60,79 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
   if(args[0] === "olta") {
     let fiyatcık4 = 400 // istediğiniz fiyat
     
-      db.delete(`olta_${kllanç.id}`, "Kapalıdır")
+      db.delete(`olta_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "ladin") {
-    let fiyatcık4 = 400 // istediğiniz fiyat
+    let fiyatcık4 = 350 // istediğiniz fiyat
     
-      db.delete(`ladinodunu_${kllanç.id}`, "Kapalıdır")
+      db.delete(`ladinodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "koyumese") {
-    let fiyatcık4 = 400 // istediğiniz fiyat
+    let fiyatcık4 = 460 // istediğiniz fiyat
     
-      db.delete(`koyumeseodunu_${kllanç.id}`, "Kapalıdır")
+      db.delete(`koyumeseodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "meşe") {
-    let fiyatcık4 = 400 // istediğiniz fiyat
+    let fiyatcık4 = 420 // istediğiniz fiyat
     
-      db.delete(`meseodunu_${kllanç.id}`, "Kapalıdır")
+      db.delete(`meseodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "huş") {
-    let fiyatcık4 = 400 // istediğiniz fiyat
+    let fiyatcık4 = 310 // istediğiniz fiyat
     
-      db.delete(`husodunu_${kllanç.id}`, "Kapalıdır")
+      db.delete(`husodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
-  if(args[0] === "huş") {
-    let fiyatcık4 = 400 // istediğiniz fiyat
+  if(args[0] === "zümrüt") {
+    let fiyatcık4 = 450 // istediğiniz fiyat
     
-      db.delete(`husodunu_${kllanç.id}`, "Kapalıdır")
+      db.delete(`zümrüt_${kllanç.id}`, "Yok", -1)
+  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
+    
+    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
+}
+  if(args[0] === "elmas") {
+    let fiyatcık4 = 600 // istediğiniz fiyat
+    
+      db.delete(`elmas_${kllanç.id}`, "Yok", -1)
+  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
+    
+    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
+}
+  if(args[0] === "altın") {
+    let fiyatcık4 = 600 // istediğiniz fiyat
+    
+      db.delete(`altın_${kllanç.id}`, "Yok", -1)
+  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
+    
+    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
+}
+   if(args[0] === "demir") {
+    let fiyatcık4 = 600 // istediğiniz fiyat
+    
+      db.delete(`demir_${kllanç.id}`, "Yok", -1)
+  db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
+    
+    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
+}
+  if(args[0] === "taş") {
+    let fiyatcık4 = 600 // istediğiniz fiyat
+    
+      db.delete(`taş_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
@@ -106,7 +140,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
   if(args[0] === "bitcoin") {
     let fiyatcık5 = 4000 // istediğiniz fiyat
     
-      db.delete(`btc_${kllanç.id}`, "Kapalıdır")
+      db.delete(`btc_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık5)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık5}`)
