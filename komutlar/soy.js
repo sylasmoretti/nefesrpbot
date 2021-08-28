@@ -62,7 +62,7 @@ exports.run = async(client, message, args) => {
     } else {
      var uziadet = await db.fetch(`${message.author.id}.uzi_adet`);
       if (!uziadet) {
-        message.reply("**Yanında `Uzi` olmadığı için kuyumcuyu soyamadın ve 1000 TL paran gitti.**");
+        message.reply("**Yanında `Uzi` olmadığı için kuyumcuyu soyamadın ve 1000 $ paran gitti.**");
          await db.set(`bakiye_${message.author.id}`, para - 1000)
       }
       if (uziadet) {
@@ -263,7 +263,7 @@ exports.run = async(client, message, args) => {
       }
       if (maymuncukadet) {
 
-        let para = Math.floor(Math.random() * 550) + 1;
+        let para = Math.floor(Math.random() * 20000) + 1;
 
         db.add(`para_${message.author.id}`, para);
 
