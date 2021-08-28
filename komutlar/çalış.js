@@ -13,19 +13,14 @@ exports.run = async (bot, message, args) => {
     if (calissüre !== null && cd - (Date.now() - calissüre) > 0) {
         let timeObj = ms(cd - (Date.now() - calissüre));
     
-        let timeEmbed = new Discord.RichEmbed()
-        .setColor("BLUE")
-        .setDescription(`Son zamanlarda zaten çalıştın.\n Tekrar denemek için ${timeObj.seconds}' saniye beklemelisin!'}`);
-        message.channel.send(timeEmbed)
+        message.channel.send`Son zamanlarda zaten çalıştın.\n Tekrar denemek için ${timeObj.seconds}' saniye beklemelisin!'}`)
       } else {
 
         let cevap = ['Yazılımcı','İnşaatçı','Sucu','Şoför','Balıkçı','Mekanik']
 
         let sonuç = Math.floor((Math.random() * cevap.length));
         let bakiye = Math.floor(Math.random() * 1000) + 1
-        .setColor("#eec400")
-        .setDescription(`Çalıştın  ${sonuç[sonuç]} ve şu kadar ${bakiye} para kazandın`);
-        message.channel.send()
+        message.channel.send(`${cevap} ve siparişini tamamladığın şirket sana ${bakiye} 💸 ödedi!`)
         
         db.add(`bakiye_${message.guild.id}_${kullanıcı.id}`, bakiye)
         db.set(`calissüre_${message.guild.id}_${kullanıcı.id}`, Date.now())
