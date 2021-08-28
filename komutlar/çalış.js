@@ -1,46 +1,53 @@
 const Discord = require('discord.js')
 const db = require('quick.db')
 const ms = require('parse-ms');
-
-exports.run = async (bot, message, args) => { 
-
-    let para = db.fetch(`bakiye_${message.author.id}`)
-    let kullanıcı = message.author;
-    let sure = await db.fetch(`calissüre_${message.member.id}`)
+exports.run = async (client, message, args) => {   
+ 
+    const hesapdurumu = await db.fetch(`hesapdurum_${message.author.id}`);
+  const hesapismi = await db.fetch(`hesapismi_${message.author.id}`);
   
-    function rastgeleMiktar(min, max) {
+  if(!hesapdurumu) {
+    message.channel.send(`İlk olarak hesap oluşturmalısın. ${client.ekoayarlar.botunuzunprefixi}hesap-oluştur <Hesap İsmi>`)
+  } else {
+   let timeout = 15000;
+   function rastgeleMiktar(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
-    }    
-    let cd = 600000;
+}   
+   let crime = await db.fetch(`calis_${message.author.id}`)
+
+   if (crime !== null && timeout - (Date.now() - crime) > 0) {
+        
+        let time = ms(timeout - (Date.now() - crime));
     
-    if (sure !== null && cd - (Date.now() - sure) > 0) {
-        let timeObj = ms(cd - (Date.now() - sure));
-    
-       let timeEmbed = new Discord.RichEmbed()
-        .setDescription(`Bir daha çalışmak için biraz beklemen gerekli **${timeObj.second} saniye** sonra tekrar dene!`);
-        message.channel.send(timeEmbed)
+        message.channel.send(new Discord.MessageEmbed()
+                      .setColor("RED")
+                        .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
+                        .setDescription(`⏱ İşte için ${time.seconds ? time.seconds + ' saniye beklemelisin!' : 'tekrar dene!'}`))
       } else {
 
-        const Cevap = ["Yazılımcılık"]
-        var cevap = Cevap[Math.floor(Math.random() * Cevap.length)]
-        var kazandın = rastgeleMiktar(400,3900)
-        message.channel.send(`${Cevap} yaparak siparişini tamamladığın şirket sana ${kazandın} 💸 ödedi!`)
-        
-        db.add(`bakiye_${message.guild.id}_${kullanıcı.id}`, kazandın)
-        db.set(`çalışma_${message.guild.id}_${kullanıcı.id}`, Date.now())
-    };
-}
+        const result = [
+          "KAZANDIN"
+        ] 
+
+ const sentences2 = ["Yazılımcılık","Çöpçülük","Temizlikçilik","Bahçe düzenleme","İnşaatçılık"]
+     var sentence2 = sentences2[Math.floor(Math.random() * sentences2.length)]
+         var kazandın = rastgeleMiktar(100,3800)
+    let embed = new Discord.MessageEmbed()
+      .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
+      .setColor("GREEN")
+      .setDescription(`${sentence2} işi yaptın ve işi yaptığın yerin sahibi sana ${kazandın} 💸 ödedi!`)
+      message.channel.send(embed)   
+     await db.set(`calis_${message.author.id}`, Date.now());
+    await db.add(`bakiye_${message.author.id}`, kazandın);
+
+        }}}
 exports.conf = {
   enabled: true,
-  guildOnly: false,
-  aliases: ['çalışma'],
-  permLevel: 0
+  aliases: ["çalış"],
 };
 
-module.exports.help = {
-  name:"çalışma",
-  description: 'çalışma',
-  usage: 'çalışma'
-  }
+exports.help = {
+  name: 'çalış',
+};

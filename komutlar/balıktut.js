@@ -55,7 +55,7 @@ exports.run = async (client, message, args) => {
         } else {
  const sentences2 = ["Çipura tuttun","Hamsi tuttun","Kolyoz tuttun","İstavrit tuttun","Köpek balığı tuttun"]
      var sentence2 = sentences2[Math.floor(Math.random() * sentences2.length)]
-         var kazandın = rastgeleMiktar(100,1100)
+         var kazandın = rastgeleMiktar(100,1200)
     let embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
