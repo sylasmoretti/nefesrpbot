@@ -62,7 +62,7 @@ exports.run = async(client, message, args) => {
  
   var sdeğer = new Discord.MessageEmbed()
  .setTitle('Şirket Bilgisi')
- .setDescription('Selam ' + message.member.user.username + ', \n Aşağıda Şirketi nin bilgileri yazıyor.Eğer bir hata olursa, [Destek Sunucumuza](https://discord.gg/6D7eX5Q) gelip,bizimle iletişime geçebilirsin.')
+ .setDescription('Selam ' + message.member.user.username + ', \n Aşağıda Şirketi nin bilgileri yazıyor.')
 .addField('Şirket Para Değeri:', '**'+sirketdeğer+'**')
 .addField('Şirkete Ait İtemler:', 'Devamı yakında!')
  .setColor('BLUE')

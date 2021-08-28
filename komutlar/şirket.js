@@ -49,7 +49,7 @@ if(!amac) {
 }
 var banka = new Discord.MessageEmbed()
 .setColor('#FB529C')
-.setTitle('Noter Ana Merkez')
+.setTitle('Black Roleplay Noter Ana Merkez')
 .setDescription('Şirketinizi Kurduk! \n Şirketiniz size günlük **"1000"** para kazandıracak! \n Detaylı bilgiler aşağıda yer alıyor.')
 .addField('**Şirket İsmi:**', isim)
 .addField('**Kuruluş Amacı:**', amac)
