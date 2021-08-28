@@ -8,11 +8,11 @@ module.exports = client => {
  setInterval(function() {
 }, 8000);
   var msgArray = [
-"BLACK ROLEPLAY",
+"BLACK ROLEPLAY ⚡",
 "DEVELOPER:' Gürkan#3422",
-"LOG SİSTEMİ",
-"BLACK SUNUCU BOT",
-"VIP ÖZELLİKLER"
+"LOG SİSTEMİ 💣",
+"BLACK SUNUCU BOT❤️",
+"VIP ÖZELLİKLER ⚡"
  ];
 
  setInterval(() => {
