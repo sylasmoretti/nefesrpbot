@@ -28,11 +28,11 @@ let sure = await db.fetch(`calissüre_${message.member.id}`)
      if(!args[0]) return message.channel.send(
     new Discord.MessageEmbed()
 .setColor("BLUE")
-.setAuthor("Asperius", client.user.avatarURL())
+.setAuthor("Black Roleplay", client.user.avatarURL())
 .setDescription(`
-Bir mob belirtiniz. Örnek: \n a?zindan zombi/örümcek/iskelet/creeper/enderman
+Bir mob belirtiniz. Örnek: \n !zindan zombi/örümcek/iskelet/creeper/enderman
 `)
-.setFooter("Asperius", client.user.avatarURL())
+.setFooter("Black Roleplay", client.user.avatarURL())
 .setTimestamp()
 )
       

@@ -15,12 +15,16 @@ exports.run = async (client, message, args) => {
   const telefon = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
   const btc = db.get(`btc_${kllanç.id}`)
-  const altın = db.get(`daltın_${kllanç.id}`)
+  const daltın = db.get(`daltın_${kllanç.id}`)
   const ladin = db.get(`ladinodunu_${kllanç.id}`)
   const koyumeşe = db.get(`koyumeseodunu_${kllanç.id}`)
   const meşe = db.get(`meseodunu_${kllanç.id}`)
   const huş = db.get(`husodunu_${kllanç.id}`)
-  const zümrüt = db.get(`husodunu_${kllanç.id}`)
+  const zümrüt = db.get(`zümrüt_${kllanç.id}`)
+  const elmas = db.get(`elmas_${kllanç.id}`)
+  const altın = db.get(`altın_${kllanç.id}`)
+  const demir = db.get(`demir_${kllanç.id}`)
+  const taş = db.get(`taş_${kllanç.id}`)
 
   if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin" && args[0] !== "ladin" && args[0] !== "koyumese" && args[0] !== "meşe" && args[0] !== "huş" && args[0] !== "zümrüt" && args[0] !== "elmas" && args[0] !== "altın" && args[0] !== "demir" && args[0] !== "taş") return message.channel.send(
 new Discord.MessageEmbed()

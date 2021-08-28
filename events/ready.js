@@ -19,5 +19,6 @@ module.exports = client => {
   var rastgeleOyun = Math.floor(Math.random() * msgArray.length);
   client.user.setActivity(`${msgArray[rastgeleOyun]}`)
 }, 5000);
-    console.log(`BLACK ROLEPLAY Botu başarıyla giriş yaptı.`);
+    console.log(`BLACK ROLEPLAY: Şu an ` + client.channels.cache.size + ` adet kanala, ` + client.guilds.cache.size + ` adet sunucuya ve ` + client.guilds.cache.reduce
+((a, b) => a + b.memberCount, 0).toLocaleString() + ` kullanıcıya hizmet veriliyor!`);
 }
