@@ -43,7 +43,7 @@ exports.run = async (client, message, args) => {
        "Balık oltadan kaçtı","Martının biri gelip balığını kaptı"]
      var cümle = cümleler[Math.floor(Math.random() * cümleler.length)]
      if (awnser === "KAYBETTİN") {
- var kaybettin = 200         
+ var kaybettin = 500         
       message.channel.send(new Discord.MessageEmbed()
 
                            .setColor("RED")
@@ -55,7 +55,7 @@ exports.run = async (client, message, args) => {
         } else {
  const sentences2 = ["Çipura tuttun","Hamsi tuttun","Kolyoz tuttun","İstavrit tuttun","Köpek balığı tuttun"]
      var sentence2 = sentences2[Math.floor(Math.random() * sentences2.length)]
-         var kazandın = rastgeleMiktar(100,900)
+         var kazandın = rastgeleMiktar(100,1100)
     let embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")

@@ -4,7 +4,7 @@ const ms = require('ms');
 
 exports.run = async (bot, message, args) => { 
 
-    var para = db.fetch(`bakiye_${message.author.id}`)
+    var bakiye = db.fetch(`bakiye_${message.author.id}`)
     let kullanıcı = message.author;
     let sure = await db.fetch(`calissüre_${message.member.id}`)
 
@@ -19,14 +19,18 @@ exports.run = async (bot, message, args) => {
         message.channel.send(timeEmbed)
       } else {
 
-        var cevap = ["Yazılımcılık","Balıkçılık","İtfaiyeci","Fırıncı"]
+        const cevap = ["Yazılımcılık","","Kolyoz tuttun","İstavrit tuttun","Köpek balığı tuttun"]
+        var Cevap = cevap[Math.floor(Math.random() * cevap.length)]
 
         var sonuç = Math.floor((Math.random() * cevap.length));
-        var para = Math.floor(Math.random() * 3900) + 1
-        message.channel.send(`${cevap} yaparak siparişini tamamladığın şirket sana ${para} 💸 ödedi!`)
+        let bakiye = Math.floor(Math.random() * 3900) + 1
+        let embed = new Discord.RichEmbed()
+        .setColor("#eec400")
+        .setDescription(`${Cevap} yaparak siparişini tamamladığın şirket sana ${bakiye} 💸 ödedi!`);
+        message.channel.send(embed)
         
-        db.add(`bakiye_${message.guild.id}_${kullanıcı.id}`, para)
-        db.set(`sure_${message.guild.id}_${kullanıcı.id}`, Date.now())
+        db.add(`bakiye_${message.guild.id}_${kullanıcı.id}`, bakiye)
+        db.set(`çalışma_${message.guild.id}_${kullanıcı.id}`, Date.now())
     };
 }
 exports.conf = {
