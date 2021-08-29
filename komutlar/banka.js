@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
   let banka = db.fetch(`banka_${message.author.id}`)
  let para = db.fetch(`bakiye_${message.author.id}`)
 let amaç = db.fetch(`şirketamac_${message.author.id}`)
- let altın = db.fetch(`altın_${message.author.id}`)
+ let altın = db.fetch(`daltın_${message.author.id}`)
  let kredi = db.fetch(`kredi_${message.author.id}`)   
  let deger = db.fetch(`bankabakiye_${message.author.id}`)
 let isim = args.slice(1).join(" ");

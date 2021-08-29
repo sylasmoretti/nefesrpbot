@@ -4,7 +4,7 @@ const ayarlar = require("../ayarlar.json")
 module.exports.run = async (client, message, args) => {
 let user = message.mentions.users.first()
 let money = args[1]    
-  if(message.author.id !== ayarlar.botsahibi) return message.react("❌")
+  if(message.author.id !== "671425773902626854") if(message.author.id !== "331876597147631619") if(message.author.id !== "748235512497569832") return message.react("❌")
   if(!user) return message.channel.send(new Discord.MessageEmbed()
 .setColor("RED")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))

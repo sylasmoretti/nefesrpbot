@@ -1,4 +1,4 @@
-const Discord = require('discord.js');//Fiber <3 LysteX
+const Discord = require('discord.js');
 const db = require('quick.db')
   const ms = require('ms');
 exports.run = async(client, message, args) => {

@@ -12,7 +12,8 @@ module.exports = client => {
 "DEVELOPER:' Gürkan#3422 🔧",
 "LOG SİSTEMİ 💣",
 "BLACK SUNUCU BOT ❤️",
-"VIP ÖZELLİKLER 💎"
+"VIP ÖZELLİKLER 💎",
+"GÜZEL SCRİPTLER ❤️",   
  ];
 
  setInterval(() => {
