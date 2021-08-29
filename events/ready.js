@@ -13,7 +13,7 @@ module.exports = client => {
 "LOG SİSTEMİ 💣",
 "BLACK SUNUCU BOT ❤️",
 "VIP ÖZELLİKLER 💎",
-"GÜZEL SCRİPTLER ❤️",   
+"GÜNCEL SCRİPTLER ❤️",   
  ];
 
  setInterval(() => {
