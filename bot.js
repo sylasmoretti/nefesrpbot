@@ -19,7 +19,7 @@ client.ayarlar = {
 client.ekoayarlar = {
   parabirimi: "USD",
   botunuzunprefixi: "!",
-  botunuzunidsi: "876619784693899334", 
+  botunuzunidsi: "901132780660981770", 
  botismi: "NEFES",
   renk: "BLACK", 
   isimsiz: "İsimsiz", 
