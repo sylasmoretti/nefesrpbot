@@ -54,7 +54,7 @@ Elmas kazmalarınız: ${elmaskazma ? elmaskazma : 'Yok.'}
 
 ⛏️ Taş kazmalarınız: ${taşkazma ? taşkazma : 'Yok.'}
 `)
-.setFooter("BLACK ROLEPLAY", client.user.avatarURL())
+.setFooter("NEFES ", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }
@@ -100,7 +100,7 @@ Koyu meşe odunlarınız: ${koyumeşe ? koyumeşe : 'Yok.'}
 Ladin odunlarınız: ${ladin ? ladin : 'Yok.'}
 
 `)
-.setFooter("BLACK ROLEPLAY", client.user.avatarURL())
+.setFooter("NEFES ", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }

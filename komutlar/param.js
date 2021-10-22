@@ -26,7 +26,7 @@ const param = new Discord.MessageEmbed()
 
 Eşyalarınızı görmek için: !çantam
 `)
-.setFooter("Guard Bot", client.user.avatarURL())
+.setFooter("NEFES Bot", client.user.avatarURL())
  .setTimestamp()
 message.channel.send(param)
 }

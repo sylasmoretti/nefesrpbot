@@ -20,7 +20,7 @@ client.ekoayarlar = {
   parabirimi: "USD",
   botunuzunprefixi: "!",
   botunuzunidsi: "876619784693899334", 
- botismi: "BLACK ROLEPLAY",
+ botismi: "NEFES",
   renk: "BLACK", 
   isimsiz: "İsimsiz", 
   rastgelepara: false, 
@@ -31,7 +31,7 @@ client.ekoayarlar = {
   dblkey: "KEY",
   dblmsj: "Bu komutu kullanabilmek için", 
   başlangıçparası: 2000, 
-  admin: ["671425773902626854","748235512497569832","331876597147631619"]
+  admin: ["331876597147631619"]
 }
 
 

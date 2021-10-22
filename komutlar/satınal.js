@@ -31,11 +31,11 @@ var taşkazma = db.get(`taşkazma_${message.guild.id}`)
   if(!args[0]) return message.channel.send(
 new Discord.MessageEmbed()
 .setColor("BLUE")
-.setAuthor("Black Roleplay", client.user.avatarURL())
+.setAuthor("NEFES ", client.user.avatarURL())
 .setDescription(`
 Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
 **!satın-al telefon/olta/bitcoin/altın/silah/** `)
-.setFooter("Black Roleplay", client.user.avatarURL())
+.setFooter("NEFES ", client.user.avatarURL())
 .setTimestamp()
 )
   

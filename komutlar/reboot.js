@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const moment = require('moment');
 
 exports.run = (client, message, args) => {
-message.channel.send('Black Roleplay Adlı Botun Yeniden Başlatılmasını Onaylıyor Musun ?')
+message.channel.send('NEFES  Adlı Botun Yeniden Başlatılmasını Onaylıyor Musun ?')
 .then(() => {
   message.channel.awaitMessages(response => response.content === "evet", {
     max: 1,
@@ -10,13 +10,13 @@ message.channel.send('Black Roleplay Adlı Botun Yeniden Başlatılmasını Onay
     errors: ['time'],
   })
   .then((collected) => {
-      message.channel.send('Black Roleplay Botu Yeniden Başlatıyorum').then(message => {
-      console.log(`Black Roleplay Botu Yeniden Başlatılıyor`)
+      message.channel.send('NEFES  Botu Yeniden Başlatıyorum').then(message => {
+      console.log(`NEFES  Botu Yeniden Başlatılıyor`)
       process.exit(1);
     }).catch(console.error)
     })
     .catch(() => {
-      message.channel.send('Black Roleplay Botun Yeniden Başlama İşlemini İptal Ettim');
+      message.channel.send('NEFES  Botun Yeniden Başlama İşlemini İptal Ettim');
     });
 });
 };

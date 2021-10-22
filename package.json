@@ -1,27 +1,27 @@
 {
   "name": "ayn",
   "version": "0.0.1",
-  "description": "BLACK",
+  "description": "NEFES ",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
-    "coders.db": "^7.5.3",
+    "chalk": "^4.1.2",
+    "coders.db": "^7.6.1",
     "common-tags": "^1.8.0",
     "dblapi.js": "^2.4.1",
-    "discord.js": "^12.1.2",
+    "discord.js": "^12.5.3",
     "discord.js-commando": "^0.12.3",
     "express": "^4.17.1",
     "jimp": "^0.16.1",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
-    "node-superfetch": "^0.2.2",
-    "os": "^0.1.1",
+    "node-superfetch": "^0.2.3",
+    "os": "^0.1.2",
     "parse-ms": "^2.1.0",
     "qui": "^0.0.2",
-    "quick.db": "^7.1.0"
+    "quick.db": "^7.1.3"
   },
   "engines": {
     "node": "12.x"

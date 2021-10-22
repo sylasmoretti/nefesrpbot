@@ -8,10 +8,8 @@ module.exports = client => {
  setInterval(function() {
 }, 8000);
   var msgArray = [
-"BLACK ROLEPLAY ⚡",
-"DEVELOPER:' Gürkan#3422 🔧",
-"LOG SİSTEMİ 💣",
-"BLACK SUNUCU BOT ❤️",
+"NEFES ROLEPLAY ⚡",
+"NEFES SUNUCU BOT ❤️",
 "VIP ÖZELLİKLER 💎",
 "GÜNCEL SCRİPTLER ❤️",   
  ];
@@ -20,6 +18,6 @@ module.exports = client => {
   var rastgeleOyun = Math.floor(Math.random() * msgArray.length);
   client.user.setActivity(`${msgArray[rastgeleOyun]}`)
 }, 5000);
-    console.log(`BLACK ROLEPLAY: Şu an ` + client.channels.cache.size + ` adet kanala, ` + client.guilds.cache.size + ` adet sunucuya ve ` + client.guilds.cache.reduce
+    console.log(`NEFES  ROLEPLAY: Şu an ` + client.channels.cache.size + ` adet kanala, ` + client.guilds.cache.size + ` adet sunucuya ve ` + client.guilds.cache.reduce
 ((a, b) => a + b.memberCount, 0).toLocaleString() + ` kullanıcıya hizmet veriliyor!`);
 }

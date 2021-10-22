@@ -7,7 +7,7 @@ var ayarlar = require('../ayarlar.json');
 exports.run = async (client, message, args) => {
 			  
 
-if(message.author.id !== "671425773902626854") return message.channel.send("Sahip komutu bu");
+if(message.author.id !== "331876597147631619") if(message.author.id !== "628321048768806932") return message.channel.send("Sahip komutu bu");
   const silinecekkllnc = message.mentions.members.first();
   if(!silinecekkllnc) return message.channel.send(`Bir kullanıcı belirtmelisin!`)
   const bankabakiye = await db.fetch(`bankabakiye_${silinecekkllnc.id}`);

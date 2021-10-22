@@ -12,11 +12,8 @@ exports.run = (client, message) => {
  **${Prefix}kasa-bilgi** \n->  Kasalar Hakkında Bilgi Alırsın
  **${Prefix}kasalar** \n->  Kasaların İçerikleri Hakkında Bilgi Alırsın
  **${Prefix}kasaaç <Kasa ID>** \n->  Belirtilen ID'ye Sahip Kasayı Açarsın
-
-
-
 `)
- .setFooter(`Guard Oyun Bot`)
+ .setFooter(`NEFES `)
  .setTimestamp()
  message.channel.send(Embed)
 }

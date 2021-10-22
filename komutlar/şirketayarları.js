@@ -22,7 +22,7 @@ exports.run = async(client, message, args) => {
   .setColor('RED')
  .setThumbnail('https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2Fwarning.png?v=1630085460014')
  .setFooter('Bir şirket kurmak için, !şirket yazman yeterli!')
-     .addField('Black L.Ş.T.D.İ')
+     .addField('NEFES  L.Ş.T.D.İ')
 .setTimestamp()
   message.channel.send(embed)
     return
@@ -37,7 +37,7 @@ exports.run = async(client, message, args) => {
   .addField('[3] Şirket Değeri', şirket + ' Değer Bilgisi')
   .setDescription('Selam ' + message.member.user.username + ', \n Aşağıda bu menü ile Yapabileceklerin yazıyor.')
   .setFooter(client.user.username + ' Bulunduğunuz kanala belirtilen sayıyı girip,işleme devam edebilirsiniz.')
-  .addField('Black L.Ş.T.D.İ')
+  .addField('NEFES  L.Ş.T.D.İ')
   .setTimestamp();
   
    var embed = new Discord.MessageEmbed()
@@ -46,7 +46,7 @@ exports.run = async(client, message, args) => {
   .addField('[2] Şirket Kuruluş Amacı değiştirme', 'şu anda kullanılan şirket amacı:**'+amaç+'**')
   .setDescription('Selam ' + message.member.user.username + ', \n Aşağıda bu menü ile Yapabileceklerin yazıyor.')
   .setFooter(client.user.username + ' Bulunduğunuz kanala belirtilen sayıyı girip,işleme devam edebilirsiniz.')
-  .addField('Black L.Ş.T.D.İ')
+  .addField('NEFES L.Ş.T.D.İ')
   .setTimestamp();
   message.channel.send(menu)
 

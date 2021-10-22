@@ -17,7 +17,7 @@ if(şirket) {
   .setDescription(message.member.user.username + ' Adlı kullanıcının zaten bir şirketi bulunuyor.')
   .setColor('RED')
  .setThumbnail('https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2Fwarning.png?v=1630085460014')
- .addField('Black L.Ş.T.D.İ')
+ .addField('NEFES  L.Ş.T.D.İ')
 .setTimestamp()
   message.channel.send(embed)
   return
@@ -30,7 +30,7 @@ if(!isim) {
   .setDescription(message.member.user.username + ' Kurulacak şirketinizin,İsmini belirtmelisiniz.')
   .setColor('RED')
  .setThumbnail('https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2Fwarning.png?v=1630085460014')  
-.addField('Black L.Ş.T.D.İ')
+.addField('NEFES  L.Ş.T.D.İ')
 .setTimestamp()
   message.channel.send(embed)
   return
@@ -42,7 +42,7 @@ if(!amac) {
   .setDescription(message.member.user.username + ' Şirketinizin,çalışma amacınızı belirtmeniz gerekiyor.')
   .setColor('RED')
  .setThumbnail('https://cdn.glitch.com/4c8a4f22-00c9-4c52-8cf1-6c85e13e0fa6%2Fwarning.png?v=1630085460014')  
-.addField('Black L.Ş.T.D.İ')
+.addField('NEFES L.Ş.T.D.İ')
 .setTimestamp()
   message.channel.send(embed)
   return
@@ -54,7 +54,7 @@ var banka = new Discord.MessageEmbed()
 .addField('**Şirket İsmi:**', isim)
 .addField('**Kuruluş Amacı:**', amac)
 .setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
-.addField('Black L.Ş.T.D.İ')
+.addField('NEFES L.Ş.T.D.İ')
 .setTimestamp()
 message.channel.send(banka)  
   

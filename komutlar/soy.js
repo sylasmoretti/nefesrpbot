@@ -5,11 +5,11 @@ exports.run = async(client, message, args) => {
     let soygunlog = db.get(`soygunlog_${message.guild.id}`)
     if(!soygunlog) {
         const embed = new Discord.MessageEmbed()
-        .setAuthor("Guard Bot", client.user.avatarURL())
+        .setAuthor("NEFES ", client.user.avatarURL())
         .setDescription(`
         Bir soygun log kanalı ayarlanmamış lütfen ayarlayınız \n -> !soygun-log ayarla #kanal
         `)
-        .setFooter("Guard Bot", client.user.avatarURL())
+        .setFooter("NEFES ", client.user.avatarURL())
         message.channel.send(embed)
     } else {
     let türler = ["kuyumcu","adam","hacker","bitcoin","ev","bankaaraç"];
