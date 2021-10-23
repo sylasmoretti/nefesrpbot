@@ -37,7 +37,7 @@ Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olt
                                           )
   
 if(args[0] === "daltın") {
-    let fiyatcık = 1000 // istediğiniz fiyat
+    let fiyatcık = 1 // istediğiniz fiyat
     
 if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
   db.delete(`daltın_${kllanç.id}`, "Yok", -1)
@@ -46,7 +46,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
   return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık}`)
 }
   if(args[0] === "balta") {
-    let fiyatcık2 = 5000 // istediğiniz fiyat
+    let fiyatcık2 = 10 // istediğiniz fiyat
     
       db.delete(`balta_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık2)
@@ -54,7 +54,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık2}`)
 }
   if(args[0] === "telefon") {
-    let fiyatcık3 = 800 // istediğiniz fiyat
+    let fiyatcık3 = 10 // istediğiniz fiyat
     
       db.delete(`telefon_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık3)
@@ -62,7 +62,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık3}`)
 }
   if(args[0] === "olta") {
-    let fiyatcık4 = 400 // istediğiniz fiyat
+    let fiyatcık4 = 31 // istediğiniz fiyat
     
       db.delete(`olta_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -78,7 +78,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "koyumeşe") {
-    let fiyatcık4 = 460 // istediğiniz fiyat
+    let fiyatcık4 = 350 // istediğiniz fiyat
     
       db.delete(`koyumeseodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -86,7 +86,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "meşe") {
-    let fiyatcık4 = 420 // istediğiniz fiyat
+    let fiyatcık4 = 350 // istediğiniz fiyat
     
       db.delete(`meseodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -94,7 +94,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "huş") {
-    let fiyatcık4 = 310 // istediğiniz fiyat
+    let fiyatcık4 = 350 // istediğiniz fiyat
     
       db.delete(`husodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -102,7 +102,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "zümrüt") {
-    let fiyatcık4 = 450 // istediğiniz fiyat
+    let fiyatcık4 = 700 // istediğiniz fiyat
     
       db.delete(`zümrüt_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -118,7 +118,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "altın") {
-    let fiyatcık4 = 600 // istediğiniz fiyat
+    let fiyatcık4 = 550 // istediğiniz fiyat
     
       db.delete(`altın_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -126,7 +126,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
    if(args[0] === "demir") {
-    let fiyatcık4 = 600 // istediğiniz fiyat
+    let fiyatcık4 = 531 // istediğiniz fiyat
     
       db.delete(`demir_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -134,7 +134,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "taş") {
-    let fiyatcık4 = 600 // istediğiniz fiyat
+    let fiyatcık4 = 500 // istediğiniz fiyat
     
       db.delete(`taş_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)

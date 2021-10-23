@@ -40,7 +40,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
 )
   
   if(args[0] === "telefon") {
-    let fiyatcık3 = 1000 // istediğiniz fiyat
+    let fiyatcık3 = 100 // istediğiniz fiyat
     
     if (bakiye < fiyatcık3) return message.reply('Yeterli Paran Yok!')
       db.set(`telefon_${kllanç.id}`, "Var")
@@ -49,7 +49,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     return message.reply(`Ürünü başarıyla aldınız`)
 }
   if(args[0] === "olta") {
-    let fiyatcık4 = 600 // istediğiniz fiyat
+    let fiyatcık4 = 631 // istediğiniz fiyat
     
     if (bakiye < fiyatcık4) return message.reply('Yeterli Paran Yok!')
       db.set(`olta_${kllanç.id}`, "Var")
@@ -67,7 +67,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     return message.reply(`Ürünü başarıyla aldınız`)
 }
     if(args[0] === "elmas-kazma") {
-    let fiyatcık5 = 12500 // istediğiniz fiyat
+    let fiyatcık5 = 12 // istediğiniz fiyat
     
     if (bakiye < fiyatcık5) return message.reply('Yeterli Paran Yok!')
       db.set(`elmaskazma_${kllanç.id}`, "Var")
