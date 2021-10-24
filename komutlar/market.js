@@ -20,7 +20,7 @@ const market = new Discord.MessageEmbed()
 .setAuthor("Market", client.user.avatarURL())
 .setDescription(`
 Genel
-🔫 Silah ile avlanarak para kazan. \n --> Fiyat: 12.500 💵
+🔫 Silah ile avlanarak para kazan. \n --> Fiyat: 12.500.000 💵
 🎣 Olta ile balık tutarak para kazan. \n --> Fiyat: 5.000 💵
 📱 Telefon ile fenomen olarak para kazan. \n --> Fiyat: 10.000 💵
 
