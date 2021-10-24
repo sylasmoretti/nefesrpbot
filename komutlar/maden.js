@@ -7,7 +7,7 @@ var hesapd = db.fetch(`hesapdurum_${message.author.id}`)
 var demirkazma = db.get(`demirkazma_${message.author.id}`)
 var elmaskazma = db.get(`elmaskazma_${message.author.id}`)
 var taşkazma = db.get(`taşkazma_${message.author.id}`)
-let cd = 15000 //30 saniye şuan kendinize göre ayarlayınız
+let cd = 10000 //30 saniye şuan kendinize göre ayarlayınız
 let sure = await db.fetch(`calissüre_${message.member.id}`)
      
       if (sure !== null && cd - (Date.now() - sure) > 0) {
