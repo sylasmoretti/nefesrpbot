@@ -27,7 +27,7 @@ Madendeyken Zümrüt kazıyodun ve ${maden} adet zümrüt kazandın
 }
 if(args[0] === "elmas") {
   if(!demirkazma) return message.reply(`Hiç demir kazmanız bulunmamaktadır! a?market`)
-  let maden4 = Math.round(Math.random() * 6)
+  let maden4 = Math.round(Math.random() * 1)
         db.add(`elmas_${message.author.id}`, +maden4)
   message.channel.send(`
 Madendeyken Elmas kazıyodun ve ${maden4} adet elmas kazandın
@@ -35,7 +35,7 @@ Madendeyken Elmas kazıyodun ve ${maden4} adet elmas kazandın
 }
 if(args[0] === "altın") {
     if(!demirkazma) return message.reply(`Hiç demir kazmanız bulunmamaktadır! a?market`)
-  let maden3 = Math.round(Math.random() * 4)
+  let maden3 = Math.round(Math.random() * 1)
         db.add(`altın_${message.author.id}`, +maden3)
 message.channel.send(`
 Madendeyken Altın kazıyodun ve ${maden3} adet altın kazandın
@@ -43,14 +43,14 @@ Madendeyken Altın kazıyodun ve ${maden3} adet altın kazandın
 }
 if(args[0] === "demir") {
       if(!taşkazma) return message.reply(`Hiç taş kazmanız bulunmamaktadır! a?market`)
-        let maden2 = Math.round(Math.random() * 8)
+        let maden2 = Math.round(Math.random() * 2)
         db.add(`demir_${message.author.id}`, +maden2)
   message.channel.send(`
 Madendeyken Demir kazıyodun ve ${maden2} adet demir kazandın
 `)
 }
 if(args[0] === "taş") {
-  let maden5 = Math.round(Math.random() * 30)
+  let maden5 = Math.round(Math.random() * 2)
         db.add(`taş_${message.author.id}`, +maden5)
      message.channel.send(`
 Madendeyken Taş kazıyodun ve ${maden5} adet taş kazandın
