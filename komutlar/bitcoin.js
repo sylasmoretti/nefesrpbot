@@ -8,7 +8,7 @@ const db = require('quick.db')
 exports.run = async (client, message, args) => {
     let member = message.author;
   let kllanç = message.mentions.users.first() || message.author;
-  let btcdeger = 120000
+  let btcdeger = 100100
   
   const bakiye = await db.fetch(`bakiye_${kllanç.id}`);
   const hesapdurumu = await db.fetch(`hesapdurum_${kllanç.id}`);

@@ -20,17 +20,16 @@ const market = new Discord.MessageEmbed()
 .setAuthor("Market", client.user.avatarURL())
 .setDescription(`
 Genel
-🔫 Silah ile avlanarak para kazan. \n --> Fiyat: 12.500.000 💵
-🎣 Olta ile balık tutarak para kazan. \n --> Fiyat: 5.000 💵
-📱 Telefon ile fenomen olarak para kazan. \n --> Fiyat: 10.000 💵
+🎣 Olta ile balık tutarak para kazan. \n --> Fiyat: 631 💵
+📱 Telefon ile fenomen olarak para kazan. \n --> Fiyat: 100 💵
 
 Diğer
-₿ Bitcoin al ve bir yatırımcı ol!. \n --> Fiyat: 5.000 💵
+₿ Bitcoin al ve bir yatırımcı ol!. \n --> Fiyat: 100.100 💵
 
 Maden
-⛏️ **Demir kazma satın al, elmas ve altın ile para kazan** \n **-->** Fiyat: 7.500 💵
-⛏️ **Elmas kaznma ssatın al, zümrüt ile para kazan** \n **-->** Fiyat: 12.500 💵
-⛏️ **Taş kazma satın al, demir ile para kazan** \n **-->** Fiyat: 5000 💵
+⛏️ **Demir kazma satın al, elmas ve altın ile para kazan** \n **-->** Fiyat: 1.500 💵
+⛏️ **Elmas kaznma ssatın al, zümrüt ile para kazan** \n **-->** Fiyat: 2.000 💵
+⛏️ **Taş kazma satın al, demir ile para kazan** \n **-->** Fiyat: 1.499 💵
 
 Orman
 🪓 **Elmas balta satın al, ladin, huş, meşe ve koyu meşe den para kazan** \n **-->** Fiyat: 11.500 💵
