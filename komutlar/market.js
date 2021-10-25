@@ -32,9 +32,9 @@ Maden
 ⛏️ **Taş kazma satın al, demir ile para kazan** \n **-->** Fiyat: 1.499 💵
 
 Orman
-🪓 **Elmas balta satın al, ladin, huş, meşe ve koyu meşe den para kazan** \n **-->** Fiyat: 11.500 💵
-🪓 **Demir balta satın al, ladin, huş ve meşe den para kazan** \n **-->** Fiyat: 9750 💵
-🪓 **Taş balta satın al, huş ve meşe den para kazan** \n **-->** Fiyat: 6750 💵
+🪓 **Elmas balta satın al, ladin, huş, meşe ve koyu meşe den para kazan** \n **-->** Fiyat: 2.000 💵
+🪓 **Demir balta satın al, ladin, huş ve meşe den para kazan** \n **-->** Fiyat: 1.500 💵
+🪓 **Taş balta satın al, huş ve meşe den para kazan** \n **-->** Fiyat: 1.499 💵
 `) 
 .setFooter("Market", client.user.avatarURL())
 .setTimestamp()
