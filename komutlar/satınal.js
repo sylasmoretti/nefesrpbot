@@ -165,17 +165,15 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
   db.add(`bakiye_${kllanç.id}`, -fiyatcık5)
     
     return message.reply(`Ürünü başarıyla aldınız`)
-      
+      }
        if(args[0] === "telsiz") {
-    let fiyatcık5 = 1 // istediğiniz fiyat
+    let fiyatcık5 = 5000 // istediğiniz fiyat
     
     if (bakiye < fiyatcık5) return message.reply('Yeterli Paran Yok!')
       db.set(`telsiz_${kllanç.id}`, "Var")
   db.add(`bakiye_${kllanç.id}`, -fiyatcık5)
     
     return message.reply(`Ürünü başarıyla aldınız`)
-}
-      
 }
 
 }         
