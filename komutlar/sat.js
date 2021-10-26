@@ -142,7 +142,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "bitcoin") {
-    let fiyatcık5 = 100000 // istediğiniz fiyat
+    let fiyatcık5 = 112000 // istediğiniz fiyat
     
       db.delete(`btc_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık5)

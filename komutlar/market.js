@@ -24,7 +24,7 @@ Genel
 📱 Telefon ile fenomen olarak para kazan. \n --> Fiyat: 100 💵
 
 Diğer
-₿ Bitcoin al ve bir yatırımcı ol!. \n --> Fiyat: 100.100 💵
+₿ Bitcoin al ve bir yatırımcı ol!. \n --> Fiyat: 110.000 💵
 
 Maden
 ⛏️ **Demir kazma satın al, elmas ve altın ile para kazan** \n **-->** Fiyat: 1.500 💵
@@ -35,6 +35,9 @@ Orman
 🪓 **Elmas balta satın al, ladin, huş, meşe ve koyu meşe den para kazan** \n **-->** Fiyat: 2.000 💵
 🪓 **Demir balta satın al, ladin, huş ve meşe den para kazan** \n **-->** Fiyat: 1.500 💵
 🪓 **Taş balta satın al, huş ve meşe den para kazan** \n **-->** Fiyat: 1.499 💵
+
+Nefes Roleplay
+👑 **Elmas balta satın al, ladin, huş, meşe ve koyu meşe den para kazan** \n **-->**
 `) 
 .setFooter("Market", client.user.avatarURL())
 .setTimestamp()

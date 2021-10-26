@@ -58,7 +58,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     return message.reply(`Ürünü başarıyla aldınız`)
 }
   if(args[0] === "bitcoin") {
-    let fiyatcık5 = 1000 // istediğiniz fiyat
+    let fiyatcık5 = 110000 // istediğiniz fiyat
     
     if (bakiye < fiyatcık5) return message.reply('Yeterli Paran Yok!')
       db.set(`btc_${kllanç.id}`, "Var")
