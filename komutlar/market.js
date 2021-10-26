@@ -24,7 +24,7 @@ Genel
 📱 **Telefon ile fenomen olarak para kazan.** \n --> Fiyat: 100 💵
 
 Diğer
-₿ **Bitcoin al ve bir yatırımcı ol!.** \n --> Fiyat: 110.000 💵
+₿ **Bitcoin al ve bir yatırımcı ol!.** \n --> Fiyat: 62.548 💵
 
 Maden
 ⛏️ **Demir kazma satın al, elmas ve altın ile para kazan** \n **-->** Fiyat: 1.500 💵
