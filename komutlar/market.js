@@ -15,6 +15,7 @@ exports.run = async (client, message, args) => {
   const telefon = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
   const btc = db.get(`btc_${kllanç.id}`)
+  const telsiz = db.get(`telsiz_${kllanç.id}`)
 
 const market = new Discord.MessageEmbed()
 .setAuthor("Market", client.user.avatarURL())
