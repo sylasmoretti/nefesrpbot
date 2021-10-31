@@ -26,6 +26,11 @@ if(args[0] === "genel") {
   const elmasbalta = db.get(`elmasbalta_${message.author.id}`)
   const demirbalta = db.get(`demirbalta_${message.author.id}`)
   const taşbalta = db.get(`taşbalta_${message.author.id}`)
+  const kelepçe = db.get(`kelepçe_${message.author.id}`)
+  const pc = db.get(`pc_${message.author.id}`)
+  const turbo = db.get(`turbo_${message.author.id}`)
+  const maymuncuk = db.get(`maymuncuk_${message.author.id}`)
+  const telsiz = db.get(`telsiz_${message.author.id}`)
 
 const param = new Discord.MessageEmbed()
 .setAuthor("PARAN", client.user.avatarURL())
@@ -33,6 +38,16 @@ const param = new Discord.MessageEmbed()
 🔫 Silahlarınız: ${silah ? silah : 'Yok.'}
 
 🎣 Oltalarınız: ${olta ? olta : 'Yok.'}
+
+📱 Kelepçeleriniz: ${kelepçe ? kelepçe : 'Yok.'}
+
+📱 Pc: ${pc ? pc : 'Yok.'}
+
+📱 Turbo: ${turbo ? turbo : 'Yok.'}
+
+📱 Maymuncuk: ${maymuncuk ? maymuncuk : 'Yok.'}
+
+📱 Telsiz: ${telsiz ? telsiz : 'Yok.'}
 
 📱 Telefonlarınız: ${telefon ? telefon : 'Yok.'}
 

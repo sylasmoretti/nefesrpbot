@@ -28,14 +28,14 @@ Ormandayken ladin odunu kırıyodun ve ${odun3} adet ladin odunu kazandın
 }
 if(args[0] === "koyumeşe") {
   if(!demirbalta) return message.reply(`Hiç demir kazmanız bulunmamaktadır! !market`)
-      let odun2 = Math.round(Math.random() * 1)
+      let odun2 = Math.round(Math.random() * 8)
         db.add(`koyumeseodunu_${message.author.id}`, +odun2)
   message.channel.send(`
 Ormandayken koyu meşe odunu kırıyodun ve ${odun2} adet koyu meşe odunu kazandın
 `)
 }
 if(args[0] === "meşe") {
-let odun4 = Math.round(Math.random() * 1)
+let odun4 = Math.round(Math.random() * 8)
         db.add(`meseodunu_${message.author.id}`, +odun4)
 message.channel.send(`
 Ormandayken meşe odunu kırıyodun ve ${odun4} adet meşe odunu kazandın
@@ -43,19 +43,13 @@ Ormandayken meşe odunu kırıyodun ve ${odun4} adet meşe odunu kazandın
 }
 if(args[0] === "huş") {
       if(!taşbalta) return message.reply(`Hiç taş baltanız bulunmamaktadır! !market`)
-                let odun = Math.round(Math.random() * 1)
+                let odun = Math.round(Math.random() * 8)
         db.add(`husodunu_${message.author.id}`, +odun)
   message.channel.send(`
 Ormandayken huş kırıyodun ve ${odun} adet huş odunu kazandın
 `)
 }
-if(args[0] === "taş") {
-  let maden5 = Math.round(Math.random() * 0)
-        db.add(`taş_${message.author.id}`, +maden5)
-     message.channel.send(`
-Madendeyken Taş kazıyodun ve ${maden5} adet taş kazandın
-`)
-}  
+ 
        
 
   
