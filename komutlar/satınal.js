@@ -49,6 +49,24 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     
     return message.reply(`Ürünü başarıyla aldınız`)
 }
+   if(args[0] === "olta") {
+    let fiyatcık4 = 631 // istediğiniz fiyat
+    
+    if (bakiye < fiyatcık4) return message.reply('Yeterli Paran Yok!')
+      db.set(`olta_${kllanç.id}`, "Var")
+  db.add(`bakiye_${kllanç.id}`, -fiyatcık4)
+    
+    return message.reply(`Ürünü başarıyla aldınız`)
+}
+   if(args[0] === "maymuncuk") {
+    let fiyatcık4 = 10000 // istediğiniz fiyat
+    
+    if (bakiye < fiyatcık4) return message.reply('Yeterli Paran Yok!')
+      db.set(`maymuncuk_${kllanç.id}`, "Var")
+  db.add(`bakiye_${kllanç.id}`, -fiyatcık4)
+    
+    return message.reply(`Ürünü başarıyla aldınız`)
+}
   if(args[0] === "olta") {
     let fiyatcık4 = 631 // istediğiniz fiyat
     

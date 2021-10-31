@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
   if(!hesapdurumu) {
     message.channel.send(`İlk olarak hesap oluşturmalısın. ${client.ekoayarlar.botunuzunprefixi}hesap-oluştur <Hesap İsmi>`)
   } else {
-   let timeout = 15000;
+   let timeout = 100;
    function rastgeleMiktar(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
                         .setDescription(`⏱ Balık tutmak için ${time.seconds ? time.seconds + ' saniye beklemelisin!' : 'tekrar dene!'}`))
       } else {
-     let gerekenpara = 250
+     let gerekenpara = 1
      let para = db.fetch(`bakiye_${message.author.id}`)
      if(para < 250) return message.channel.send(new Discord.MessageEmbed()
                       .setColor("RED")
@@ -55,7 +55,7 @@ exports.run = async (client, message, args) => {
         } else {
  const sentences2 = ["Çipura tuttun","Hamsi tuttun","Kolyoz tuttun","İstavrit tuttun","Köpek balığı tuttun","Japon balığı tuttun","Çipura balığı tuttun"];
      var sentence2 = sentences2[Math.floor(Math.random() * sentences2.length)]
-         var kazandın = rastgeleMiktar(500,1500)
+         var kazandın = rastgeleMiktar(500,5000)
     let embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")

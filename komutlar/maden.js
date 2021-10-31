@@ -16,7 +16,7 @@ let sure = await db.fetch(`calissüre_${message.member.id}`)
     } else {
         if(!hesapd) return message.channel.send("İlk önce hesap oluşturmalısın\nHesap oluşturmak için `!hesap-oluştur <isim>`")
 
-   if(!args[0]) return message.reply(`Bir maden belirtiniz. Örnek: !maden zümrüt/elmas/altın/demir/taş`)
+   if(!args[0]) return message.reply(`Bir maden belirtiniz. Örnek: !maden zümrüt/elmas/altın/demir/taş/krom/platinyum/bakır`)
 if(args[0] === "zümrüt") {
     if(!elmaskazma) return message.reply(`Hiç elmas kazmanız bulunmamaktadır! !market`)
         let maden = Math.round(Math.random() * 3)
@@ -63,11 +63,11 @@ Madendeyken Krom kazıyodun ve ${maden5} adet krom kazandın
 Madendeyken Bakır kazıyodun ve ${maden5} adet bakır kazandın
 `)
 }
-      if(args[0] === "elmas") {
+      if(args[0] === "platinyum") {
   let maden5 = Math.round(Math.random() * 1)
-        db.add(`elmas_${message.author.id}`, +maden5)
+        db.add(`platinyum_${message.author.id}`, +maden5)
      message.channel.send(`
-Madendeyken Elmas kazıyodun ve ${maden5} adet elmas kazandın
+Madendeyken platinyum kazıyodun ve ${maden5} adet platinyum kazandın
 `)
 }  
 if(args[0] === "taş") {
