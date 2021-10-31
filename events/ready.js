@@ -12,7 +12,8 @@ module.exports = client => {
 "NEFES ROLEPLAY BOTU ❤️",
 "VIP ÖZELLİKLER 💎",
 "GÜNCEL KOMUTLAR ❤️",   
-" ⚡",
+"CEO İS CAPKIN AND KIVANÇ ⚡",
+"DİSCORD ROLEPLAY BOTU 💎",
  ];
 
  setInterval(() => {

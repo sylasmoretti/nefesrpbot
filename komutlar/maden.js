@@ -48,7 +48,28 @@ if(args[0] === "demir") {
   message.channel.send(`
 Madendeyken Demir kazıyodun ve ${maden2} adet demir kazandın
 `)
+  }
+  if(args[0] === "krom") {
+  let maden5 = Math.round(Math.random() * 10)
+        db.add(`krom_${message.author.id}`, +maden5)
+     message.channel.send(`
+Madendeyken Krom kazıyodun ve ${maden5} adet krom kazandın
+`)
+    }
+  if(args[0] === "bakır") {
+  let maden5 = Math.round(Math.random() * 6)
+        db.add(`bakır_${message.author.id}`, +maden5)
+     message.channel.send(`
+Madendeyken Bakır kazıyodun ve ${maden5} adet bakır kazandın
+`)
 }
+      if(args[0] === "elmas") {
+  let maden5 = Math.round(Math.random() * 1)
+        db.add(`elmas_${message.author.id}`, +maden5)
+     message.channel.send(`
+Madendeyken Elmas kazıyodun ve ${maden5} adet elmas kazandın
+`)
+}  
 if(args[0] === "taş") {
   let maden5 = Math.round(Math.random() * 8)
         db.add(`taş_${message.author.id}`, +maden5)
