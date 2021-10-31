@@ -49,11 +49,20 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     
     return message.reply(`Ürünü başarıyla aldınız`)
 }
-   if(args[0] === "olta") {
-    let fiyatcık4 = 631 // istediğiniz fiyat
+   if(args[0] === "pc") {
+    let fiyatcık4 = 50000 // istediğiniz fiyat
     
     if (bakiye < fiyatcık4) return message.reply('Yeterli Paran Yok!')
-      db.set(`olta_${kllanç.id}`, "Var")
+      db.set(`pc_${kllanç.id}`, "Var")
+  db.add(`bakiye_${kllanç.id}`, -fiyatcık4)
+    
+    return message.reply(`Ürünü başarıyla aldınız`)
+}
+   if(args[0] === "turbo") {
+    let fiyatcık4 = 31631 // istediğiniz fiyat
+    
+    if (bakiye < fiyatcık4) return message.reply('Yeterli Paran Yok!')
+      db.set(`turbo_${kllanç.id}`, "Var")
   db.add(`bakiye_${kllanç.id}`, -fiyatcık4)
     
     return message.reply(`Ürünü başarıyla aldınız`)
@@ -63,6 +72,15 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     
     if (bakiye < fiyatcık4) return message.reply('Yeterli Paran Yok!')
       db.set(`maymuncuk_${kllanç.id}`, "Var")
+  db.add(`bakiye_${kllanç.id}`, -fiyatcık4)
+    
+    return message.reply(`Ürünü başarıyla aldınız`)
+}
+  if(args[0] === "kelepçe") {
+    let fiyatcık4 = 60000 // istediğiniz fiyat
+    
+    if (bakiye < fiyatcık4) return message.reply('Yeterli Paran Yok!')
+      db.set(`kelepçe_${kllanç.id}`, "Var")
   db.add(`bakiye_${kllanç.id}`, -fiyatcık4)
     
     return message.reply(`Ürünü başarıyla aldınız`)

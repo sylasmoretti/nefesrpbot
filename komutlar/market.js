@@ -23,6 +23,10 @@ const market = new Discord.MessageEmbed()
 Genel
 🎣 **Olta ile balık tutarak para kazan.** \n --> Fiyat: 631 💵
 📱 **Telefon ile fenomen olarak para kazan.** \n --> Fiyat: 100 💵
+📱 **Pc ile video izlemek için satın al.** \n --> Fiyat: 50.000 💵
+📱 **Turbo ile arabanı hızlandırmak için satın al.** \n --> Fiyat: 31.631 💵
+📱 **Maymuncuk ile kilit açmak için satın al.** \n --> Fiyat: 10.000 💵
+📱 **Kelepçe ile adam soymak için satın al.** \n --> Fiyat: 60.000 💵
 📱 **Telsiz ile haberleşmek için satın al.** \n --> Fiyat: 5.000 💵
 
 Diğer
