@@ -31,9 +31,9 @@ exports.run = async (client, message, args) => {
           "KAZANDIN"
         ] 
 
- const sentences2 = ["Yazılımcılık","Çöpçülük","Temizlikçilik","Bahçe düzenleme","İnşaatçılık"]
+ const sentences2 = ["Yazılımcılık","Çöpçülük","Temizlikçilik","Bahçe düzenleme","İnşaatçılık","Nakliyatçılık yaptın"]
      var sentence2 = sentences2[Math.floor(Math.random() * sentences2.length)]
-         var kazandın = rastgeleMiktar(500,4000)
+         var kazandın = rastgeleMiktar(1,4000)
     let embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")

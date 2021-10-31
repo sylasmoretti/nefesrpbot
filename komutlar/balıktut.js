@@ -53,9 +53,9 @@ exports.run = async (client, message, args) => {
       await db.set(`baliktutma_${message.author.id}`, Date.now());
        await db.add(`bakiye_${message.author.id}`, -kaybettin);   
         } else {
- const sentences2 = ["Çipura tuttun","Hamsi tuttun","Kolyoz tuttun","İstavrit tuttun","Köpek balığı tuttun"]
+ const sentences2 = ["Çipura tuttun","Hamsi tuttun","Kolyoz tuttun","İstavrit tuttun","Köpek balığı tuttun","Japon balığı tuttun","Çipura balığı tuttun"];
      var sentence2 = sentences2[Math.floor(Math.random() * sentences2.length)]
-         var kazandın = rastgeleMiktar(500,1500)
+         var kazandın = rastgeleMiktar(1,2)
     let embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
