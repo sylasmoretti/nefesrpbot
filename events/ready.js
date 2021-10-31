@@ -9,9 +9,10 @@ module.exports = client => {
 }, 8000);
   var msgArray = [
 "NEFES ROLEPLAY ⚡",
-"NEFES SUNUCU BOT ❤️",
+"NEFES ROLEPLAY BOTU ❤️",
 "VIP ÖZELLİKLER 💎",
-"GÜNCEL SCRİPTLER ❤️",   
+"GÜNCEL KOMUTLAR ❤️",   
+" ⚡",
  ];
 
  setInterval(() => {
