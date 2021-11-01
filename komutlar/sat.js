@@ -24,9 +24,12 @@ exports.run = async (client, message, args) => {
   const elmas = db.get(`elmas_${kllanç.id}`)
   const altın = db.get(`altın_${kllanç.id}`)
   const demir = db.get(`demir_${kllanç.id}`)
+  const bakır = db.get(`bakır_${kllanç.id}`)
+  const krom = db.get(`krom_${kllanç.id}`)
+  const platinyum = db.get(`platinyum_${kllanç.id}`)
   const taş = db.get(`taş_${kllanç.id}`)
 
-  if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin" && args[0] !== "ladin" && args[0] !== "koyumeşe" && args[0] !== "meşe" && args[0] !== "huş" && args[0] !== "zümrüt" && args[0] !== "elmas" && args[0] !== "altın" && args[0] !== "demir" && args[0] !== "taş") return message.channel.send(
+  if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "krom" && args[0] !== "bakır" && args[0] !== "platinyum" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin" && args[0] !== "ladin" && args[0] !== "koyumeşe" && args[0] !== "meşe" && args[0] !== "huş" && args[0] !== "zümrüt" && args[0] !== "elmas" && args[0] !== "altın" && args[0] !== "demir" && args[0] !== "taş") return message.channel.send(
 new Discord.MessageEmbed()
 .setAuthor("NEFES ", client.user.avatarURL())
 .setDescription(`
@@ -49,6 +52,30 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     let fiyatcık2 = 10 // istediğiniz fiyat
     
       db.delete(`balta_${kllanç.id}`, "Yok", -1)
+  db.add(`bakiye_${kllanç.id}`, +fiyatcık2)
+    
+    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık2}`)
+}
+    if(args[0] === "platinyum") {
+    let fiyatcık2 = 1 // istediğiniz fiyat
+    
+      db.delete(`platinyum_${kllanç.id}`, "Yok", -1)
+  db.add(`bakiye_${kllanç.id}`, +fiyatcık2)
+    
+    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık2}`)
+}
+    if(args[0] === "bakır") {
+    let fiyatcık2 = 1 // istediğiniz fiyat
+    
+      db.delete(`bakır_${kllanç.id}`, "Yok", -1)
+  db.add(`bakiye_${kllanç.id}`, +fiyatcık2)
+    
+    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık2}`)
+}
+    if(args[0] === "krom") {
+    let fiyatcık2 = 1 // istediğiniz fiyat
+    
+      db.delete(`krom_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık2)
     
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık2}`)

@@ -79,6 +79,9 @@ if(args[0] === "maden") {
   const altın = db.get(`altın_${kllanç.id}`)
   const demir = db.get(`demir_${kllanç.id}`)
   const zümrüt = db.get(`zümrüt_${kllanç.id}`)
+  const krom = db.get(`krom_${kllanç.id}`)
+  const bakır = db.get(`bakır_${kllanç.id}`)
+  const platinyum = db.get(`platinyum_${kllanç.id}`)
   const taş = db.get(`taş_${kllanç.id}`)
 const param = new Discord.MessageEmbed()
 .setAuthor("PARAN", client.user.avatarURL())
@@ -92,6 +95,10 @@ Zümrütleriniz: ${zümrüt ? zümrüt : 'Yok.'}
 Demirleriniz: ${demir ? demir : 'Yok.'}
 
 Kromlarınız: ${krom ? krom : 'Yok.'}
+
+Bakırlarınız: ${bakır ? bakır : 'Yok.'}
+
+Platinyumlarınız: ${platinyum ? platinyum : 'Yok.'}
 
 Taşlarınız: ${taş ? taş : 'Yok.'}
 `)
