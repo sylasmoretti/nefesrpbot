@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');//Fiber <3 LysteX
 const db = require('quick.db')
   const ms = require('ms');

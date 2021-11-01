@@ -91,6 +91,8 @@ Zümrütleriniz: ${zümrüt ? zümrüt : 'Yok.'}
 
 Demirleriniz: ${demir ? demir : 'Yok.'}
 
+Kromlarınız: ${krom ? krom : 'Yok.'}
+
 Taşlarınız: ${taş ? taş : 'Yok.'}
 `)
 .setFooter("BLACK ROLEPLAY", client.user.avatarURL())
