@@ -6,13 +6,12 @@ var prefix = ayarlar.prefix;
 
 module.exports = client => {
  setInterval(function() {
-}, 8000);
+}, 5000);
   var msgArray = [
 "NEFES ROLEPLAY ⚡",
 "NEFES ROLEPLAY BOTU ❤️",
 "VIP ÖZELLİKLER 💎",
 "GÜNCEL KOMUTLAR ❤️",   
-"CEO İS CAPKIN AND KIVANÇ ⚡",
 "DİSCORD ROLEPLAY BOTU 💎",
  ];
 
