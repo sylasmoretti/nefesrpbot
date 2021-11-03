@@ -97,7 +97,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "ladin") {
-    let fiyatcık4 = 10 // istediğiniz fiyat
+    let fiyatcık4 = 1 // istediğiniz fiyat
     
       db.delete(`ladinodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -105,7 +105,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "koyumeşe") {
-    let fiyatcık4 = 10 // istediğiniz fiyat
+    let fiyatcık4 = 1 // istediğiniz fiyat
     
       db.delete(`koyumeseodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -113,7 +113,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "meşe") {
-    let fiyatcık4 = 10 // istediğiniz fiyat
+    let fiyatcık4 = 1 // istediğiniz fiyat
     
       db.delete(`meseodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
@@ -121,7 +121,7 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
     return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık4}`)
 }
   if(args[0] === "huş") {
-    let fiyatcık4 = 10 // istediğiniz fiyat
+    let fiyatcık4 = 1 // istediğiniz fiyat
     
       db.delete(`husodunu_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık4)
