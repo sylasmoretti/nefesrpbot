@@ -34,7 +34,7 @@ exports.run = async (client, message, args) => {
 new Discord.MessageEmbed()
 .setAuthor("NEFES ", client.user.avatarURL())
 .setDescription(`
-Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/graolta/bitcoin/ladin/koyumeşe/meşe/huş/zümrüt/elmas/altın/demir/taş
+Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/gram/olta/bitcoin/ladin/koyumeşe/meşe/huş/zümrüt/elmas/altın/demir/taş
 `)
 .setFooter("NEFES ", message.author.avatarURL())
 .setTimestamp()
@@ -59,6 +59,14 @@ if(!altın) return message.reply(`Hiç altınınız bulunmamakta!`)
 }
     if(args[0] === "platinyum") {
     let fiyatcık2 = 1 // istediğiniz fiyat
+    
+      db.delete(`platinyum_${kllanç.id}`, "Yok", -1)
+  db.add(`bakiye_${kllanç.id}`, +fiyatcık2)
+    
+    return message.reply(`Ürünü başarıyla sattınız. Kazandığınız para: ${fiyatcık2}`)
+}
+  if(args[0] === "gram") {
+    let fiyatcık2 = 569580 // istediğiniz fiyat
     
       db.delete(`platinyum_${kllanç.id}`, "Yok", -1)
   db.add(`bakiye_${kllanç.id}`, +fiyatcık2)

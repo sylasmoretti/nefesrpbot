@@ -14,11 +14,10 @@ if(args[0] === "genel") {
     let btcdeger = 4532
   
   const bakiye = await db.fetch(`bakiye_${kllanç.id}`);
-  const silah = db.get(`silah_${kllanç.id}`)
   const olta = db.get(`silah_${kllanç.id}`)
   const telefon = db.get(`silah_${kllanç.id}`)
+  const gram = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
-  const btc = db.get(`btc_${kllanç.id}`)
   const demirkazma = db.get(`demirkazma_${kllanç.id}`)
   const elmaskazma = db.get(`elmaskazma_${kllanç.id}`)
   const taşkazma = db.get(`taşkazma_${kllanç.id}`)
@@ -35,7 +34,6 @@ if(args[0] === "genel") {
 const param = new Discord.MessageEmbed()
 .setAuthor("PARAN", client.user.avatarURL())
 .setDescription(`
-🔫 Silahlarınız: ${silah ? silah : 'Yok.'}
 
 🎣 Oltalarınız: ${olta ? olta : 'Yok.'}
 
@@ -51,7 +49,7 @@ const param = new Discord.MessageEmbed()
 
 📱 Telefonlarınız: ${telefon ? telefon : 'Yok.'}
 
-Bitcoinleriniz: ${btc ? btc : 'Yok.'} \n --> Bitcoin Değeri: ${btcdeger}
+🔫 Gram altınınız: ${gram ? gram : 'Yok.'}
 
 Orman
 

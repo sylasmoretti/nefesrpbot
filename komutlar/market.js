@@ -13,6 +13,7 @@ exports.run = async (client, message, args) => {
   const silah = db.get(`silah_${kllanç.id}`)
   const olta = db.get(`silah_${kllanç.id}`)
   const telefon = db.get(`silah_${kllanç.id}`)
+  const gram = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
   const btc = db.get(`btc_${kllanç.id}`)
   const telsiz = db.get(`telsiz_${kllanç.id}`)
@@ -30,7 +31,7 @@ Genel
 📱 **Telsiz ile haberleşmek için satın al.** \n --> Fiyat: 5.000 💵
 
 Diğer
-₿ **Bitcoin al ve bir yatırımcı ol!.** \n --> Fiyat: 62.548 💵
+₿ **Gram altın ile para kazanmak için satın al.** \n --> Fiyat: 569.584 💵
 
 Maden
 ⛏️ **Demir kazma satın al, elmas ve altın ile para kazan** \n **-->** Fiyat: 1.500 💵
