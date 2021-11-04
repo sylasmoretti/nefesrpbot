@@ -14,6 +14,7 @@ exports.run = async (client, message, args) => {
   const silah = db.get(`silah_${kllanç.id}`)
   const olta = db.get(`silah_${kllanç.id}`)
   const telefon = db.get(`silah_${kllanç.id}`)
+  const gram = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
   const btc = db.get(`btc_${kllanç.id}`)
 
@@ -35,13 +36,22 @@ new Discord.MessageEmbed()
 .setAuthor("NEFES ", client.user.avatarURL())
 .setDescription(`
 Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
-**!satın-al telefon/olta/bitcoin/altın/telsiz/silah/** `)
+**!satın-al telefon/gram/olta/bitcoin/altın/telsiz/silah/** `)
 .setFooter("NEFES ", client.user.avatarURL())
 .setTimestamp()
 )
   
   if(args[0] === "telefon") {
     let fiyatcık3 = 100 // istediğiniz fiyat
+    
+    if (bakiye < fiyatcık3) return message.reply('Yeterli Paran Yok!')
+      db.set(`telefon_${kllanç.id}`, "Var")
+  db.add(`bakiye_${kllanç.id}`, -fiyatcık3)
+    
+    return message.reply(`Ürünü başarıyla aldınız`)
+}
+  if(args[0] === "gram") {
+    let fiyatcık3 = 569584 // istediğiniz fiyat
     
     if (bakiye < fiyatcık3) return message.reply('Yeterli Paran Yok!')
       db.set(`telefon_${kllanç.id}`, "Var")

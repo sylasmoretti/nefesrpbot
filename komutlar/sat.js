@@ -13,6 +13,7 @@ exports.run = async (client, message, args) => {
   const silah = db.get(`silah_${kllanç.id}`)
   const olta = db.get(`silah_${kllanç.id}`)
   const telefon = db.get(`silah_${kllanç.id}`)
+  const gram = db.get(`silah_${kllanç.id}`)
   const balta = db.get(`balta_${kllanç.id}`)
   const btc = db.get(`btc_${kllanç.id}`)
   const daltın = db.get(`daltın_${kllanç.id}`)
@@ -29,11 +30,11 @@ exports.run = async (client, message, args) => {
   const platinyum = db.get(`platinyum_${kllanç.id}`)
   const taş = db.get(`taş_${kllanç.id}`)
 
-  if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "krom" && args[0] !== "bakır" && args[0] !== "platinyum" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin" && args[0] !== "ladin" && args[0] !== "koyumeşe" && args[0] !== "meşe" && args[0] !== "huş" && args[0] !== "zümrüt" && args[0] !== "elmas" && args[0] !== "altın" && args[0] !== "demir" && args[0] !== "taş") return message.channel.send(
+  if(args[0] !== "daltın" && args[0] !== "balta" && args[0] !== "krom" && args[0] !== "bakır" && args[0] !== "platinyum" && args[0] !== "telefon" && args[0] !== "olta" && args[0] !== "bitcoin" && args[0] !== "ladin" && args[0] !== "koyumeşe" && args[0] !== "meşe" && args[0] !== "huş" && args[0] !== "zümrüt" && args[0] !== "elmas" && args[0] !== "altın" && args[0] !== "demir" && args[0] !== "gram" && args[0] !== "taş") return message.channel.send(
 new Discord.MessageEmbed()
 .setAuthor("NEFES ", client.user.avatarURL())
 .setDescription(`
-Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/olta/bitcoin/ladin/koyumeşe/meşe/huş/zümrüt/elmas/altın/demir/taş
+Satmak istediğiniz eşyanın id sini giriniz. Örnek \n !sat altın/telefon/graolta/bitcoin/ladin/koyumeşe/meşe/huş/zümrüt/elmas/altın/demir/taş
 `)
 .setFooter("NEFES ", message.author.avatarURL())
 .setTimestamp()
