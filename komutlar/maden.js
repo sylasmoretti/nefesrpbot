@@ -72,7 +72,7 @@ Madendeyken platinyum kazıyodun ve ${maden5} adet platinyum kazandın
 `)
 }  
 if(args[0] === "taş") {
-  let maden5 = Math.round(Math.random() * 10)
+  let maden5 = Math.round(Math.random() * 100)
         db.add(`taş_${message.author.id}`, +maden5)
      message.channel.send(`
 Madendeyken Taş kazıyodun ve ${maden5} adet taş kazandın
