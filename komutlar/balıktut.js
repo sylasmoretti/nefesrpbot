@@ -43,7 +43,7 @@ exports.run = async (client, message, args) => {
        "Balık Oltadan gaçtı. Sende Başınu Tuttun."]
      var cümle = cümleler[Math.floor(Math.random() * cümleler.length)]
      if (awnser === "KAYBETTİN") {
- var kaybettin = 1000     
+ var kaybettin = 800     
       message.channel.send(new Discord.MessageEmbed()
 
                            .setColor("RED")
