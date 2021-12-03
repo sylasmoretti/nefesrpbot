@@ -7,12 +7,9 @@ var prefix = ayarlar.prefix;
 module.exports = client => {
  setInterval(function() {
 }, 5000);
-  var msgArray = [
-"NEFES ROLEPLAY ⚡",
-"NEFES ROLEPLAY BOTU ❤️",
-"VIP ÖZELLİKLER 💎",
-"GÜNCEL KOMUTLAR ❤️",   
-"DİSCORD ROLEPLAY BOTU 💎",
+  var msgArray = [ 
+"https://discord.gg/8JqSbR8q5A ❤️",   
+"DİSCORD SUNUCUMUZA HERKSESİ BEKLERİZ 💎",
  ];
 
  setInterval(() => {
