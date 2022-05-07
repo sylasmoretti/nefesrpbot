@@ -7,10 +7,10 @@ var prefix = ayarlar.prefix;
 module.exports = client => {
  setInterval(function() {
 }, 5000);
-  var msgArray = [ 
-"https://discord.gg/8JqSbR8q5A ❤️",   
-"DİSCORD SUNUCUMUZA HERKSESİ BEKLERİZ 💎",
-"Kıvan and Sami ❤️",   
+  var msgArray = [   
+"DİSCORD SUNUCUMUZA HOS GELDİNİZ 💎",
+"KIVANC AND SAMI 👑",   
+"NEFES ROLEPLAY ⚔️",   
  ];
 
  setInterval(() => {
