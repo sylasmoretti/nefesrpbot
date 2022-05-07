@@ -1,5 +1,4 @@
 const Discord = require('discord.js')
-////JaguaR#6187
 exports.run = function(bot, message) {
     message.channel.send(new Discord.MessageEmbed()
     .setColor('RANDOM')
