@@ -7,11 +7,9 @@ var prefix = ayarlar.prefix;
 module.exports = client => {
  setInterval(function() {
 }, 5000);
-  var msgArray = [   
-"DİSCORD SUNUCUMUZA HOS GELDİNİZ 💎",
-"KIVANC AND SAMI 👑",   
-"NEFES ROLEPLAY ⚔️",   
- ];
+  var msgArray = [
+    
+  ];
 
  setInterval(() => {
   var rastgeleOyun = Math.floor(Math.random() * msgArray.length);
