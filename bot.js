@@ -14,7 +14,7 @@ const db = require("quick.db")
 
 client.ayarlar = {
 "prefix":"!",
-"sahip":"671425773902626854",
+"sahip":"852664807383760975",
 }
 client.ekoayarlar = {
   parabirimi: "USD",
@@ -26,12 +26,12 @@ client.ekoayarlar = {
   rastgelepara: false, 
   minpara: 30, 
   maxpara: 800,
-  günlükpara: 300,
+  günlükpara: 350,
   dbloy: false, 
   dblkey: "KEY",
   dblmsj: "Bu komutu kullanabilmek için", 
   başlangıçparası: 2000, 
-  admin: ["331876597147631619"]
+  admin: ["852664807383760975"]
 }
 
 

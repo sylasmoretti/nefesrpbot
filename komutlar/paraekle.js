@@ -6,7 +6,7 @@ var ayarlar = require('../ayarlar.json');
 exports.run = async (client, message, args) => {
 		  
 	
-if(message.author.id !== "331876597147631619") if(message.author.id !== "628321048768806932")return message.channel.send("Sahip komutu bu");
+if(message.author.id !== "852664807383760975") if(message.author.id !== "331876597147631619")return message.channel.send("bu komutu kullanacak yetkiye sahip değilsin!");
   const silinecekkllnc = message.mentions.members.first();
   let para = args[1]
   if(!silinecekkllnc) return message.channel.send(`Bir kullanıcı belirtmelisin!`)
@@ -18,7 +18,7 @@ if(message.author.id !== "331876597147631619") if(message.author.id !== "6283210
   await db.add(`bakiye_${silinecekkllnc.id}`, para)
   
   
-  message.channel.send(`:+1:`)
+  message.channel.send(`başarıyla para eklendi!`)
 
 }
 exports.conf = {

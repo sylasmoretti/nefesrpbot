@@ -10,6 +10,7 @@ module.exports = client => {
   var msgArray = [ 
 "https://discord.gg/8JqSbR8q5A ❤️",   
 "DİSCORD SUNUCUMUZA HERKSESİ BEKLERİZ 💎",
+"Kıvan and Sami ❤️",   
  ];
 
  setInterval(() => {
