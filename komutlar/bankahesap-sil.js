@@ -26,7 +26,7 @@ if(message.author.id !== "331876597147631619") if(message.author.id !== "6283210
 exports.conf = {
     enabled: true,
     guildOnly: true,
-    aliases: ['sil'],
+    aliases: ['bankahesapsil'],
     permLevel: 0
 }
 
