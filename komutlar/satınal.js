@@ -51,7 +51,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     return message.reply(`Ürünü başarıyla aldınız`)
 }
   if(args[0] === "gram") {
-    let fiyatcık3 = 569584 // istediğiniz fiyat
+    let fiyatcık3 = 62500 // istediğiniz fiyat
     
     if (bakiye < fiyatcık3) return message.reply('Yeterli Paran Yok!')
       db.set(`telefon_${kllanç.id}`, "Var")
@@ -87,7 +87,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     return message.reply(`Ürünü başarıyla aldınız`)
 }
   if(args[0] === "kelepçe") {
-    let fiyatcık4 = 60000 // istediğiniz fiyat
+    let fiyatcık4 = 30000 // istediğiniz fiyat
     
     if (bakiye < fiyatcık4) return message.reply('Yeterli Paran Yok!')
       db.set(`kelepçe_${kllanç.id}`, "Var")
@@ -96,7 +96,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     return message.reply(`Ürünü başarıyla aldınız`)
 }
   if(args[0] === "olta") {
-    let fiyatcık4 = 631 // istediğiniz fiyat
+    let fiyatcık4 = 250 // istediğiniz fiyat
     
     if (bakiye < fiyatcık4) return message.reply('Yeterli Paran Yok!')
       db.set(`olta_${kllanç.id}`, "Var")
@@ -105,7 +105,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     return message.reply(`Ürünü başarıyla aldınız`)
 }
   if(args[0] === "bitcoin") {
-    let fiyatcık5 = 110000 // istediğiniz fiyat
+    let fiyatcık5 = 62500 // istediğiniz fiyat
     
     if (bakiye < fiyatcık5) return message.reply('Yeterli Paran Yok!')
       db.set(`btc_${kllanç.id}`, "Var")
@@ -132,7 +132,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     return message.reply(`Ürünü başarıyla aldınız`)
 }
     if(args[0] === "taş-kazma") {
-    let fiyatcık5 = 1499 // istediğiniz fiyat
+    let fiyatcık5 = 500 // istediğiniz fiyat
     
     if (bakiye < fiyatcık5) return message.reply('Yeterli Paran Yok!')
       db.set(`taşkazma_${kllanç.id}`, "Var")
@@ -159,7 +159,7 @@ Satın almak istediğiniz eşyanın id sini giriniz. **Örnek**
     return message.reply(`Ürünü başarıyla aldınız`)
 }
     if(args[0] === "taş-balta") {
-    let fiyatcık5 = 1499 // istediğiniz fiyat
+    let fiyatcık5 = 500 // istediğiniz fiyat
     
     if (bakiye < fiyatcık5) return message.reply('Yeterli Paran Yok!')
       db.set(`taşbalta_${kllanç.id}`, "Var")

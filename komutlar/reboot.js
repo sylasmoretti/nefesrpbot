@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const moment = require('moment');
 
 exports.run = (client, message, args) => {
+
+if(message.author.id !== "852664807383760975") return message.channel.send("Bunu Yapacak Yetkiye Sahip Değilsin! :rage:");
 message.channel.send('NEFES  Adlı Botun Yeniden Başlatılmasını Onaylıyor Musun ?')
 .then(() => {
   message.channel.awaitMessages(response => response.content === "evet", {

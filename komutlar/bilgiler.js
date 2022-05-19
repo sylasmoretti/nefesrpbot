@@ -13,24 +13,25 @@ exports.run = async (client, message, args) => {
   const hesapismi = await db.fetch(`hesapismi_${kllanç.id}`);
   const hesaptarihyıl = await db.fetch(`hesaptarihyıl${kllanç.id}`);
   const hesaptarihay = await db.fetch(`hesaptarihay${kllanç.id}`);
-  const hesaptarihgün = await db.fetch(`hesaptarihgün${kllanç.id}`)
+  const hesaptarihgün = await db.fetch(`hesaptarihgün${kllanç.id}`);
+  const deger = await db.fetch(`bankabakiye_${kllanç.id}`)
   
   if(!hesapdurumu) {
     if(args[0]) return message.reply(`Bakmak istediğin kullanıcının bir hesabı bulunmamakta.`)
-    message.reply(`İlk olarak hesap oluşturmalısın. ${client.ekoayarlar.botunuzunprefixi}hesap-oluştur <Hesap İsmi>`)
+    message.reply(`İlk olarak hesap oluşturmalısın. ${client.ekoayarlar.botunuzunprefixi}hesap <Hesap İsmi>`)
   } else {
     if(hesapdurumu) {
       if(!hesapismi) {
         const embedczdn = new Discord.MessageEmbed()
         .setColor(client.ekoayarlar.renk)
-        .setDescription(`Hesap İsmi: ${client.ekoayarlar.isimsiz}\n Hesap Bakiyesi: ${bakiye}\n Hesap Oluşturma Tarihi: Bilinmiyor`)
+        .setDescription(` 🏦 Hesap İsmi: ${hesapismi} \n \n 💵 Hesap Bakiyesi: ${bakiye} \n \n 🏦 Banka Bakiyesi: ${deger ? deger : '0'}`)
         message.channel.send(embedczdn)
       } else {
         if(hesapdurumu) {
           if(hesapismi) {
             const embedczdnv2 = new Discord.MessageEmbed()
             .setColor(client.ekoayarlar.renk)
-            .setDescription(`Black Banka Hesap İsmi: ${hesapismi}\n Bakiye: ${bakiye}\n Hesap Oluşturma Tarihi: *${hesaptarihay}/ ${hesaptarihgün}/${hesaptarihyıl}* gününde hesabın oluşturuldu!`)
+            .setDescription(` 🏦 Hesap İsmi: ${hesapismi}\n \n 💵 Bakiye : ${bakiye} \n \n :credit_card:  Banka Bakiyesi: ${deger ? deger : '0'}`)
             message.channel.send(embedczdnv2)
           }
         }

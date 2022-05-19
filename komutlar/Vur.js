@@ -8,7 +8,7 @@ exports.run = function(bot, message) {
     
 
     function doMagicDiceVoodoo() {
-        var rand = ['Eğilerek Yumruktan Sıyrıldı','Sol Yanağına Sert Bir Yumruk Attın!','Yüzünün Ortasına Bir Yumruk Attın','Sağ Yanağına Sert Bir Yumruk Attın!','Yana Çekildi Ve Yumruktan Sıyrıldı!','Yumruğu Atacakken Elini Tuttu Ve Atamadın!'];
+        var rand = ['Eğilerek Mermiden Kaçtı','Karnından Vurdun!','Kafasına Sıktın!','Sağ Omuzuna Geldi!','Omuzunu Sıyırdı!','Duvarın Arkasına Geçti!','Silah Tutukluk Yaptı Ateş Edemedin!','Mermin Bitmiş Kahretsin!','Iskaladın Antreman Yapmalısın!'];
 
         return rand[Math.floor(Math.random()*rand.length)];
     }
@@ -22,7 +22,7 @@ exports.conf = {
 }
 
 exports.help = {
-    name: 'yumruk',
-    description: 'yumruk atarsınız',
-    usage: 'yumruk'
+    name: 'ateşet',
+    description: '1-15 arası sayı atar.',
+    usage: 'zar'
 }

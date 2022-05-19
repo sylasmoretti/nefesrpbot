@@ -21,7 +21,7 @@ const param = new Discord.MessageEmbed()
 .setDescription(`
 💵 Paranız: ${bakiye}
 
-🏦 Banka İsmİ: ${bankaismi2 ? bankaismi2: "Hesap Oluşturunuz"}
+🏦 Banka İsmİ: ${hesapismi ? hesapismi: kllanç.id}
 🏦 Bankadaki Para: ${deger ? deger: "0"}
 
 Eşyalarınızı görmek için: !çantam

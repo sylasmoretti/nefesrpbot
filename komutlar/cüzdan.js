@@ -28,7 +28,7 @@ if(!member2) return message.reply("Bir Kullanıcı Etiketlermisin.")
         const embedczdn = new Discord.MessageEmbed()
           .setColor(client.ekoayarlar.renk)
           .setDescription(
-            `Bankadaki Hesap İsmi: ${hesapismi ? hesapismi : 'Bilinmiyor.'}\n Bakiye: **${bakiye}**\n Hesap Oluşturma Tarihi: *${hesaptarihay}/ ${hesaptarihgün}/${hesaptarihyıl}* gününde hesabın oluşturuldu!`
+            `Bankadaki Hesap İsmi: ${kllanç.id}\n Bakiye: **${bakiye}**\n Hesap Oluşturma Tarihi: *${hesaptarihay}/ ${hesaptarihgün}/${hesaptarihyıl}* gününde hesabın oluşturuldu!`
           );
         message.channel.send(embedczdn);
       }

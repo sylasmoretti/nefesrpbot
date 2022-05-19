@@ -4,11 +4,11 @@ exports.run = function(bot, message) {
     .setColor('RANDOM')
     .setDescription(``)
     .setFooter(message.author.tag, message.author.displayAvatarURL())
-    .setTitle(doMagicDiceVoodoo()));
+    .setTitle('Tokat atma işlemin: ' + doMagicDiceVoodoo()));
     
 
     function doMagicDiceVoodoo() {
-        var rand = ['Eğilerek Yumruktan Sıyrıldı','Sol Yanağına Sert Bir Yumruk Attın!','Yüzünün Ortasına Bir Yumruk Attın','Sağ Yanağına Sert Bir Yumruk Attın!','Yana Çekildi Ve Yumruktan Sıyrıldı!','Yumruğu Atacakken Elini Tuttu Ve Atamadın!'];
+        var rand = ['Eğilerek Tokattan Sıyrıldı','Sol Yanağına Sert Bir Tokat Attın!','Tam Kafasına Sert Bir Tokat Attın','Sağ Yanağına Sert Bir Tokat Attın!','Yana Çekildi Ve Tokattan Sıyrıldı!','Tokat Atacakken Elini Tuttu Ve Atamadın!'];
 
         return rand[Math.floor(Math.random()*rand.length)];
     }
@@ -22,7 +22,7 @@ exports.conf = {
 }
 
 exports.help = {
-    name: 'yumruk',
-    description: 'yumruk atarsınız',
-    usage: 'yumruk'
+    name: 'tokat',
+    description: '1-15 arası sayı atar.',
+    usage: 'zar'
 }

@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 exports.run = function(bot, message) {
     message.channel.send(new Discord.MessageEmbed()
     .setColor('RANDOM')
-    .setDescription('> Sayınız Yukarıda :)')
+    .setDescription('')
     .setFooter(message.author.tag, message.author.displayAvatarURL())
     .setTitle('🎲 ZAR SAYISI: ' + doMagicDiceVoodoo()));
 

@@ -6,7 +6,7 @@ var ayarlar = require('../ayarlar.json');
 exports.run = async (client, message, args) => {
 		  
 	
-if(message.author.id !== "852664807383760975") if(message.author.id !== "331876597147631619")return message.channel.send("bu komutu kullanacak yetkiye sahip değilsin!");
+if(message.author.id !== "852664807383760975") if(message.author.id !== "628321048768806932") if(message.author.id !== "331876597147631619") if(message.author.id !== "850491362805022720") return message.channel.send("bu komutu kullanacak yetkiye sahip değilsin!");
   const silinecekkllnc = message.mentions.members.first();
   let para = args[1]
   if(!silinecekkllnc) return message.channel.send(`Bir kullanıcı belirtmelisin!`)
@@ -24,7 +24,7 @@ if(message.author.id !== "852664807383760975") if(message.author.id !== "3318765
 exports.conf = {
     enabled: true,
     guildOnly: true,
-    aliases: ['ekle'],
+    aliases: ['e'],
     permLevel: 0
 }
 

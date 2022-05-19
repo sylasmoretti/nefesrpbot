@@ -39,17 +39,10 @@ const param = new Discord.MessageEmbed()
 
 📱 Kelepçeleriniz: ${kelepçe ? kelepçe : 'Yok.'}
 
-📱 Pc: ${pc ? pc : 'Yok.'}
-
-📱 Turbo: ${turbo ? turbo : 'Yok.'}
-
-📱 Maymuncuk: ${maymuncuk ? maymuncuk : 'Yok.'}
-
 📱 Telsiz: ${telsiz ? telsiz : 'Yok.'}
 
 📱 Telefonlarınız: ${telefon ? telefon : 'Yok.'}
 
-🔫 Gram altınınız: ${gram ? gram : 'Yok.'}
 
 Orman
 
@@ -61,7 +54,7 @@ Orman
 
 Maden
 
-Elmas kazmalarınız: ${elmaskazma ? elmaskazma : 'Yok.'}
+⛏ Elmas kazmalarınız: ${elmaskazma ? elmaskazma : 'Yok.'}
 
 ⛏️ Demir kazmalarınız: ${demirkazma ? demirkazma : 'Yok.'}
 
@@ -92,10 +85,6 @@ Zümrütleriniz: ${zümrüt ? zümrüt : 'Yok.'}
 
 Demirleriniz: ${demir ? demir : 'Yok.'}
 
-Kromlarınız: ${krom ? krom : 'Yok.'}
-
-Bakırlarınız: ${bakır ? bakır : 'Yok.'}
-
 Platinyumlarınız: ${platinyum ? platinyum : 'Yok.'}
 
 Taşlarınız: ${taş ? taş : 'Yok.'}
@@ -120,6 +109,28 @@ Huş odunlarınız: ${huş ? huş : 'Yok.'}
 Koyu meşe odunlarınız: ${koyumeşe ? koyumeşe : 'Yok.'}
 
 Ladin odunlarınız: ${ladin ? ladin : 'Yok.'}
+
+`)
+.setFooter("NEFES ", client.user.avatarURL())
+ .setTimestamp()
+message.channel.send(param)
+}
+if(args[0] === "uyusturu") {
+    const bakiye = await db.fetch(`bakiye_${kllanç.id}`);
+  const esrar = db.get(`esrar_${kllanç.id}`)
+  const eroin = db.get(`eroin_${kllanç.id}`)
+  const meth = db.get(`meth_${kllanç.id}`)
+  const kokain = db.get(`kokain_${kllanç.id}`)
+const param = new Discord.MessageEmbed()
+.setAuthor("PARAN", client.user.avatarURL())
+.setDescription(`
+Kokaininiz: ${kokain ? kokain : 'Yok.'}
+
+Eroininiz: ${eroin ? eroin : 'Yok.'}
+
+Esrarınız: ${esrar ? esrar : 'Yok.'}
+
+Methiniz: ${meth ? meth : 'Yok.'}
 
 `)
 .setFooter("NEFES ", client.user.avatarURL())

@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const db = require('quick.db')
 exports.run = (client, message, args) => {
   let banka = db.fetch(`banka_${message.author.id}`)
- let para = db.fetch(`bakiye_${message.author.id}`)
+ let bakiye = db.fetch(`bakiye_${message.author.id}`)
 let amaç = db.fetch(`şirketamac_${message.author.id}`)
  let altın = db.fetch(`daltın_${message.author.id}`)
  let kredi = db.fetch(`kredi_${message.author.id}`)   
@@ -14,12 +14,12 @@ const embed1 = new Discord.MessageEmbed()
 .setDescription(`
 **Ne yapmak istediğinizi belirtiniz.**
 banka hesap-oluştur -> Banka hesabı oluşturursunuz.
-banka para-çek -> Bankadaki paranızdan para çekersiniz.
-banka para-yatır -> Bankaya pata yatırırsınız.
-banka hesap-bilgi -> Banka hesap bilginize bakarsınız.
+banka çek -> Bankadaki paranızdan para çekersiniz.
+banka yatır -> Bankaya pata yatırırsınız.
+banka bilgi -> Banka hesap bilginize bakarsınız.
 `)
 .setFooter("NEFES  Bank", message.author.avatarURL())
-if(args[0] !== "hesap-oluştur" && args[0] !== "para-çek" && args[0] !== "para-yatır" && args[0] !== "hesap-bilgi") return message.channel.send(embed1)
+if(args[0] !== "hesap-oluştur" && args[0] !== "çek" && args[0] !== "yatır" && args[0] !== "bilgi") return message.channel.send(embed1)
 if(args[0] === "hesap-oluştur") {
 if(banka) {
 
@@ -55,7 +55,7 @@ message.channel.send(banka1)
 db.set(`banka_${message.author.id}`, isim)
   db.set(`bankabakiye_${message.author.id}`, 1000)
 }
-if(args[0] === "para-yatır") {
+if(args[0] === "yatır") {
 let para = args.slice(1).join(" ");  
 if(!args[0]) return message.channel.send(
 new Discord.MessageEmbed()
@@ -66,9 +66,10 @@ Ne kadar para yatırmak istediğinizi yazınız
                                         )
 db.add(`bankabakiye_${message.author.id}`, +para)  
 db.add(`bakiye_${message.author.id}`, -para)
-return message.channel.send(`Para yatırımı başarılı! Banka bakiyesi: ${deger}`)
+return message.channel.send(`Para yatırımı başarılı! Yatırılan Miktar : ${para} 
+`)
 } 
-if(args[0] === "para-çek") {
+if(args[0] === "çek") {
 let para = args.slice(1).join(" ");  
 if(!args[0]) return message.channel.send(
 new Discord.MessageEmbed()
@@ -79,18 +80,17 @@ Ne kadar para çekmek istediğinizi yazınız
                                         )
 db.add(`bankabakiye_${message.author.id}`, -para)
   db.add(`bakiye_${message.author.id}`, +para)
-return message.channel.send(`Para çekimi başarılı!`)
+return message.channel.send(`Para çekimi başarılı! Çekilen Miktar: ${para}
+`)
 }   
-if(args[0] === "hesap-bilgi") {
+if(args[0] === "bilgi") {
 if(!banka) {
 var banka1 = new Discord.MessageEmbed()
 .setColor('#050202')
-.setTitle('NEFES  Banka Ana Merkez')
+.setTitle('NEFES  Banka Ana Merkez  🪙 ')
 .addField('Bakiye (Cebindeki para) Miktarı:', '**'+para+'**')
-.addField('🌟 Altın Miktarı:', `${altın ? altın: "Yok"}`)
-.addField('Kredi Kartı Kredisi:', '**'+kredi+'**')
 .addField('**Hata :warning:**', message.member.user.username + ' Adlı kullanıcının bir banka hesabı bulunmuyor!')
-.setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
+.setFooter('Nefes RolePlay Keyifli Kullanımlar diler.')
 .setTimestamp()
 message.channel.send(banka1)  
 return
@@ -101,14 +101,12 @@ return
 
 var banka2 = new Discord.MessageEmbed()
 .setColor('#050202')
-.setTitle('NEFES Banka Ana Merkez')
-.addField('Bakiye (Cebindeki para) Miktarı:', `${para}`)
-.addField('Altın Miktarı:', `${altın ? altın: "Yok"}`)
-.addField(':credit_card: Kredi Kartı Kredisi:', '**'+kredi+'**')
+.setTitle('NEFES Banka Ana Merkez  🪙 ')
+.addField('Bakiye (Cebindeki para) Miktarı:', `${bakiye}`)
 .addField('Banka Hesap Bilgileri:', '------------------------------')
 .addField('Banka Hesap İsmi:', '**'+banka+'**')
 .addField('Banka Hesabındaki Para:', '**'+deger+'**')
-.setFooter(client.user.username + ' Keyifli Kullanımlar diler.')
+.setFooter('Nefes RolePlay Keyifli Kullanımlar diler.')
 .setTimestamp()
 message.channel.send(banka2)
 }

@@ -22,26 +22,20 @@ const market = new Discord.MessageEmbed()
 .setAuthor("Market", client.user.avatarURL())
 .setDescription(`
 Genel
-🎣 **Olta ile balık tutarak para kazan.** \n --> Fiyat: 631 💵
-📱 **Telefon ile fenomen olarak para kazan.** \n --> Fiyat: 100 💵
-📱 **Pc ile video izlemek için satın al.** \n --> Fiyat: 50.000 💵
-📱 **Turbo ile arabanı hızlandırmak için satın al.** \n --> Fiyat: 31.631 💵
-📱 **Maymuncuk ile kilit açmak için satın al.** \n --> Fiyat: 10.000 💵
-📱 **Kelepçe ile adam soymak için satın al.** \n --> Fiyat: 60.000 💵
+🎣 **Olta ile balık tutarak para kazan.** \n --> Fiyat: 250 💵
+📱 **Telefon ile haberleşmek sosyal medyayı kullanmak.** \n --> Fiyat: 100 💵
+📱 **Kelepçe ile adam soymak için satın al.** \n --> Fiyat: 30.000 💵
 📱 **Telsiz ile haberleşmek için satın al.** \n --> Fiyat: 5.000 💵
-
-Diğer
-₿ **Gram altın ile para kazanmak için satın al.** \n --> Fiyat: 569.584 💵
 
 Maden
 ⛏️ **Demir kazma satın al, elmas ve altın ile para kazan** \n **-->** Fiyat: 1.500 💵
 ⛏️ **Elmas kaznma ssatın al, zümrüt ile para kazan** \n **-->** Fiyat: 2.000 💵
-⛏️ **Taş kazma satın al, demir ile para kazan** \n **-->** Fiyat: 1.499 💵
+⛏️ **Taş kazma satın al, demir ile para kazan** \n **-->** Fiyat: 500 💵
 
 Orman
 🪓 **Elmas balta satın al, ladin, huş, meşe ve koyu meşe den para kazan** \n **-->** Fiyat: 2.000 💵
 🪓 **Demir balta satın al, ladin, huş ve meşe den para kazan** \n **-->** Fiyat: 1.500 💵
-🪓 **Taş balta satın al, huş ve meşe den para kazan** \n **-->** Fiyat: 1.499 💵
+🪓 **Taş balta satın al, huş ve meşe den para kazan** \n **-->** Fiyat: 500 💵
 
 ** Nefes Roleplay **
 👑 **Nefes Roleplay'e hoş geldiniz.**
